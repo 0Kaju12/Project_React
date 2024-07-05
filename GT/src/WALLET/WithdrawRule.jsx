@@ -6,14 +6,7 @@ import { useState, useEffect } from "react";
 
 function WithdrawRule(){
 
-    const topStyle = {
-        backgroundImage: `url(${topBackground})`,
-        backgroundSize: "cover",
-        height: "100vh",
-        width: "100%",
-        paddingBottom: "100px",
-        paddingTop: "10px",
-      };
+    
       const navbarStyle = {
         height: "60px",
         display: "flex",
@@ -38,7 +31,7 @@ function WithdrawRule(){
 
     return (
         <>
-         <div className="bg-custom-purple text-white " style={navbarStyle}>
+         <div className="bg-blue-700 text-white " style={navbarStyle}>
         <button className="px-4" onClick={() => navigate('/imp8')}>
           <BiArrowBack size={24} />
         </button>
@@ -46,8 +39,8 @@ function WithdrawRule(){
           <h1 className="text-white px-3">Withdraw Rule</h1>
         </div>
       </div>
-      <div style={topStyle}>
-        <div className="text-white ">
+      <div className="mt-2" >
+        <div className="text-black ">
           {status && gameRates.length > 0 && gameRates[0].withdrawal_rule.split('\n').map((line, index) => (
             <p className="mb-4"key={index}>{line}</p>
           ))}

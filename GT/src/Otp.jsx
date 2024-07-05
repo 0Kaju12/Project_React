@@ -1,20 +1,13 @@
-import topBackground from "./Images/bg.png";
+import React, { useState, useEffect } from "react";
 import { BiArrowBack } from "react-icons/bi";
 import logo from "./Images/logo.png";
-import { useLocation, useNavigate } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import OtpInput from "otp-input-react";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "./Util/loginSlice";
-import { register, remove } from "./Util/registerSlice";
+import { remove } from "./Util/registerSlice";
 
 function Otp() {
-  const backStyle = {
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-    minHeight: "100vh",
-  };
-
   const navbarStyle = {
     height: "60px",
     display: "flex",
@@ -25,18 +18,11 @@ function Otp() {
   const [errorMsg, setErrorMsg] = useState();
   const [data, setdata] = useState({});
   const [data2, setdata2] = useState(null);
-  // const[otp2, setotp2]=useState(null);
 
   const username = useSelector((state) => state.registerDetail.username);
   const mobile = useSelector((state) => state.registerDetail.phone);
   const password = useSelector((state) => state.registerDetail.password);
   const otp2 = useSelector((state) => state.registerDetail.otp);
-  // console.log(username);
-  // console.log(mobile);
-  // console.log(password);
-  // console.log(otp2);
-
-  // console.log(otp2);
 
   const navigate = useNavigate();
   const back = () => {
@@ -45,8 +31,6 @@ function Otp() {
 
   const dispatch = useDispatch();
   const handleAdduser = (username, token, mobile) => {
-     console.log(username);
-     console.log(token)
     dispatch(login({ username: username, token: token, mobile: mobile }));
     dispatch(remove());
   };
@@ -60,31 +44,22 @@ function Otp() {
 
   const [otp, setOtp] = useState(null);
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
-      console.log("Entered OTP:", otp);
-      console.log("OTP from Redux (otp2):", otp2);
-      console.log("OTP from data2:", data2);
-  
-      // Check if the entered OTP matches either the OTP received from the server (otp2) or the data2
       if (otp == otp2 || otp == data2) {
-        console.log("OTP is valid. Proceeding with form submission...");
         setIsSubmit(true);
         const a = await fetchData(username, mobile, password);
         handleAdduser(a?.user_name, a?.unique_token, mobile);
         navigate("/imp");
       } else {
-        console.log("Entered OTP does not match the expected OTPs.");
         setErrorMsg("Enter Valid OTP");
       }
     } catch (error) {
       console.error("Error registering:", error);
     }
   };
-  
 
   const fetchData = async (username, mobile, password) => {
     try {
@@ -114,7 +89,6 @@ function Otp() {
         requestOptions
       );
       const result = await response.json();
-      // console.log(result);
       setdata(result);
       return result;
     } catch (error) {}
@@ -130,40 +104,39 @@ function Otp() {
       console.error("Error registering:", error);
     }
   };
+
   const fetchResendOtp = async (username, phoneno, password) => {
     try {
       const myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-  
+
       const raw = JSON.stringify({
         env_type: "Prod",
         app_key: "jAFaRUulipsumXLLSLPFytYvUUsgfh",
         mobile: phoneno,
       });
-  
+
       const requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw,
         redirect: "follow",
       };
-  
+
       const response = await fetch(
         "https://kalyanmilanofficialmatka.in/api-resend-otp",
         requestOptions
       );
       const result = await response.json();
-      console.log("resend");
-      console.log(result?.otp);
-      setdata2(result?.otp); // Ensure data2 is correctly updated here
+      setdata2(result?.otp);
     } catch (error) {
       console.error("Error:", error);
     }
   };
-  
+
   return (
     <>
-      <div style={backStyle}>
+      <div>
         <div className="bg-custom-purple text-white" style={navbarStyle}>
           <button className="px-4" onClick={() => back()}>
             <BiArrowBack size={24} />
@@ -176,23 +149,23 @@ function Otp() {
           <img src={logo} alt="Center Image" className="w-40 h-40" />
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-white mt-4 text-3xl">OTP Verification</p>
-          <p className="text-white mt-4">
+          <p className="text-black mt-4 text-3xl">OTP Verification</p>
+          <p className="text-black mt-4">
             Enter the code from the SMS we sent to
           </p>
-          <div className="text-white">+91 {mobile}</div>
+          <div className="text-black">+91 {mobile}</div>
           {counter > 0 && (
-            <div className="text-white mt-5">Resend OTP in: 00 : {counter}</div>
+            <div className="text-black mt-5">Resend OTP in: 00 : {counter}</div>
           )}
-          <OtpInput
-            value={otp}
-            onChange={setOtp}
-            otpType="number"
-            disabled={false}
-            autoFocus
-            className="mt-5 ml-4"
-          />
-          <div className="text-gray-500" style={{ margin: "30px 20px 0 0" }}>
+           <OtpInput
+          value={otp}
+          onChange={setOtp}
+          otpType="number"
+          disabled={false}
+          autoFocus
+          inputClassName="border border-black rounded-md p-3 mt-5"
+        />
+          <div className="text-black-500" style={{ margin: "30px 20px 0 0" }}>
             I didn't receive any code.{" "}
             {counter === 0 && (
               <button className="ml-3 text-red-500 font-bold" onClick={handleResendOtp}>

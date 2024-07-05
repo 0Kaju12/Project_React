@@ -16,13 +16,6 @@ function Transfer() {
     alignItems: "center",
     position: "relative",
   };
-  const backStyle = {
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    position: "relative",
-    paddingBottom: "400px",
-  };
   const cardStyle = {
     width: "400px",
     display: "flex",
@@ -140,12 +133,12 @@ function Transfer() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
+      <div className="bg-blue-700 text-white" style={navbarStyle}>
         <button className="px-4" onClick={back}>
           <BiArrowBack size={24} />
         </button>
         <div>
-          <h1 className="text-white px-3">Single Digit</h1>
+          <h1 className="text-white px-3">Transfer</h1>
         </div>
 
         <ul className="font-bold text-lg flex flex-shrink: 0 absolute right-10 top-15">
@@ -163,19 +156,19 @@ function Transfer() {
       </div>
 
       <div
-        style={backStyle}
-        className="text-white flex flex-col justify-center items-center pt-5"
+        
+        className="text-black flex flex-col justify-center items-center pt-5"
       >
         <form onSubmit={handleSubmit} style={cardStyle}>
           <input
-            className="py-3 px-5 my-2 rounded-xl text-black"
+            className="py-3 px-5 my-2 rounded-xl text-black border-4 border-black"
             placeholder="Enter Points"
             type="text"
             ref={points}
           />
           <p className="text-red-500">{formErrors.points}</p>
           <input
-            className="py-3 px-5 my-2 rounded-xl text-black"
+            className="py-3 px-5 my-2 rounded-xl text-blac border-4 border-black"
             placeholder="Enter Number"
             type="text"
             ref={phoneno}
