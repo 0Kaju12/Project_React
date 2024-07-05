@@ -6,6 +6,9 @@ import { useState, useEffect, useRef } from "react"; // Combined import statemen
 import usePayment from "../Hooks/usePayment";
 import { useSelector } from "react-redux";
 import useWallet from "../Hooks/useWallet";
+import { BsFileEarmarkRuledFill } from "react-icons/bs";
+import { FaHistory } from "react-icons/fa";
+
 
 // import { useRef } from "react";
 import withdraw_history_btn from "../Images/withdraw_history_btn.png";
@@ -19,31 +22,17 @@ function WithdrawFunds() {
     position: "relative",
   };
 
-  const topStyle = {
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-    height: "100vh ", // Set the height of the div
-    width: "100%",
-    padding: "",
-  };
 
   const box1 = {
-    border: "3px solid #ccc",
     padding: "10px",
     width: "300px",
     margin: "auto",
-    borderRadius: "10px",
-    background: "linear-gradient(to right, #141384, #000000)",
-    color: "#fff",
     marginBottom: "",
   };
 
   const enterAmount = {
     padding: "8px",
-    borderRadius: "5px",
-    border: "1px solid #ffffff",
     display: "flex",
-    background: "linear-gradient(to right, #141384, #000000)",
     width: "300px",
   };
 
@@ -191,7 +180,7 @@ function WithdrawFunds() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
+      <div className="bg-blue-700 text-white" style={navbarStyle}>
         <button className="px-4" onClick={() => back()}>
           <BiArrowBack size={24} />
         </button>
@@ -201,7 +190,7 @@ function WithdrawFunds() {
         </div>
       </div>
 
-      <div className=" p-5" style={topStyle}>
+      <div className=" p-5" >
         <div
           style={{
             background: "white",
@@ -211,7 +200,7 @@ function WithdrawFunds() {
             marginBottom: "20px",
           }}
         >
-          <p className="text-red-500 mt-2 py-2 pl-2">
+          <p className="text-red-500 mt-2 py-2 pl-2 border-4 rounded-xl  border-black  ">
             Withdraw Timings :- 07:00AM -10:00AM
           </p>
           <p className="text-red-500 ">{errorText}</p>
@@ -225,21 +214,25 @@ function WithdrawFunds() {
             marginBottom: "2px",
           }}
         >
-          <button onClick={() => navigate("/withdrawrule")}>
-            <img src={withdraw_rules_btn} />
+<button
+            onClick={() => navigate("/withdrawrule")}
+            className="flex font-bold  justify-evenly items-center  p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
+          >
+            <p className="mr-5 ml-2">Withdraw Rule</p>
+            <BsFileEarmarkRuledFill className="h-6 w-12" />
           </button>
         </div>
-        <div className="" style={box1}>
+        <div className="text-black border-4 rounded-xl border-black  font-bold " style={box1}>
           <p>Current Balance</p>
           <p>RS {walletAmt}</p>
         </div>
 
-        <div className="flex flex-col" style={box4}>
+        <div className="flex flex-col " style={box4}>
           <input
             type="text"
             placeholder="Enter Points"
             ref={amount}
-            className="placeholder-white text-white mb-2"
+            className="placeholder-black text-black font-bold  border-black border-4 rounded-xl mb-2"
             style={enterAmount}
           />
 
@@ -247,7 +240,7 @@ function WithdrawFunds() {
         </div>
         <div style={box5}>
           <select
-            className="text-white"
+            className="text-black border-4 rounded-xl border-black  font-bold"
             value={selectedUPI}
             onChange={handleUPIChange}
             style={enterAmount}
@@ -267,8 +260,7 @@ function WithdrawFunds() {
         </div>
         <div style={box4} className="flex flex-col ">
           <button
-            className="text-white rounded"
-            style={btnStyle}
+            className="text-white rounded bg-blue-700 hover:bg-blue-500 py-2 px-4 "
             onClick={handleSubmit}
             disabled={isSubmitting}
           >
@@ -281,14 +273,17 @@ function WithdrawFunds() {
             padding: "10px",
             width: "250px",
             margin: "auto",
-
-            marginBottom: "20px",
+            marginTop: "-14px",
+            marginBottom: "2px",
           }}
         >
-          <button onClick={() => navigate("/withdrawhistory")}>
-            <img src={withdraw_history_btn} />
-          </button>
-        </div>
+<button
+            onClick={() => navigate("/withdrawhistory")}
+            className="flex font-bold  justify-evenly items-center  p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
+          >
+            <p className="mr-5 ml-2">Withdraw History</p>
+            <FaHistory className="h-6 w-12" />
+          </button>          </div>
       </div>
     </>
   );

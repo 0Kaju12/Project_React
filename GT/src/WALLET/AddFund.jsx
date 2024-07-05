@@ -11,6 +11,8 @@ import useWallet from "../Hooks/useWallet";
 import deposit_history_btn from "../Images/deposit_history_btn.png";
 import deposit_rules_btn from "../Images/deposit_rules_btn.png";
 import QR_PAY from "../QR_PAY";
+import { BsFileEarmarkRuledFill } from "react-icons/bs";
+import { FaHistory } from "react-icons/fa";
 
 function AddFunds() {
   const [currentBalance, setCurrentBalance] = useState(0);
@@ -24,21 +26,21 @@ function AddFunds() {
     position: "relative",
   };
 
-  const topStyle = {
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-    height: "auto ",
-    width: "100%",
-    paddingBottom: "150px",
-  };
+  // const topStyle = {
+  //   backgroundImage: `url(${topBackground})`,
+  //   backgroundSize: "cover",
+  //   height: "auto ",
+  //   width: "100%",
+  //   paddingBottom: "150px",
+  // };
 
   const box1 = {
-    border: "3px solid #ccc",
+    // border: "3px solid #ccc",
     padding: "10px",
     width: "300px",
     margin: "auto",
-    borderRadius: "10px",
-    background: "linear-gradient(to right, #141384, #000000)",
+    // borderRadius: "10px",
+    // background: "linear-gradient(to right, #141384, #000000)",
     color: "#fff",
     marginTop: "-24px",
   };
@@ -83,7 +85,7 @@ function AddFunds() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white " style={navbarStyle}>
+      <div className="bg-blue-700 text-white " style={navbarStyle}>
         <button className="px-4" onClick={back}>
           <BiArrowBack size={24} />
         </button>
@@ -93,7 +95,7 @@ function AddFunds() {
         </div>
       </div>
 
-      <div className="" style={topStyle}>
+      <div className="text-black " >
         <div
           style={{
             padding: "10px",
@@ -103,18 +105,18 @@ function AddFunds() {
             marginBottom: "12px",
           }}
         >
-          <button onClick={() => navigate("/depositrule")}>
-            <img src={deposit_rules_btn} />
+          <button
+            onClick={() => navigate("/depositrule")}
+            className="flex font-bold  justify-evenly items-center p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
+          >
+            <p className="mr-5 ml-2">Deposit Rule</p>
+            <BsFileEarmarkRuledFill className="h-6 w-12" />
           </button>
         </div>
-        <div className="mt-1" style={box1}>
-          <p>Current Balance</p>
-          <p>RS {res.wallet_amt}</p>
+        <div style={box1} className=" mt-1 text-black font-bold border-4 rounded-xl border-black " >
+          <p className="text-black">Current Balance</p>
+          <p className="text-black">RS {res.wallet_amt}</p>
         </div>
-        <div className="flex justify-center items-center">
-          {/* <p className="text-white mb-2">Or</p> */}
-        </div>
-        <div style={box4}>{/* </button> */}</div>
         <QR_PAY />
         <div
           style={{
@@ -125,8 +127,12 @@ function AddFunds() {
             marginBottom: "px",
           }}
         >
-          <button onClick={() => navigate("/addfundhistory")}>
-            <img src={deposit_history_btn} />
+<button
+            onClick={() => navigate("/addfundhistory")}
+            className="flex font-bold  justify-evenly items-center  p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
+          >
+            <p className="mr-5 ml-2">Deposit History</p>
+            <FaHistory className="h-6 w-12" />
           </button>
         </div>
       </div>

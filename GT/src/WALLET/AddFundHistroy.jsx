@@ -15,14 +15,7 @@ function AddFundHistory() {
   const resinfo = useAddFundData(unique, mobile);
   console.log('thispages')
   console.log(resinfo);
-  const topStyle = {
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-    height: "auto ", // Set the height of the div
-    width: "100%", // Set the width of the div
-    paddingTop:'50px', 
-    paddingBottom:'900px'
-  };
+  
   const navbarStyle = {
     height: "60px",
     display: "flex",
@@ -46,7 +39,7 @@ function AddFundHistory() {
 
   return (
     <>
-    <div className="bg-custom-purple text-white " style={navbarStyle}>
+    <div className="bg-blue-700 text-white " style={navbarStyle}>
         <button className="px-4" onClick={() => back()}>
           <BiArrowBack size={24} />
         </button>
@@ -55,12 +48,12 @@ function AddFundHistory() {
           <h1 className="text-white px-3">Deposit History</h1>
         </div>
       </div>
-    <div style={topStyle}>
+    <div className="text-black mt-2">
       <div className="">
         {gameRates.map((game, index) => (
           <div key={index} className="mb-8">
             <a href={game?.payment_receipt} target="_blank" rel="noopener noreferrer">
-              <div className="border-white text-black mr-2 ml-4 p-2 py-4 flex flex-col bg-white rounded-3xl border">
+              <div className="border-black text-black mr-2 ml-4 p-2 py-4 flex flex-col bg-white rounded-3xl border">
                 <div>
                   <p>
                     <span className="font-bold">Id:</span> {game?.tx_request_number}

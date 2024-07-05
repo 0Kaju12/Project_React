@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import useWallet from "../Hooks/useWallet.jsx";
 import { useSelector } from "react-redux";
 import wallet_history_btn from "../Images/wallet_history_btn.png";
+import { FaHistory } from "react-icons/fa";
 
 function Wallet() {
   const navbarStyle = {
@@ -19,22 +20,22 @@ function Wallet() {
     alignItems: "center",
     position: "relative",
   };
-  const topStyle = {
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-    height: "100vh ", // Set the height of the div
-    width: "100%", // Set the width of the div
-    padding: "",
-  };
+  // const topStyle = {
+  //   backgroundImage: `url(${topBackground})`,
+  //   backgroundSize: "cover",
+  //   height: "100vh ", // Set the height of the div
+  //   width: "100%", // Set the width of the div
+  //   padding: "",
+  // };
 
   const box1 = {
-    border: "3px solid #ccc",
+    // border: "3px solid #ccc",
     padding: "10px",
     // Adjust the width as needed
     margin: "auto",
-    borderRadius: "10px", // Add border-radius for rounded corners
-    background: "linear-gradient(to right, #141384, #000000)", // Blue gradient background
-    color: "#fff", // Text color
+    // borderRadius: "10px", // Add border-radius for rounded corners
+    // background: "linear-gradient(to right, #141384, #000000)", // Blue gradient background
+    // color: "#fff", // Text color
     marginBottom: "20px",
     height: "100px",
   };
@@ -47,7 +48,7 @@ function Wallet() {
     alignItems: "center",
     flexDirection: "column",
     background: "white",
-    borderRadius: "20px",
+    // borderRadius: "20px",
     height: "85px",
   };
 
@@ -134,7 +135,7 @@ function Wallet() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white " style={navbarStyle}>
+      <div className="bg-blue-700 text-white " style={navbarStyle}>
         <button className="px-4" onClick={() => back()}>
           <BiArrowBack size={24} />
         </button>
@@ -143,22 +144,29 @@ function Wallet() {
           <h1 className="text-white px-3">Wallet</h1>
         </div>
       </div>
-      <div className=" p-5" style={topStyle}>
-        <div className="p-5 sm:w-auto md:max-w-lg lg:max-w-lg" style={box1}>
+      <div className=" p-5 text-black">
+        <div
+          className="p-5 sm:w-auto md:max-w-lg lg:max-w-lg text-black font-bold border-black border-4 rounded-xl"
+          style={box1}
+        >
           <p>Current Balance</p>
           <p>RS {res.wallet_amt}</p>
         </div>
 
-        <div style={Container}>
+        <div style={Container} className="">
           <div>
-            <button onClick={() => addf()} className="bg-red-700" style={box3}>
+            <button
+              onClick={() => addf()}
+              className="bg-blue-700 rounded-xl hover:bg-blue-500"
+              style={box3}
+            >
               + Add Fund
             </button>
           </div>
           <div>
             <button
               onClick={() => withd()}
-              className="bg-orange-500"
+              className="bg-blue-700 rounded-xl hover:bg-blue-500"
               style={box3}
             >
               - Withdraw Fund
@@ -167,7 +175,7 @@ function Wallet() {
 
           <div>
             <button
-              className="bg-teal-500"
+              className="bg-blue-700 rounded-xl hover:bg-blue-500"
               style={box3}
               onClick={() => trans()}
             >
@@ -175,26 +183,31 @@ function Wallet() {
             </button>
           </div>
         </div>
-        <div className="border border-white rounded-md w-80 m-auto mt-2 mb-2">
+        <div className="border-4 border-black rounded-xl w-80 m-auto mt-2 mb-2">
           {" "}
           <div className="" style={box4}>
             {/* <img src={frame} alt="" /> */}
-            <p className="font-bold text-white text-center px-1 ">
+            <p className="font-bold text-black text-center px-1 ">
               PLEASE SELECT WITHDRAW METHOD HERE
             </p>
           </div>
-          <div
-            style={Container1}
-            className=" w-80 m-auto px-0 pb-2"
-          >
+          <div style={Container1} className=" w-80 m-auto px-0 pb-2">
             <div className="mr-6">
-              <button style={box2} onClick={() => handleClick("1")}>
+              <button
+                className="border-2 border-black rounded-xl"
+                style={box2}
+                onClick={() => handleClick("1")}
+              >
                 <img src={phone_pe} alt="PhonePe" style={radioImageStyle} />
                 PhonePe
               </button>
             </div>
             <div className="mr-6">
-              <button style={box2} onClick={() => handleClick("2")}>
+              <button
+                className="border-2 border-black rounded-xl"
+                style={box2}
+                onClick={() => handleClick("2")}
+              >
                 <img
                   className="mb-1 mt-2"
                   src={paytm}
@@ -206,7 +219,11 @@ function Wallet() {
             </div>
 
             <div>
-              <button style={box2} onClick={() => handleClick("3")}>
+              <button
+                className="border-2 border-black rounded-xl"
+                style={box2}
+                onClick={() => handleClick("3")}
+              >
                 <img src={gpay} alt="PhonePe" style={radioImageStyle} />
                 GPay
               </button>
@@ -226,8 +243,12 @@ function Wallet() {
             marginBottom: "20px",
           }}
         >
-          <button onClick={() => navigate("/transaction")}>
-            <img src={wallet_history_btn} />
+          <button
+            onClick={() => navigate("/transaction")}
+            className="flex font-bold  justify-evenly items-center p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
+          >
+            <p className="mr-5 ml-2">Wallet History</p>
+            <FaHistory className="h-6 w-12" />
           </button>
         </div>
 

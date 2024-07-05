@@ -1,35 +1,19 @@
 import logo from "./Images/logo.png";
-import topBackground from "./Images/bg.png";
+// import topBackground from "./Images/bg.png";
 import { FiEye, FiEyeOff, FiAlertCircle } from "react-icons/fi";
 import { useState, useRef } from "react";
-import whatsapp from "./Images/whatsapp.png";
-import call from "./Images/call_helpline.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register } from "./Util/registerSlice";
 
 function Register() {
-  const navbarStyle = {
-    height: "60px",
-    display: "flex",
-    alignItems: "center",
-  };
-  const backStyle = {
-    paddingBottom: "500px",
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-  };
+  
   const cardStyle = {
     width: "400px",
     display: "flex",
     flexDirection: "column",
     padding: "20px",
     position: "relative",
-  };
-  const cellImageStyle = {
-    maxWidth: "150px",
-    maxHeight: "150px",
-    objectFit: "cover",
   };
 
   const username = useRef();
@@ -86,21 +70,12 @@ function Register() {
       setIsSubmitting(false);
     }
   };
-  const CallButton = ({ phoneNumber, imgSrc }) => (
-    <a href={`tel:${phoneNumber}`} >
-      <img
-        src={imgSrc}
-        alt="Call Button"
-        style={cellImageStyle}
-      />
-    </a>
-  );
+
   const validate = (username, phoneno, password) => {
     const errors = {};
     const regex = /^[6-9]{1}[0-9]{9}$/;
-
-    if (!username) {
-      errors.username = "Username is required!";
+    if(!username){
+      errors.username="Username is required";
     }
     if (!phoneno) {
       errors.phoneno = "Phone No is required!";
@@ -148,9 +123,10 @@ function Register() {
 
   return (
     <>
-      <div style={backStyle} className="text-white">
-        <div className="flex justify-center items-center">
+      <div className="text-black">
+        <div className="flex flex-col justify-center items-center">
           <img src={logo} alt="Center Image" className="w-40 h-40" />
+          <h1 className="font-bold text-2xl">Signup</h1>
         </div>
         <div className="flex justify-center item-center p-5">
           <form style={cardStyle} onSubmit={handleSubmit}>
@@ -158,7 +134,7 @@ function Register() {
             <input
               type="text"
               placeholder="Username"
-              className="bg-gray-500 pt-3 pr-7 pl-5 pb-3 rounded"
+              className="border border-black pt-3 pr-7 pl-5 pb-3 rounded"
               ref={username}
               name="username"
             />
@@ -180,7 +156,7 @@ function Register() {
             <input
               type="text"
               placeholder="Phone Number"
-              className="bg-gray-500 pt-3 pr-7 pl-5 pb-3 rounded"
+              className="border border-black pt-3 pr-7 pl-5 pb-3 rounded"
               ref={phoneno}
               name="phoneno"
             />
@@ -203,7 +179,7 @@ function Register() {
               type={showCurrentPassword ? "text" : "password"}
               placeholder="Password"
               ref={password}
-              className="bg-gray-500 pt-3 pr-15 pl-5 pb-3 rounded"
+              className="border border-black pt-3 pr-15 pl-5 pb-3 rounded"
               name="password"
             />
             <p className="text-red-500">{formErrors.password}</p>
@@ -220,12 +196,9 @@ function Register() {
               </button>
             </div>
 
-            <div className="relative mb-5 mt-9">
-              <p className="absolute right-0">Forgot Password ?</p>
-            </div>
             <div className="flex justify-center mb-5">
               <button
-                className="p-3 border border-black-500 rounded mt-4 bg-blue-800 w-3/4"
+                className="p-3 border border-black-500 rounded mt-4 text-white bg-blue-800 hover:bg-blue-700 w-full"
                 type="submit"
                 disabled={isSubmitting}
               >
@@ -235,28 +208,10 @@ function Register() {
             <div className="flex justify-center">
               <p>
                 Already have an account?{" "}
-                <Link to="/" className="text-yellow-500">
+                <Link to="/login" className="text-blue-500">
                   Login
-                </Link>
+                </Link> 
               </p>
-            </div>
-            <div className="flex justify-between mt-2">
-              <div>
-              <CallButton phoneNumber="+1234567890" className='' imgSrc={call} style={cellImageStyle}  />
-              </div>
-
-              <div className="mr-4">
-                <button>
-                  <img src={whatsapp} alt="Add Fund" style={cellImageStyle} />
-                </button>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <p className="mt-2">By logging in you agree to these</p>
-              <a href="" className="mb-2 text-green-500">
-                Terms and Conditions and Privacy Policy
-              </a>
-              <hr className="w-1/2" />
             </div>
           </form>
         </div>
