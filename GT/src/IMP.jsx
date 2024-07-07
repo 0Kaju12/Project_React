@@ -26,7 +26,7 @@ function Imp() {
     <>
       <div className="relative">
 
-          {memoizedNavbar}
+          {/* {memoizedNavbar} */}
           {memoizedTop}
         
 
@@ -35,7 +35,7 @@ function Imp() {
           
         </div>
 
-      <Footer/>
+      {/* <Footer/> */}
 
       </div>
     </>
