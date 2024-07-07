@@ -165,14 +165,6 @@ function Profile() {
   return (
     <>
       <div>
-        <div className="bg-custom-purple text-white" style={navbarStyle}>
-          <button className="px-4" onClick={() => back()}>
-            <BiArrowBack size={24} />
-          </button>
-          <div>
-            <h1 className="text-white px-3 text-lg">Profile</h1>
-          </div>
-        </div>
         <div style={backStyle}>
           <div style={userContainer}>
             <img
