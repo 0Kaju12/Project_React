@@ -3,7 +3,7 @@ import HamburgerIcon from "./Images/Hamburger.png";
 import "./Navbar.css";
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import "./Sidebar.css";
-import sidebarBackground from "./Images/bg.png";
+import sidebarBackground from "./Images/bg.jpg";
 import logoutImg from "./Images/logout.png";
 import logo from "./Images/logo.png";
 import call24 from "./Images/call_24.png";
@@ -30,6 +30,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "./Util/loginSlice";
 import useGameFront from "./Hooks/useGameFront";
 import { removePass } from "./Util/passslice";
+import { FaWallet } from "react-icons/fa";
 
 function Navbar() {
   const Hamburg = {
@@ -81,27 +82,23 @@ function Navbar() {
   
 
   return (
-    <nav className="bg-custom-purple text-white relative p-2">
-      <div className="container flex mx-auto flex-1 justify-between items-center">
+    <nav className=" text-white relative p-2" style={{background :'#000000'}}>
+      <div className="container flex mx-auto flex-1 justify-between items-center ">
         <div className="flex items-center ">
           <div onClick={handleHamburgerClick} style={Hamburg} className="mr-4">
             <img src={HamburgerIcon} alt="Hamburger Icon" className="w-8 h-8" />
           </div>
 
           <div className="text-xl fading-text">
-            <div className="w-40 flex items-center">
+            <div className="w-40 flex items-center ">
               <marquee scrollamount="4"> SATTA MATKA OFFICIALS</marquee>
             </div>
           </div>
 
           <ul className="font-bold text-lg flex flex-shrink: 0 absolute right-10 top-15">
             <li className="flex items-center">
-              <NavLink to="/imp7" className="text-white flex items-center">
-                <img
-                  src={WalletIcon}
-                  alt="Wallet Icon"
-                  className="w-8 h-8 mr-2"
-                />
+              <NavLink to="/imp7" className=" flex items-center">
+              <FaWallet className="w-8 h-6 mr-2" />
                 <span>{resinfo.wallet_amt}</span>
               </NavLink>
             </li>
@@ -115,7 +112,7 @@ function Navbar() {
           className={isSidebarActive ? "sidebar--active" : "sidebar"}
           style={sidebarStyle}
         >
-          <div className="px-6 pt-4">
+          <div className="px-6 pt-4 pb-3" style={{background:'black'}}>
             {/* User Info */}
             <div className="text-center">
               <div className="flex">
@@ -132,45 +129,10 @@ function Navbar() {
               <div className="text-sm opacity-75 -mt-4 -ml-6">{mobile}</div>
             </div>
             {/* Logout Button */}
-            <div className="flex justify-center mt-8">
-              <button className="flex items-center justify-center text-white font-bold rounded-full w-10 h-10 mx-2">
-                <img
-                  src={call24} // Replace with the path to your Button 1 image
-                  alt="Button 1"
-                  className="w-full h-full object-cover"
-                />
-              </button>
-              <div className="flex items-center mx-2">
-                <img src={logo} alt="Center Image" className="w-22 h-24" />
-              </div>
-              <a
-                href={telegram} target="_blank"
-                className="flex items-center justify-center rounded-full w-10 h-10 mx-2 hover:bg-green-700"
-              >
-                {" "}
-                {/* Replace with your desired link */}
-                <button className="flex items-center justify-center text-white font-bold rounded-full w-full h-full">
-                  <img
-                    src={telegram_icon} // Replace with the path to your Button 1 image
-                    alt="Button 1"
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              </a>
-            </div>
+
           </div>
           <ul className="space-y-1.5">
-            <li>
-            <div
-              className="mb-4 flex items-center justify-center   "
-              onClick={handleClick}
-            >
-              <button className=" text-xl font-bold  py-1 px-4 bg-amber-400 text-black  rounded-xl">
-                {"Download APP"}
-              </button>
-              {/* <div className="text-xl font-bold ml-5 bg-yellow-400 p-2 rounded-xl">{"Download APP"}</div> */}
-            </div>
-            </li>
+
 
             <li>
               <NavLink
@@ -186,7 +148,7 @@ function Navbar() {
                 Home
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 to="/profile"
                 className="block py-2 px-4 hover:bg-gray-700 rounded-lg"
@@ -198,7 +160,7 @@ function Navbar() {
                 />
                 Profile
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 to="/imp9"
@@ -283,7 +245,7 @@ function Navbar() {
               </NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <NavLink
                 to="/gameRates"
                 className="block py-2 px-4 hover:bg-gray-700 rounded-lg"
@@ -295,8 +257,8 @@ function Navbar() {
                 />
                 Rate our App
               </NavLink>
-            </li>
-
+            </li> */}
+{/* 
             <li>
               <NavLink
                 to="/gameRates"
@@ -309,8 +271,8 @@ function Navbar() {
                 />
                 Visit our Website
               </NavLink>
-            </li>
-
+            </li> */}
+{/* 
             <li>
               <NavLink
                 to="/gameRates"
@@ -323,9 +285,9 @@ function Navbar() {
                 />
                 Mail us
               </NavLink>
-            </li>
+            </li> */}
 
-            <li>
+            {/* <li>
               <a
                 href="#"
                 className="block py-2 px-4 hover:bg-gray-700 rounded-lg"
@@ -337,7 +299,7 @@ function Navbar() {
                 />
                 Share our App
               </a>
-            </li>
+            </li> */}
 
             <li>
               <NavLink
@@ -379,8 +341,19 @@ function Navbar() {
                 About Us
               </NavLink>
             </li>
+            <li>
+            <div
+              className="mb-4 flex items-center justify-center   "
+              onClick={handleClick}
+            >
+              <button className=" text-xl font-bold  py-1 px-4 bg-amber-400 text-black  rounded-xl">
+                {"Download APP"}
+              </button>
+              {/* <div className="text-xl font-bold ml-5 bg-yellow-400 p-2 rounded-xl">{"Download APP"}</div> */}
+            </div>
+            </li>
 
-            <li onClick={handlelogout}>
+            {/* <li onClick={handlelogout}>
               <NavLink className="block py-2 px-4 hover:bg-gray-700 rounded-lg">
                 <img
                   src={logoutImg}
@@ -389,8 +362,15 @@ function Navbar() {
                 />
                 Log out
               </NavLink>
-            </li>
+            </li> */}
+            <hr class="my-4" />
           </ul>
+          <div className="flex flex-col p-4">
+          <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={()=>{navigate('/profile')}}>My Profile</button>
+          <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" onClick={handlelogout}>Logout</button>
+
+          </div>
+
         </div>
       </div>
     </nav>

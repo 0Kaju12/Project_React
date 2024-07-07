@@ -7,6 +7,9 @@ import useGameFront from "./Hooks/useGameFront";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import Timer from "./Timer";
+import games_bg from "./Images/games_bg.jpg";
+import { FcStart } from "react-icons/fc";
+
 
 function GameFRONT() {
   const [status, setStatus] = useState(false);
@@ -31,7 +34,14 @@ function GameFRONT() {
     height: "auto",
     marginTop: "-4px",
   };
-
+  const bgStyle = {
+    backgroundImage: `url(${games_bg})`,
+    backgroundSize: "cover",
+    // backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    height: "auto",  // Adjust based on your layout needs
+    width: "auto",
+  };
   const resinfo = useGameFront(unique);
 
   useEffect(() => {
@@ -44,21 +54,21 @@ function GameFRONT() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="pt-5 pr-4">
       {gameRates.map((game) => (
         <div key={game.game_id} className="mb-5">
           <div
-            className=" flex justify-between items-center pt-1 pl-2 pr-2 pb-7 ml-2 mr-6 h-15 rounded-2xl border border-white text-white"
+            className=" flex justify-center items-center pt-1 pl-2 pr-4 pb-7 ml-10 mr-6 h-15 rounded-2xl border border-white text-white"
             style={{ background: "linear-gradient(to right, #141384, #0000)" }}
           >
-            <p className="top-0 right-0">{game.game_name}</p>
+            <p className="pr-3">{game.game_name}</p>
             {game.open_time && game.close_time && game.msg_status === 1 ? (
               <Timer closeTime={game.close_time_srt} />
             ) : (
               "00:00:00"
             )}
           </div>
-          <div className="bg-white mr-2 ml-7 z-2 -mt-7 p-1 pb-2 flex flex-col rounded-2xl border">
+          <div className="bg-white mr-2 ml-7 z-2 -mt-7 p-1 pb-2 flex flex-col rounded-2xl border" style={bgStyle}>
             <div
               className={`text-${
                 game.msg_status === 2 ? "red" : "green"
@@ -72,7 +82,7 @@ function GameFRONT() {
                   <img src={chart} style={imgstyle} alt="" />
                 </a>
               </div>
-              <p className="text-blue-900 font-bold">
+              <p className="text-white font-bold">
   {game.open_result
     ? game.close_result
       ? `${game.open_result}${game.close_result}`
@@ -102,13 +112,13 @@ function GameFRONT() {
             </div>
             <div style={laststyle}>
               <p
-                className="text-green-700 font-bold p-4"
+                className="text-green-500 font-bold p-4"
                 style={{ fontSize: "12px" }}
               >
                 Open - {game.open_time}
               </p>
               <p
-                className="text-red-700 font-bold"
+                className="text-red-500 font-bold"
                 style={{ fontSize: "12px" }}
               >
                 Close - {game.close_time}

@@ -2,9 +2,10 @@ import React, { useMemo } from "react";
 import Navbar from "./Navbar";
 import Top from "./Top";
 import GameFRONT from "./GameFRONT";
-import topBackground from './Images/bg.png';
+import topBackground from './Images/main_bg.png';
 import { Provider } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
+import Footer from './Footer'; 
 
 function Imp() {
   const topStyle = {
@@ -24,14 +25,18 @@ function Imp() {
   return (
     <>
       <div className="relative">
-        <div className="sticky top-0">
+
           {memoizedNavbar}
           {memoizedTop}
-        </div>
+        
 
         <div className="" style={topStyle}>
           <GameFRONT />
+          
         </div>
+
+      <Footer/>
+
       </div>
     </>
   );
