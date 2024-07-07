@@ -45,15 +45,6 @@ function Game() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">{gameName}</h1>
-        </div>
-      </div>
-
       <div className="pl-2 flex justify-center -mt-8" style={backStyle}>
         <div className="grid grid-cols-2 gap-2 " style={cardStyle}>
           <div className="col-span-1 flex justify-center items-center ">

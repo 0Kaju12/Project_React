@@ -221,27 +221,7 @@ function Single() {
   const totalPoints=submittedData.reduce((acc, curr) => acc + parseInt(curr.points), 0)
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
-        <button className="px-4" onClick={back}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">Single Digit</h1>
-        </div>
 
-        <ul className="font-bold text-lg flex flex-shrink: 0 absolute right-10 top-15">
-          <li className="flex items-center">
-            <a href="#" className="text-white flex items-center">
-              <img
-                src={WalletIcon}
-                alt="Wallet Icon"
-                className="w-8 h-8 mr-2"
-              />
-              <span>{walletAmt}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
       <div style={backStyle} className="text-white " >
         <div className="flex justify-center items-center pt-5  ">
           <div className="" style={cardStyle}>
@@ -280,7 +260,7 @@ function Single() {
                   </label>
                 </div>
               )}
-              <div className="border shadow-md flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
+              <div className="border shadow-md flex justify-center items-center w-1/2 border-black-500 p-4 bg-white rounded-xl">
                 <input
                   type="radio"
                   id="option1"

@@ -52,7 +52,7 @@ function TripplePana() {
     alignItems: "center",
   };
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    background:'white',
     backgroundSize: "cover", // This will make the background image cover the container without
     backgroundPosition: "center",
     position: "relative",
@@ -241,27 +241,6 @@ function TripplePana() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
-        <button className="px-4" onClick={back}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">Triple Pana</h1>
-        </div>
-
-        <ul className="font-bold text-lg flex flex-shrink: 0 absolute right-10 top-15">
-          <li className="flex items-center">
-            <a href="#" className="text-white flex items-center">
-              <img
-                src={WalletIcon}
-                alt="Wallet Icon"
-                className="w-8 h-8 mr-2"
-              />
-              <span>{walletAmt}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
       <div style={backStyle} className="text-white">
         <div className="flex justify-center items-center pt-5 ">
           <div className="" style={cardStyle}>
@@ -269,12 +248,12 @@ function TripplePana() {
               type="date"
               value={todayDate}
               readOnly
-              className="w-full flex justify-center p-4 text-black border border-black-500 rounded-xl text-center"
+              className="shadow-md border w-full flex justify-center p-4 text-black border border-black-500 rounded-xl text-center"
             />
             <p className="m-2">Choose Session</p>
             <div className="flex space-x-4 justify-center items-center w-full ">
               {isOpen ? (
-                <div className="flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
+                <div className="shadow-md border flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
                   <input
                     type="radio"
                     id="option2"
@@ -286,7 +265,7 @@ function TripplePana() {
                   </label>
                 </div>
               ) : (
-                <div className="flex justify-center items-center w-1/2 border border-black-500 p-4 bg-gray-300 rounded-xl cursor-not-allowed opacity-50">
+                <div className="shadow-md border flex justify-center items-center w-1/2 border border-black-500 p-4 bg-gray-300 rounded-xl cursor-not-allowed opacity-50">
                   <input
                     type="radio"
                     id="option2"
@@ -299,7 +278,7 @@ function TripplePana() {
                   </label>
                 </div>
               )}
-              <div className="flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
+              <div className="shadow-md border flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
                 <input
                   type="radio"
                   id="option1"
@@ -318,7 +297,7 @@ function TripplePana() {
               inputMode="numeric"
               ref={digit}
               placeholder="Enter Pana"
-              className="w-full p-4 border border-black-500 rounded-xl text-black"
+              className="shadow-md border w-full p-4 border border-black-500 rounded-xl text-black"
               list="digitList" // Step 2: Add list attribute
               autoComplete="off"
             />{" "}
@@ -333,11 +312,11 @@ function TripplePana() {
               inputMode="numeric"
               ref={point}
               placeholder="Enter Points"
-              className="w-full  p-4 border border-black-500 rounded-xl text-black"
+              className="shadow-md border w-full  p-4 border border-black-500 rounded-xl text-black"
             />
-            <div className="flex  mb-4 text-black">
+            <div className="flex  mb-4 text-white">
               <button
-                className={`p-4 border border-black-500 rounded-xl bg-yellow-500 mt-4 ${
+                className={`p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 cursor-pointer mt-4 ${
                   isProceed ? "w-11/12" : "w-full"
                 }`}
                 onClick={handleSubmit}
@@ -347,7 +326,7 @@ function TripplePana() {
               {isProceed && (
                 <>
                   <button
-                    className="p-4 border border-black-500 rounded-xl bg-yellow-500 mt-4 w-full ml-3"
+                    className="p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 cursor-pointer mt-4 w-full ml-3"
                     onClick={() => setShowModal(true)}
                   >
                     Submit
@@ -394,7 +373,7 @@ function TripplePana() {
               return (
                 <div key={index} className="w-full flex mb-3 ">
                   <div
-                    className="w-10/12  p-1  border border-black-500 bg-white text-black flex justify-between"
+                    className="shadow-md border w-10/12  p-1  border border-black-500 bg-white text-black flex justify-between"
                     style={{ borderRadius: "25px" }}
                   >
                     <div className="flex flex-col items-center ml-4">
@@ -407,7 +386,7 @@ function TripplePana() {
                     </div>
                   </div>
                   <button
-                    className="bg-white p-4 flex items-center justify-center ml-1"
+                    className="shadow-md border bg-white p-4 flex items-center justify-center ml-1"
                     style={{ borderRadius: "20px" }}
                     onClick={handleClickRemoveDiv(index)}
                   >
