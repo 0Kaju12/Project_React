@@ -18,11 +18,14 @@ import gali from "./Images/gali_disawar.png";
 import useGameFront from "./Hooks/useGameFront";
 import top_bg from "./Images/top_bg.jpg";
 import { RiFundsFill } from "react-icons/ri";
-
+import { FaRegCreditCard } from "react-icons/fa";
+import { MdWallet } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoCall } from "react-icons/io5";
 
 function Top() {
   const topStyle = {
-    backgroundImage: `url(${top_bg})`,
+    // backgroundImage: `url(${top_bg})`,
     backgroundSize: "cover",
     // backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -109,8 +112,15 @@ function Top() {
       className=""
       style={topStyle}
     >
-    <div className="flex items-center justify-center p-4">
-      <div className="grid grid-cols-2 gap-4">
+    <div className="flex items-center justify-center pt-2 mb-2">
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md"><button onClick={() => navigate("/imp9")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md"> <button onClick={() => navigate("/imp8")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md">          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Whatsapp</p> <FaWhatsapp className="text-4xl" /></button> </a> </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
+      {/* <div className="grid grid-cols-2 gap-4">
         <div>
           
           <button
@@ -156,7 +166,7 @@ function Top() {
             Call Helpline
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
 
       <div className="flex justify-center items-start pb-2 col-span-full">
@@ -172,3 +182,49 @@ function Top() {
 }
 
 export default React.memo(Top);
+
+// <div>
+          
+//           <button
+          
+//             type="button"
+//             className="flex items-center justify-center text-gray-900 bg-white border  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+//             onClick={() => navigate("/imp9")}
+//           >
+//            <RiFundsFill className="mr-2 w-8 h-6" /> Add Funds
+//           </button>
+//         </div>
+//         <div>
+//           <button
+//             type="button"
+//             className="text-gray-900 bg-white border  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+//             onClick={() => navigate("/imp8")}
+//           >
+           
+//      Withdraw
+//           </button>
+//         </div>
+//         <div>
+//           <a
+//             href={whatsappUrl}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="flex justify-center items-center w-full"
+//           >
+//             <button
+//               type="button"
+//               className="text-gray-900 bg-white border   focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+//             >
+//               WhatsApp
+//             </button>
+//           </a>
+//         </div>
+//         <div>
+//           <button
+//             type="button"
+//             className="text-gray-900 bg-white border  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+//             onClick={() => navigate("/imp8")}
+//           >
+//             Call Helpline
+//           </button>
+//         </div>
