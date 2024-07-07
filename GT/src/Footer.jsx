@@ -37,7 +37,7 @@ const Footer = () => {
         <div>
             <button>
             <BiDice6  className="w-6 h-5 ml-2"/>
-             My Bids
+             Bids
             </button>
         </div>
 

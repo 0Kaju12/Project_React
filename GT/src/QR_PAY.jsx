@@ -17,7 +17,7 @@ function QR_PAY() {
     flexDirection: "column",
     alignItems: "center",
     padding: "0px",
-    marginTop: "-28px"
+    marginTop: "0px"
   };
   const back = () => {
     navigate("/addfund");
@@ -59,16 +59,16 @@ function QR_PAY() {
   return (
     <>
 
-      <div className=" text-black text-lg" >
+      <div className=" text-black text-lg " >
         <div style={cardStyle}>
           <p className="font-bold mt-8">Pay & Send the Screenshot </p>
           <p className="font-bold">With Registered Mobile Number</p>
           <div className=" flex flex-col justify-center items-center">
             <p className="font-bold mt-1"> Scan & Pay</p>
-            <img className="h-32 w-36 mt-1 border-4 rounded-xl border-black" src={gameRates.qr_image} alt="" />
+            <img className="h-32 w-36 mt-1 border border-black z-2 rounded-xl " src={gameRates.qr_image} alt="" />
           </div>
 
-          <div className=" flex  justify-between items-center border-4 rounded-xl w-80  border-black  p-2 mt-4">
+          <div className=" flex  justify-between items-center border rounded-xl w-80    p-2 mt-4">
             <p>{gameRates.upi_id}</p>
             <CopyToClipboard text={textToCopy} onCopy={() => setCopied(true)}>
               <button>
@@ -83,7 +83,7 @@ function QR_PAY() {
             <p>Screenshot on whatsapp</p>
           </div>
 
-          <div className="  text-red-500 bg-white px-8 py-1 border-4 rounded-xl mt-1  border-black hover:bg-gray-100 hover:border-none"> 
+          <div className="  text-red-500 bg-white px-8 py-1 border rounded-xl mt-1   hover:bg-gray-100 hover:border-none"> 
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer " className="flex justify-center items-center font-bold">
               Send Screeenshot
               <img src={what} alt=""  className="ml-2"/>
