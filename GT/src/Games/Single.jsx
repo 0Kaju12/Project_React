@@ -34,7 +34,8 @@ function Single() {
     alignItems: "center",
   };
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
+    background:'white',
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
@@ -241,37 +242,37 @@ function Single() {
           </li>
         </ul>
       </div>
-      <div style={backStyle} className="text-white" >
-        <div className="flex justify-center items-center pt-5 ">
+      <div style={backStyle} className="text-white " >
+        <div className="flex justify-center items-center pt-5  ">
           <div className="" style={cardStyle}>
             <input
               type="date"
               value={todayDate}
               readOnly
-              className="w-full flex justify-center p-4 text-black border border-black-500 rounded-xl text-center"
+              className="border shadow-md w-full flex justify-center p-4 text-black  border-black-500 rounded-xl text-center"
             />
             <p className="m-2">Choose Session</p>
             <div className="flex space-x-4 justify-center items-center w-full ">
               
               {isOpen ? (
-                <div className="flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
+                <div className=" shadow-md flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
                   <input
                     type="radio"
                     id="option2"
                     name="radioGroup"
-                    className="form-radio text-blue-500 focus:ring-2 focus:ring-blue-500"
+                    className="border shadow-md form-radio text-blue-500 focus:ring-2 focus:ring-blue-500"
                   />
                   <label htmlFor="option2" className="ml-2 text-gray-700">
                     Open
                   </label>
                 </div>
               ) : (
-                <div className="flex justify-center items-center w-1/2 border border-black-500 p-4 bg-gray-300 rounded-xl cursor-not-allowed opacity-50">
+                <div className=" border shadow-md flex justify-center items-center w-1/2 border-black-500 p-4 bg-gray-300 rounded-xl cursor-not-allowed opacity-50">
                   <input
                     type="radio"
                     id="option2"
                     name="radioGroup"
-                    className="form-radio text-blue-500 focus:ring-2 focus:ring-blue-500"
+                    className="border shadow-md form-radio text-blue-500 focus:ring-2 focus:ring-blue-500"
                     disabled
                   />
                   <label htmlFor="option2" className="ml-2 text-gray-700">
@@ -279,7 +280,7 @@ function Single() {
                   </label>
                 </div>
               )}
-              <div className="flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
+              <div className="border shadow-md flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
                 <input
                   type="radio"
                   id="option1"
@@ -299,7 +300,7 @@ function Single() {
               inputMode="numeric"
               ref={digit}
               placeholder="Enter Digit"
-              className="w-full p-4 border border-black-500 rounded-xl text-black"
+              className="border shadow-md w-full p-4 border border-black-500 rounded-xl text-black"
               list="digitList" // Step 2: Add list attribute
               autoComplete="off" 
             />
@@ -314,11 +315,11 @@ function Single() {
               inputMode="numeric"
               ref={point}
               placeholder="Enter Points"
-              className="w-full  p-4 border border-black-500 rounded-xl text-black"
+              className=" shadow-md w-full  p-4 border border-black-500 rounded-xl text-black"
             />
-            <div className="flex  mb-4 text-black">
+            <div className="flex  mb-4 ">
               <button
-                className={`p-4 border border-black-500 rounded-xl bg-yellow-500 mt-4 ${
+                className={`p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 cursor-pointer text-white mt-4 ${
                   isProceed ? "w-11/12" : "w-full"
                 }`}
                 onClick={handleSubmit}
@@ -328,7 +329,7 @@ function Single() {
               {isProceed && (
                   <>
                     <button
-                      className="p-4 border border-black-500 rounded-xl bg-yellow-500 mt-4 w-full ml-3"
+                      className="p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 mt-4 w-full ml-3"
                       onClick={() => setShowModal(true)}
                     >
                       Submit
@@ -374,7 +375,7 @@ function Single() {
               return (
                 <div key={index} className="w-full flex mb-3 ">
                   <div
-                    className="w-10/12  p-1  border border-black-500 bg-white text-black flex justify-between"
+                    className="border shadow-md w-10/12  p-1  border border-black-500 bg-white text-black flex justify-between"
                     style={{ borderRadius: "25px" }}
                   >
                     <div className="flex flex-col items-center ml-4">
@@ -387,7 +388,7 @@ function Single() {
                     </div>
                   </div>
                   <button
-                    className="bg-white p-4 flex items-center justify-center ml-1"
+                    className="border shadow-md bg-white p-4 flex items-center justify-center ml-1"
                     style={{ borderRadius: "20px" }}
                     onClick={handleClickRemoveDiv(index)}
                   >

@@ -27,7 +27,8 @@ function Game() {
   };
 
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
+    background:'white',
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -63,7 +64,7 @@ function Game() {
                   navigate("/single", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Single Digit' } });
                 }
               }}>
-              <img src={url1} alt="Image 1" className="w-32 h-32" />
+              <img src={url1} alt="Image 1" className="w-32 h-32 border shadow-md" />
             </button>
           </div>
           <div className="col-span-1 flex justify-center items-center">
@@ -74,7 +75,7 @@ function Game() {
                   navigate("/jodi", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Jodi Digit' } });
                 }
               }}>
-              <img src={url2} alt="Image 2" className="w-32 h-32" />
+              <img src={url2} alt="Image 2" className="w-32 h-32 border shadow-md" />
             </button>
           </div>
 
@@ -87,10 +88,10 @@ function Game() {
                   navigate("/singlepana", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Single Pana' } });
                 }
               }}>
-              <img src={url3} alt="Image 3" className="w-32 h-32" />
+              <img src={url3} alt="Image 3" className="w-32 h-32 border shadow-md" />
             </button>
           </div>
-          <div className="col-span-1 flex justify-center items-center -mt-12">
+          <div className="col-span-1 flex justify-center items-center -mt-12 ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -98,7 +99,7 @@ function Game() {
                   navigate("/doublepana", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Double Pana' } });
                 }
               }}>
-              <img src={url4} alt="Image 4" className="w-32 h-32" />
+              <img src={url4} alt="Image 4" className="w-32 h-32 border shadow-md" />
             </button>
           </div>
 
@@ -111,7 +112,7 @@ function Game() {
                   navigate("/tripplepana", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Triple Pana' } });
                 }
               }}>
-              <img src={url5} alt="Image 5" className="w-32 h-32" />
+              <img src={url5} alt="Image 5" className="w-32 h-32 border shadow-md" />
             </button>
           </div>
 
@@ -124,7 +125,7 @@ function Game() {
                   navigate("/halfsangam", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Half Sangam' } });
                 }
               }}>
-              <img src={url6} alt="Image 6" className="w-32 h-32" />
+              <img src={url6} alt="Image 6" className="w-32 h-32 border shadow-md" />
             </button>
           </div>
           <div className="col-span-1 flex justify-center items-center -mt-12">
@@ -135,7 +136,7 @@ function Game() {
                   navigate("/fullsangam", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Full Sangam' } });
                 }
               }}>
-              <img src={url7} alt="Image 7" className="w-32 h-32" />
+              <img src={url7} alt="Image 7" className="w-32 h-32 border shadow-md" />
             </button>
           </div>
         </div>
