@@ -1,9 +1,5 @@
 import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import appStore from './Util/appStore';
 import ScrollToTop from './ScrollToTop';
@@ -69,7 +65,8 @@ import TripplePana from './Games/TripplePana.jsx';
 import SinglePana from './Games/SinglePana.jsx';
 import DoublePana from './Games/DoublePana.jsx';
 import Jodi from './Games/Jodi.jsx';
-import Layout from './Layout';
+import MainLayout from './MainLayout';
+import BasicLayout from './BasicLayout';
 
 function App() {
   return (
@@ -77,21 +74,9 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="/r" element={<Register />} />
+          {/* Routes with MainLayout */}
+          <Route path="/" element={<MainLayout />}>
             <Route path="/star" element={<Starline />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/imp" element={<Imp />} />
-            <Route path="/otp" element={<Otp />} />
-            <Route path="/otp2" element={<Otp2 />} />
-            <Route index element={<LandingIMP />} />
-            <Route path="/addfund" element={<AddFunds />} />
-            <Route path="/win" element={<Win />} />
-            <Route path="/windata" element={<Windata />} />
-            <Route path="/bid" element={<Bid />} />
-            <Route path="/gameRates" element={<GameRates />} />
-            <Route path="/game" element={<Game />} />
-            <Route path="/htp" element={<Htp />} />
             <Route path="/imp3" element={<IMP3 />} />
             <Route path="/imp4" element={<IMP4 />} />
             <Route path="/imp5" element={<IMP5 />} />
@@ -113,9 +98,6 @@ function App() {
             <Route path="/change" element={<Changepass />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/imp2" element={<IMP2 />} />
-            <Route path="/withdraw" element={<WithdrawFunds />} />
-            <Route path="/qrpay" element={<QR_PAY />} />
             <Route path="/stargame" element={<StarGame />} />
             <Route path="/ssinglepana" element={<Ssinglepana />} />
             <Route path="/sdoublepana" element={<Sdoublepana />} />
@@ -136,6 +118,29 @@ function App() {
             <Route path="/doublepana" element={<DoublePana />} />
             <Route path="/singlepana" element={<SinglePana />} />
             <Route path="/jodi" element={<Jodi />} />
+
+            
+            <Route path="/otp2" element={<Otp2 />} />
+            <Route path="/addfund" element={<AddFunds />} />
+            <Route path="/win" element={<Win />} />
+            <Route path="/windata" element={<Windata />} />
+            <Route path="/bid" element={<Bid />} />
+            <Route path="/gameRates" element={<GameRates />} />
+            <Route path="/game" element={<Game />} />
+            <Route path="/htp" element={<Htp />} />
+            <Route path="/imp2" element={<IMP2 />} />
+            <Route path="/withdraw" element={<WithdrawFunds />} />
+            <Route path="/qrpay" element={<QR_PAY />} />
+            <Route path="/imp" element={<Imp />} />
+          </Route>
+          
+          {/* Routes with BasicLayout */}
+          <Route element={<BasicLayout />}>
+          <Route index element={<LandingIMP />} />
+            <Route path="/r" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+
+            <Route path="/otp" element={<Otp />} />
           </Route>
         </Routes>
       </BrowserRouter>

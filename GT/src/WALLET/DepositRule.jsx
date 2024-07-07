@@ -31,16 +31,8 @@ function DepositRule(){
 
     return (
         <>
-         <div className="bg-blue-700 text-white " style={navbarStyle}>
-        <button className="px-4" onClick={() => navigate('/imp9')}>
-          <BiArrowBack size={24} />
-        </button>
-        <div className="flex justify-center items-center">
-          <h1 className="text-white px-3">Deposit Rule</h1>
-        </div>
-      </div>
       <div  className="mt-2">
-        <div className="text-black ">
+        <div className="text-black font-bold ">
           {status && gameRates.length > 0 && gameRates[0].deposit_rule.split('\n').map((line, index) => (
             <p className="mb-4"key={index}>{line}</p>
           ))}

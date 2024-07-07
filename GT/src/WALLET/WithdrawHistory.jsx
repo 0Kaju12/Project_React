@@ -37,16 +37,7 @@ function WithdrawHistory() {
   }
   return (
     <>
-    
-    <div className="bg-blue-700 text-white " style={navbarStyle}>
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div className="flex justify-center items-center">
-          {/* <img src={fund} alt="Wallet" /> */}
-          <h1 className="text-white px-3">Withdraw History</h1>
-        </div>
-      </div>
+ 
     <div >
       <div className="text-black ">
         {gameRates.map((game, index) => (

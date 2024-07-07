@@ -8,11 +8,6 @@ import { login } from "./Util/loginSlice";
 import { remove } from "./Util/registerSlice";
 
 function Otp() {
-  const navbarStyle = {
-    height: "60px",
-    display: "flex",
-    alignItems: "center",
-  };
 
   const [isSubmit, setIsSubmit] = useState(false);
   const [errorMsg, setErrorMsg] = useState();
@@ -133,18 +128,17 @@ function Otp() {
       console.error("Error:", error);
     }
   };
+  const cardStyle = {
+    width: "370px",
+    display: "flex",
+    flexDirection: "column",
+    padding: "",
+    position: "relative",
+  };
 
   return (
     <>
-      <div>
-        <div className="bg-custom-purple text-white" style={navbarStyle}>
-          <button className="px-4" onClick={() => back()}>
-            <BiArrowBack size={24} />
-          </button>
-          <div>
-            <h1 className="text-white px-3 text-lg">OTP</h1>
-          </div>
-        </div>
+      <div className="p-5 shadow-md z-4 mt-2 m-auto" style={cardStyle}>
         <div className="flex justify-center items-center">
           <img src={logo} alt="Center Image" className="w-40 h-40" />
         </div>

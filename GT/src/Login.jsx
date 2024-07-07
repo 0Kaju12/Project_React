@@ -116,12 +116,14 @@ function Login() {
   return (
     <>
       <div  className="text-black flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center ">
+        
+        {/* <div style={cardStyle}> */}
+        
+          <form style={cardStyle} className="p-5 shadow-md z-4 mt-2" onSubmit={handleSubmit}>
+          <div className="flex flex-col justify-center items-center ">
           <img src={logo} alt="Center Image" className="w-40 h-40" />
           <h1 className="font-bold text-2xl">Login</h1>
         </div>
-        {/* <div style={cardStyle}> */}
-          <form style={cardStyle} className="p-5" onSubmit={handleSubmit}>
             <p>Phone Number</p>
             <input
               type="number"

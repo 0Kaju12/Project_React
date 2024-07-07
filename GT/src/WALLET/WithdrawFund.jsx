@@ -9,7 +9,6 @@ import useWallet from "../Hooks/useWallet";
 import { BsFileEarmarkRuledFill } from "react-icons/bs";
 import { FaHistory } from "react-icons/fa";
 
-
 // import { useRef } from "react";
 import withdraw_history_btn from "../Images/withdraw_history_btn.png";
 import withdraw_rules_btn from "../Images/withdraw_rules_btn.png";
@@ -21,7 +20,6 @@ function WithdrawFunds() {
     alignItems: "center",
     position: "relative",
   };
-
 
   const box1 = {
     padding: "10px",
@@ -42,7 +40,7 @@ function WithdrawFunds() {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop:"-4px"
+    marginTop: "-4px",
   };
   const box5 = {
     width: "auto",
@@ -50,8 +48,8 @@ function WithdrawFunds() {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop:"-28px",
-    marginBottom:"4px"
+    marginTop: "-28px",
+    marginBottom: "4px",
   };
 
   const btnStyle = {
@@ -59,7 +57,15 @@ function WithdrawFunds() {
     width: "200px",
     padding: "7px",
     borderRadius: "15px",
-    marginTop:"-14px"
+    marginTop: "-14px",
+  };
+
+  const cardStyle = {
+    width: "373px",
+    display: "flex",
+    flexDirection: "column",
+    padding: "",
+    position: "relative",
   };
 
   const amount = useRef();
@@ -180,17 +186,94 @@ function WithdrawFunds() {
 
   return (
     <>
-      <div className="bg-blue-700 text-white" style={navbarStyle}>
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div className="flex justify-center items-center">
-          {/* <img src={fund} alt="Wallet" /> */}
-          <h1 className="text-white px-3">Withdraw Fund</h1>
+    <div className="flex items-center justify-center">
+      <div className=" pt-4 ">
+        <div style={cardStyle} className="z-4 shadow-md ">
+        <div className="flex items-center justify-center pr-2" >
+          <p className="text-red-500 mt-2 py-2 pl-2  rounded-xl  border font-bold  ">
+            Withdraw Timings :- 07:00AM -10:00AM
+          </p>
+          <p className="text-red-500 ">{errorText}</p>
+        </div>
+        <div className="flex items-center  justify-center  mt-4 mb-2">
+          <button
+            className="w-1/2 border mr-2 py-2 flex items-center justify-center text-white  rounded cursor-pointer bg-blue-700 hover:bg-blue-500"
+            onClick={() => navigate("/withdrawrule")}
+          >
+            <p className="mr-0 ml-2">Withdraw Rule</p>
+            <BsFileEarmarkRuledFill className="h-6 w-12" />
+          </button>
+          <button
+            className="w-1/2 border ml-2 py-2 flex   rounded cursor-pointer text-white items-center justify-center bg-blue-700 hover:bg-blue-500  "
+            onClick={() => navigate("/withdrawhistory")}
+          >
+            <p className="mr-0 ml-1">Withdraw History</p>
+            <FaHistory className="h-6 w-12" />
+          </button>
+        </div>
+
+        <div className="flex flex-col " style={box4}>
+          <input
+            type="text"
+            placeholder="Enter Points"
+            ref={amount}
+            className="placeholder-black text-black font-bold   border rounded-xl mb-2"
+            style={enterAmount}
+          />
+
+          <p className="text-red-500 ">{formErrors.amount}</p>
+        </div>
+        <div style={box5}>
+          <select
+            className="text-black border rounded-xl   font-bold"
+            value={selectedUPI}
+            onChange={handleUPIChange}
+            style={enterAmount}
+          >
+            {gamesUpi.length === 0 ? (
+              <option value="" disabled>
+                Please set the method From Wallet First
+              </option>
+            ) : (
+              gamesUpi.map((upi, index) => (
+                <option key={index} value={upi.value} className="text-black">
+                  {upi?.name}: {upi?.value}
+                </option>
+              ))
+            )}
+          </select>
+        </div>
+        <div style={box4} className="flex flex-col ">
+          <button
+            className="text-white rounded bg-blue-700 hover:bg-blue-500 py-2 px-4 "
+            onClick={handleSubmit}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Submitting..." : "Withdraw Now"}
+          </button>
+          <p className="text-red-500 ">{errorText}</p>
+        </div>
+        <div
+          style={{
+            padding: "10px",
+            width: "250px",
+            margin: "auto",
+            marginTop: "-14px",
+            marginBottom: "2px",
+          }}
+        >
+        </div>
         </div>
       </div>
+      </div>
+    </>
+  );
+}
 
-      <div className=" p-5" >
+export default WithdrawFunds;
+
+{
+  /* <div className=" p-5">
         <div
           style={{
             background: "white",
@@ -214,7 +297,7 @@ function WithdrawFunds() {
             marginBottom: "2px",
           }}
         >
-<button
+          <button
             onClick={() => navigate("/withdrawrule")}
             className="flex font-bold  justify-evenly items-center  p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
           >
@@ -222,7 +305,10 @@ function WithdrawFunds() {
             <BsFileEarmarkRuledFill className="h-6 w-12" />
           </button>
         </div>
-        <div className="text-black border-4 rounded-xl border-black  font-bold " style={box1}>
+        <div
+          className="text-black border-4 rounded-xl border-black  font-bold "
+          style={box1}
+        >
           <p>Current Balance</p>
           <p>RS {walletAmt}</p>
         </div>
@@ -277,16 +363,13 @@ function WithdrawFunds() {
             marginBottom: "2px",
           }}
         >
-<button
+          <button
             onClick={() => navigate("/withdrawhistory")}
             className="flex font-bold  justify-evenly items-center  p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
           >
             <p className="mr-5 ml-2">Withdraw History</p>
             <FaHistory className="h-6 w-12" />
-          </button>          </div>
-      </div>
-    </>
-  );
+          </button>{" "}
+        </div>
+      </div> */
 }
-
-export default WithdrawFunds;
