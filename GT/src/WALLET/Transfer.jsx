@@ -133,42 +133,24 @@ function Transfer() {
 
   return (
     <>
-      <div className="bg-blue-700 text-white" style={navbarStyle}>
-        <button className="px-4" onClick={back}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">Transfer</h1>
-        </div>
-
-        <ul className="font-bold text-lg flex flex-shrink: 0 absolute right-10 top-15">
-          <li className="flex items-center">
-            <a href="#" className="text-white flex items-center">
-              <img
-                src={WalletIcon}
-                alt="Wallet Icon"
-                className="w-8 h-8 mr-2"
-              />
-              <span>{res?.wallet_amt}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      
 
       <div
         
         className="text-black flex flex-col justify-center items-center pt-5"
       >
         <form onSubmit={handleSubmit} style={cardStyle}>
+          <p className="font-bold ">Enter Points</p>
           <input
-            className="py-3 px-5 my-2 rounded-xl text-black border-4 border-black"
+            className="py-3 px-5 my-2 rounded-xl text-black border "
             placeholder="Enter Points"
             type="text"
             ref={points}
           />
           <p className="text-red-500">{formErrors.points}</p>
+          <p className="font-bold ">Enter Phone Number</p>
           <input
-            className="py-3 px-5 my-2 rounded-xl text-blac border-4 border-black"
+            className="py-3 px-5 my-2 rounded-xl text-black  border"
             placeholder="Enter Number"
             type="text"
             ref={phoneno}
@@ -176,7 +158,7 @@ function Transfer() {
           <p className="text-red-500">{formErrors.phoneno}</p>
           <div className=" flex justify-center items-center">
             <button
-              className="py-3 px-2 w-48  bg-green-400 items-center my-4 rounded-xl "
+              className="py-3 px-2 w-48  text-white rounded bg-blue-700 hover:bg-blue-500  "
               type="submit"
             >
               Transfer
@@ -192,7 +174,7 @@ function Transfer() {
           </div>
         </form>
         <div className="  mt-16 bg-white items-center w-auto p-2 rounded-xl">
-          <img className="w-48 h-48" src={transf} alt="" />
+          {/* <img className="w-48 h-48" src={transf} alt="" /> */}
         </div>
         <p className="mt-2">Fill your Amount And Number To</p>
         <p className="items-center ">Transfer The Fund</p>

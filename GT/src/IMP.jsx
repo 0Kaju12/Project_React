@@ -9,7 +9,7 @@ import Footer from './Footer';
 
 function Imp() {
   const topStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover',
     height: 'auto',
     width: '100%',

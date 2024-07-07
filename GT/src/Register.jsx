@@ -9,7 +9,7 @@ import { register } from "./Util/registerSlice";
 function Register() {
   
   const cardStyle = {
-    width: "400px",
+    width: "375px",
     display: "flex",
     flexDirection: "column",
     padding: "20px",
@@ -123,17 +123,21 @@ function Register() {
 
   return (
     <>
-      <div className="text-black">
-        <div className="flex flex-col justify-center items-center">
+      <div className="text-black ">
+        
+        
+          <form style={cardStyle} className="p-5 shadow-md z-4 mt-2 m-auto" onSubmit={handleSubmit}>
+          <div className="flex justify-center item-center">
+          <div className="flex flex-col justify-center items-center">
           <img src={logo} alt="Center Image" className="w-40 h-40" />
           <h1 className="font-bold text-2xl">Signup</h1>
+          </div>
         </div>
-        <div className="flex justify-center item-center p-5">
-          <form style={cardStyle} onSubmit={handleSubmit}>
             <p className="">Username</p>
             <input
               type="text"
               placeholder="Username"
+              
               className="border border-black pt-3 pr-7 pl-5 pb-3 rounded"
               ref={username}
               name="username"
@@ -215,7 +219,7 @@ function Register() {
             </div>
           </form>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }

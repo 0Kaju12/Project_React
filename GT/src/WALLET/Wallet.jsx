@@ -71,7 +71,6 @@ function Wallet() {
   };
 
   const box3 = {
-    borderRadius: "10px",
     padding: "8px 12px 8px 9px",
     alignItems: "center", // Align items to the start (top) of the container
     width: "auto",
@@ -92,6 +91,7 @@ function Wallet() {
     alignItems: "center",
     flexDirection: "column",
   };
+
 
   const navigate = useNavigate();
 
@@ -135,24 +135,8 @@ function Wallet() {
 
   return (
     <>
-      <div className="bg-blue-700 text-white " style={navbarStyle}>
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div className="flex justify-center items-center">
-          {/* <img src={fund} alt="Wallet" /> */}
-          <h1 className="text-white px-3">Wallet</h1>
-        </div>
-      </div>
-      <div className=" p-5 text-black">
-        <div
-          className="p-5 sm:w-auto md:max-w-lg lg:max-w-lg text-black font-bold border-black border-4 rounded-xl"
-          style={box1}
-        >
-          <p>Current Balance</p>
-          <p>RS {res.wallet_amt}</p>
-        </div>
 
+      <div className=" p-5 text-black z-4 shadow-md m-auto ">
         <div style={Container} className="">
           <div>
             <button
@@ -183,7 +167,7 @@ function Wallet() {
             </button>
           </div>
         </div>
-        <div className="border-4 border-black rounded-xl w-80 m-auto mt-2 mb-2">
+        <div className="border rounded-xl w-80 m-auto mt-2 mb-2">
           {" "}
           <div className="" style={box4}>
             {/* <img src={frame} alt="" /> */}
@@ -245,7 +229,7 @@ function Wallet() {
         >
           <button
             onClick={() => navigate("/transaction")}
-            className="flex font-bold  justify-evenly items-center p-2 py-3 rounded-xl hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
+            className="flex   justify-evenly items-center p-2 py-3 rounded hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
           >
             <p className="mr-5 ml-2">Wallet History</p>
             <FaHistory className="h-6 w-12" />

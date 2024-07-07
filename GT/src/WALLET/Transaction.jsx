@@ -6,6 +6,9 @@ import { BiArrowBack } from "react-icons/bi";
 import close from "../Images/close.png";
 import open from "../Images/play.png";
 import { useNavigate } from "react-router-dom";
+import { RiSubtractFill } from "react-icons/ri";
+import { IoAddSharp } from "react-icons/io5";
+
 
 function Transaction() {
   const [status, setStatus] = useState(false);
@@ -14,7 +17,7 @@ function Transaction() {
   const resinfo = useTransaction(unique);
   console.log(resinfo);
   const topStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: "cover",
     height: "auto ", // Set the height of the div
     width: "100%", // Set the width of the div
@@ -47,26 +50,13 @@ function Transaction() {
   }
   return (
     <>
-    <div className="bg-custom-purple text-white " style={navbarStyle}>
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div className="flex justify-center items-center">
-          {/* <img src={fund} alt="Wallet" /> */}
-          <h1 className="text-white px-3">Wallet History</h1>
-        </div>
-      </div>
-    <div style={topStyle}>
+    <div  className="text-black font-bold mt-2">
       <div className="">
         {gameRates.map((game, index) => (
           <div key={index} className="mb-8">
-            <div className="border-white text-white mr-2 ml-4 p-2 py-4 flex justify-between rounded-3xl border">
+            <div className="border border-black mr-2 ml-4 p-2 py-4 flex items-center justify-between rounded-3xl ">
               <div>
-                <img
-                  className=""
-                  src={game.transaction_type === '1' ? open : close}
-                  alt=""
-                />
+                {game.transaction_type === '1' ? <IoAddSharp />: <RiSubtractFill />}
               </div>
               <div>
                 <p>{game?.transaction_note}</p>

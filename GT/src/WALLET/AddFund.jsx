@@ -19,54 +19,15 @@ function AddFunds() {
   const [amountToAdd, setAmountToAdd] = useState(0);
   const navigate = useNavigate();
 
-  const navbarStyle = {
-    height: "60px",
-    display: "flex",
-    alignItems: "center",
-    position: "relative",
-  };
 
   const cardStyle = {
-    width: "370px",
+    width: "375px",
     display: "flex",
     flexDirection: "column",
     padding: "",
     position: "relative",
   };
 
-  const topStyle = {
-    backgroundImage: `url(${topBackground})`,
-    backgroundSize: "cover",
-    height: "auto ",
-    width: "100%",
-    paddingBottom: "250px",
-  };
-
-  const box1 = {
-    // border: "3px solid #ccc",
-    padding: "10px",
-    width: "300px",
-    margin: "auto",
-    // borderRadius: "10px",
-    // background: "linear-gradient(to right, #141384, #000000)",
-    color: "#fff",
-    marginTop: "-24px",
-  };
-
-  const buttonStyle = {
-    padding: "10px",
-    background: "#061050",
-    color: "#fff",
-    cursor: "pointer",
-  };
-
-  const box4 = {
-    width: "auto",
-    padding: "20px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  };
 
   const mobile = useSelector((state) => state.userDetail.mobile);
   const unique = useSelector((state) => state.userDetail.token);
@@ -93,18 +54,18 @@ function AddFunds() {
 
   return (
     <>
-    <div className="relative flex items-center justify-center m-auto " style={topStyle}>
-    <div style={cardStyle} >
+    <div className="relative flex items-center justify-center m-auto  " >
+    <div style={cardStyle} className="border mt-2 py-2 px-1 z-4 shadow-md "  >
       <div className="font-bold text-lg items-center justify-center flex mt-4">
       <h1 >Add Funds</h1>
       </div>
       <div className="flex items-center font-bold justify-center  mt-4 mb-2">
-        <button className="w-1/2 border mr-2 py-2 flex  bg-white rounded-xl cursor-pointer" onClick={() => navigate("/depositrule")}>
+        <button className="w-1/2 border mr-2 py-2 flex  items-center justify-center text-white  rounded cursor-pointer bg-blue-700 hover:bg-blue-500" onClick={() => navigate("/depositrule")}>
           <p className="mr-5 ml-2">Deposit Rule</p>
          <BsFileEarmarkRuledFill className="h-6 w-12" />
          </button>
-        <button className="w-1/2 border ml-2 py-2 flex  bg-white rounded-xl cursor-pointer " onClick={() => navigate("/addfundhistory")}>
-        <p className="mr-0 ml-2">Deposit History</p>
+        <button className="w-1/2 border ml-2 py-2 flex items-center justify-center text-white  rounded  bg-blue-700 hover:bg-blue-500 cursor-pointer " onClick={() => navigate("/addfundhistory")}>
+        <p className="mr-0 ml-1">Deposit History</p>
         <FaHistory className="h-6 w-12" />
         </button>
       </div>

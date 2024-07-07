@@ -31,16 +31,9 @@ function WithdrawRule(){
 
     return (
         <>
-         <div className="bg-blue-700 text-white " style={navbarStyle}>
-        <button className="px-4" onClick={() => navigate('/imp8')}>
-          <BiArrowBack size={24} />
-        </button>
-        <div className="flex justify-center items-center">
-          <h1 className="text-white px-3">Withdraw Rule</h1>
-        </div>
-      </div>
-      <div className="mt-2" >
-        <div className="text-black ">
+
+      <div className="mt-2 font-bold" >
+        <div className="text-black  ">
           {status && gameRates.length > 0 && gameRates[0].withdrawal_rule.split('\n').map((line, index) => (
             <p className="mb-4"key={index}>{line}</p>
           ))}
