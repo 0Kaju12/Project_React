@@ -11,16 +11,16 @@ import GALIGAME from "./GALIGAME";
 
 function GALIIMP(){
     const topStyle = {
-        backgroundImage: `url(${topBackground})`,
+        // backgroundImage: `url(${topBackground})`,
         backgroundSize: 'cover',
         height: 'auto', // Set the height of the div
         width: '100%', // Set the width of the div
-        paddingBottom:'150px'
+        // paddingBottom:'150px'
       };
     return (
         <>
         <div className="relative">
-        <div className="sticky top-0">
+        <div className="sticky top-0 ">
         <GALIRATES/>
         </div>
         

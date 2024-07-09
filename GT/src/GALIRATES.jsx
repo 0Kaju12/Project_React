@@ -7,9 +7,11 @@ import useStarline from "./Hooks/useStarline";
 import { useState, useEffect } from "react";
 import useGaliGameRates from "./Hooks/useGaliGameRates";
 import useGaliGameFront from "./Hooks/useGaliGameFront";
+import { FaHistory } from "react-icons/fa";
+import { FaChartSimple } from "react-icons/fa6";
 function GALIRATES() {
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: "cover", // This will make the background image cover the container without
     paddingBottom: "10px",
     paddingTop: "0px"
@@ -79,18 +81,16 @@ function GALIRATES() {
   return (
     <>
       <div>
-        <div className="bg-custom-purple text-white" style={navbarStyle}>
-          <button className="px-4" onClick={() => back()}>
-            <BiArrowBack size={24} />
-          </button>
-          <div>
-            <h1 className="text-white px-3 text-lg">Gali Diswar Game</h1>
-          </div>
-        </div>
+        <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>GALI DISAWAR</h1></div>
         <div>
           <div style={backStyle}>
             <div className="w-120">
-              <div className="flex " style={box1}>
+            <div className="flex items-center justify-center pt-2 mb-2">
+      <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/impbid")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Bid-History</p> <FaHistory className="text-2xl" /></button> </div>
+      <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/impwin")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Win History</p> <FaHistory className="text-2xl" /></button> </div>
+      <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={handleClick} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Chart</p> <FaChartSimple className="text-2xl" /></button> </div>
+      </div>
+              {/* <div className="flex " style={box1}>
                 <button
                   className="text-white rounded border border-white  "
                   style={btnStyle}
@@ -112,37 +112,37 @@ function GALIRATES() {
                 >
                   CHART
                 </button>
-              </div>
-              <div className="flex justify-center align-items-center">
-                <div style={priceStyle} className="px-5  pt-2 text-white border border-white ">
-                  <div className="flex flex-row justify-between p-2">
-                    <p>Left Digit</p>
-                    <p>:-</p>
+              </div> */}
+              {/* <div className=""> */}
+                <div  className="flex flex-col justify-center w-120 text-black border font-bold z-4 shadow-md p-2   ">
+                  <div className="flex  justify-evenly items-center ">
+                    <p className="-ml-2">Left Digit</p>
+                    <p className="ml-1">:-</p>
                     <p>
                       {gameRates["single_digit_val_1"]}-
                       {gameRates["single_digit_val_2"]}
                     </p>
                   </div>
 
-                  <div className="flex flex-row justify-between p-2">
-                    <p>Right Digit</p>
-                    <p>:-</p>
+                  <div className="flex   justify-evenly items-center ">
+                    <p className="-ml-1"> Right Digit</p>
+                    <p className="">:-</p>
                     <p>
                       {gameRates["single_pana_val_1"]}-
                       {gameRates["single_pana_val_2"]}
                     </p>
                   </div>
 
-                  <div className="flex flex-row justify-between p-2">
-                    <p>Jodi Digit</p>
-                    <p>:-</p>
+                  <div className="flex   justify-evenly items-center">
+                    <p>Jodi Digit </p>
+                    <p className="ml-4">:-</p>
                     <p>
                       {gameRates["double_pana_val_1"]}-
                       {gameRates["double_pana_val_2"]}
                     </p>
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
