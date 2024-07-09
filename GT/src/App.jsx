@@ -67,7 +67,7 @@ import DoublePana from './Games/DoublePana.jsx';
 import Jodi from './Games/Jodi.jsx';
 import MainLayout from './MainLayout';
 import BasicLayout from './BasicLayout';
-
+import History from './History.jsx';
 function App() {
   return (
     <Provider store={appStore}>
@@ -132,6 +132,7 @@ function App() {
             <Route path="/withdraw" element={<WithdrawFunds />} />
             <Route path="/qrpay" element={<QR_PAY />} />
             <Route path="/imp" element={<Imp />} />
+            <Route path='/histories' element={<History/>}/>
           </Route>
           
           {/* Routes with BasicLayout */}

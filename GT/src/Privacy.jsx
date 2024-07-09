@@ -13,23 +13,9 @@ function Privacy (){
   };
     return(
     <div>
-      <div
-        className="bg-custom-purple text-white sticky top-0"
-        style={navbarStyle}
-      >
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">  Privacy Policy</h1>
-        </div>
-      </div>
-    <div className='sticky top-0 bg-white'>
-      <div className="flex justify-center items-center ">
-        <img src={logo} alt="Center Image" className="w-40 h-40" />
-      </div>
-    </div>
-    <div className='overflow-y-auto h-screen'>
+                <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>Privacy Policy</h1></div>
+      
+    <div className='overflow-y-auto h-screen p-2'>
     <strong>Privacy Policy I Terms & Conditions </strong><div className='mb-5'></div>
 Last updated: September 18, 2023
 <div className='mb-5'></div>

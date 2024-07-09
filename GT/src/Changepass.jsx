@@ -14,7 +14,7 @@ function Changepass() {
   };
 
   const changePassStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: "cover",
   };
   const dispatch = useDispatch();
@@ -26,8 +26,8 @@ function Changepass() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [errorText, setErrorText] = useState("");
-  const [msg, setmsg]= useState("");
-  const [issubmit,setIsSubmit]= useState(false);
+  const [msg, setmsg] = useState("");
+  const [issubmit, setIsSubmit] = useState(false);
 
   const handleToggleCurrentPassword = () => {
     setShowCurrentPassword(!showCurrentPassword);
@@ -47,11 +47,11 @@ function Changepass() {
   };
 
   const handleAdduser = (password) => {
-    dispatch(addPass({password: password}));
+    dispatch(addPass({ password: password }));
   };
-  
-  const token = useSelector(state => state.userDetail.token);
-  const pass= useSelector(state=> state.userDetail2.password);
+
+  const token = useSelector((state) => state.userDetail.token);
+  const pass = useSelector((state) => state.userDetail2.password);
   console.log(pass);
 
   useEffect(() => {
@@ -78,9 +78,13 @@ function Changepass() {
     }
 
     try {
-      await fetchData(currentPassword.current.value, newPassword.current.value,token);
+      await fetchData(
+        currentPassword.current.value,
+        newPassword.current.value,
+        token
+      );
       setIsSubmit(true);
-      setmsg('Successfully changed password');
+      setmsg("Successfully changed password");
       handleAdduser(newPassword.current.value);
     } catch (error) {
       setErrorText("Old password is incorrect");
@@ -92,9 +96,8 @@ function Changepass() {
 
     if (!currentPassword) {
       errors.conf0 = "Current Password is required!";
-    }
-    else if(currentPassword !== pass){
-      errors.conf4 = 'Old password does not match';
+    } else if (currentPassword !== pass) {
+      errors.conf4 = "Old password does not match";
     }
 
     if (!newPassword) {
@@ -122,7 +125,7 @@ function Changepass() {
       app_key: "jAFaRUulipsumXLLSLPFytYvUUsgfh",
       unique_token: token,
       old_pass: currentPassword,
-      new_pass: newPassword
+      new_pass: newPassword,
     });
 
     const requestOptions = {
@@ -138,7 +141,7 @@ function Changepass() {
     );
     const result = await response.json();
 
-    if(result?.status === true){
+    if (result?.status === true) {
       // Password changed successfully
     } else {
       throw new Error("Invalid username and password");
@@ -147,110 +150,105 @@ function Changepass() {
 
   return (
     <>
-      <div>
-        <div className="bg-custom-purple text-white" style={navbarStyle}>
-          <button className="px-4" onClick={() => back()}>
-            <BiArrowBack size={24} />
-          </button>
-          <h1 className="text-white px-3">Change Password</h1>
-        </div>
+      <div className="font-bold flex items-center justify-center text-2xl mt-2 mb-2">
+        <h1>Change Password</h1>
       </div>
       <div style={changePassStyle}>
-        <div className="flex justify-center items-center h-screen">
-        <form onSubmit={handleSubmit}>
-          <div className="bg-transparent p-6 rounded-md shadow-md">
-            <div className="mb-6 relative">
-              <label className="block mb-1 font-medium text-white">
-                Current Password
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <img src={changePassword} alt="" className="h-5 w-5" />
-                </div>
-                <input
-                  type={showCurrentPassword ? "text" : "password"}
-                  placeholder="Password"
-                  ref={currentPassword}
-                  className="w-full rounded-md border-gray-300 bg-gray-300 focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-3 text-black"
-                  style={{ width: "300px" }}
-                  name="password"
-                />
+        <div className="flex justify-center items-center ">
+          <form onSubmit={handleSubmit}>
+            <div className="bg-transparent p-6 rounded-md shadow-md">
+              <div className="mb-6 relative">
+                <label className="block mb-1 font-bold text-black">
+                  Current Password
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <FiLock className="h-6 w-6 text-black" />
+                  </div>
+                  <input
+                    type={showCurrentPassword ? "text" : "password"}
+                    placeholder="Password"
+                    ref={currentPassword}
+                    className="w-full rounded-md border-gray-300 bg-gray-300 focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-3 text-black"
+                    style={{ width: "300px" }}
+                    name="password"
+                  />
 
-                <button
-                  type="button"
-                  onClick={handleToggleCurrentPassword}
-                  className="absolute inset-y-0 right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center mr-2 focus:outline-none"
-                >
-                  {showCurrentPassword ? <FiEyeOff /> : <FiEye />}
-                </button>
-                <p className="text-red-500">{formErrors.conf0}</p>
-              </div>
-            </div>
-            <div className="mb-6 relative">
-              <label className="block mb-1 font-medium text-white">
-                New Password
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FiLock className="h-6 w-6 text-black" />
+                  <button
+                    type="button"
+                    onClick={handleToggleCurrentPassword}
+                    className="absolute inset-y-0 right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center mr-2 focus:outline-none"
+                  >
+                    {showCurrentPassword ? <FiEyeOff /> : <FiEye />}
+                  </button>
+                  <p className="text-red-500">{formErrors.conf0}</p>
                 </div>
-                <input
-                  type={showNewPassword ? "text" : "password"}
-                  placeholder="Enter New Password"
-                  ref={newPassword}
-                  className="w-full rounded-md border-gray-300 bg-gray-300 focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-3 text-black"
-                  style={{ width: "300px" }}
-                  name="newPassword"
-                />
-                <button
-                  type="button"
-                  onClick={handleToggleNewPassword}
-                  className="absolute inset-y-0 right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center mr-2 focus:outline-none"
-                >
-                  {showNewPassword ? <FiEyeOff /> : <FiEye />}
-                </button>
-                <p className="text-red-500">{formErrors.conf1}</p>
               </div>
-            </div>
-            <div className="mb-6 relative">
-              <label className="block mb-1 font-medium text-white">
-                Confirm New Password
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FiLock className="h-6 w-6 text-black" />
+              <div className="mb-6 relative">
+                <label className="block mb-1 font-medium text-white">
+                  New Password
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <FiLock className="h-6 w-6 text-black" />
+                  </div>
+                  <input
+                    type={showNewPassword ? "text" : "password"}
+                    placeholder="Enter New Password"
+                    ref={newPassword}
+                    className="w-full rounded-md border-gray-300 bg-gray-300 focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-3 text-black"
+                    style={{ width: "300px" }}
+                    name="newPassword"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleToggleNewPassword}
+                    className="absolute inset-y-0 right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center mr-2 focus:outline-none"
+                  >
+                    {showNewPassword ? <FiEyeOff /> : <FiEye />}
+                  </button>
+                  <p className="text-red-500">{formErrors.conf1}</p>
                 </div>
-                <input
-                  type={showConfirmPassword ? "text" : "password"}
-                  placeholder="Enter Confirm Password"
-                  ref={confirmPassword}
-                  className="w-full rounded-md border-gray-300 bg-gray-300 focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-3 text-black"
-                  style={{ width: "300px" }}
-                  name="confirmPassword"
-                />
+              </div>
+              <div className="mb-6 relative">
+                <label className="block mb-1 font-medium text-white">
+                  Confirm New Password
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <FiLock className="h-6 w-6 text-black" />
+                  </div>
+                  <input
+                    type={showConfirmPassword ? "text" : "password"}
+                    placeholder="Enter Confirm Password"
+                    ref={confirmPassword}
+                    className="w-full rounded-md border-gray-300 bg-gray-300 focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-3 text-black"
+                    style={{ width: "300px" }}
+                    name="confirmPassword"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleToggleConfirmPassword}
+                    className="absolute inset-y-0 right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center mr-2 focus:outline-none"
+                  >
+                    {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                  </button>
+                  <p className="text-red-500">{formErrors.conf2}</p>
+                  <p className="text-red-500">{formErrors.conf3}</p>
+                  <p className="text-red-500">{formErrors.conf4}</p>
+                  <p className="text-green-500">{msg}</p>
+                </div>
+              </div>
+              <div className="flex justify-center items-center">
                 <button
-                  type="button"
-                  onClick={handleToggleConfirmPassword}
-                  className="absolute inset-y-0 right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center mr-2 focus:outline-none"
+                  className="text-white px-10 py-2 rounded-md  bg-blue-600 hover:bg-blue-700"
+                  type="submit"
                 >
-                  {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                  Change
                 </button>
-                <p className="text-red-500">{formErrors.conf2}</p>
-                <p className="text-red-500">{formErrors.conf3}</p>
-                <p className="text-red-500">{formErrors.conf4}</p>
-                <p className="text-green-500">{msg}</p>
               </div>
             </div>
-            <div className="flex justify-center items-center">
-              <button
-                className="text-white px-10 py-2 rounded-md bg-gradient-to-r from-green-100 to-green-700"
-                type="submit"
-              >
-                Change
-              </button>
-            </div>
-          </div>
-        </form>
+          </form>
         </div>
       </div>
     </>

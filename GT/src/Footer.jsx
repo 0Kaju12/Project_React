@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
         <div>
             <button>
-            <FaHistory className="w-6 h-5 ml-2" onClick={()=>{navigate('/profile')}}/>
+            <FaHistory className="w-6 h-5 ml-2" onClick={()=>{navigate('/histories')}}/>
              History
             </button>
         </div>
@@ -33,13 +33,13 @@ const Footer = () => {
         </div>
         <div>
             <button>
-            <FaBook className="w-6 h-5 ml-2"/>
+            <FaBook className="w-6 h-5 ml-2" onClick={()=>{navigate('/transaction')}}/>
              Passbook
             </button>
         </div>
         <div>
             <button>
-            <BiDice6  className="w-6 h-5 ml-2"/>
+            <BiDice6  className="w-6 h-5 ml-2" onClick={()=>{navigate('/imp4')}}/>
              Bids
             </button>
         </div>

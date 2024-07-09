@@ -15,7 +15,7 @@ function GameRates() {
   };
 
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     position: 'relative'
@@ -47,51 +47,42 @@ function GameRates() {
 
   return (
     <>
-      <div>
-        <div className="bg-custom-purple text-white" style={navbarStyle}>
-          <button className="px-4" onClick={() => back()}>
-            <BiArrowBack size={24} />
-          </button>
-          <div>
-            <h1 className="text-white px-3 ">Game Rates</h1>
-          </div>
-        </div>
-      </div>
+          <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>Game Rates</h1></div>
       <div className="h-screen" style={backStyle}>
         <div style={cardStyle}>
           {status && (
             <>
-              <div className=" text-white border border-white h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className=" text-black border  h-10 w-80  font-bold flex justify-between items-center" style={newStyle}>
                 <p>Single Digit</p>
                 <p>{gameRates['single_digit_val_1']}-{gameRates['single_digit_val_2']}</p>
               </div>
 
-              <div className="bg-linear-gradient(to right, #141384, #000000) text-white border border-white h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-black border h-10 w-80 font-bold  flex justify-between items-center" style={newStyle}>
                 <p>Jodi Digit</p>
                 <p>{gameRates['jodi_digit_val_1']}-{gameRates['jodi_digit_val_2']}</p>
               </div>
 
-              <div className="bg-linear-gradient(to right, #141384, #000000) text-white border border-white h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Single Panna</p>
                 <p>{gameRates['single_pana_val_1']}-{gameRates['single_pana_val_2']}</p>
               </div>
 
-              <div className="bg-linear-gradient(to right, #141384, #000000) text-white border border-white h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Double Panna</p>
                 <p>{gameRates['double_pana_val_1']}-{gameRates['double_pana_val_2']}</p>
               </div>
 
-              <div className="bg-linear-gradient(to right, #141384, #000000) text-white border border-white h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Tripple Panna</p>
                 <p>{gameRates['tripple_pana_val_1']}-{gameRates['tripple_pana_val_2']}</p>
               </div>
 
-              <div className="bg-linear-gradient(to right, #141384, #000000) text-white border border-white h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Half Sangam</p>
                 <p>{gameRates['half_sangam_val_1']}-{gameRates['half_sangam_val_2']}</p>
               </div>
 
-              <div className="bg-linear-gradient(to right, #141384, #000000) text-white border border-white h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Jodi Digit</p>
                 <p>{gameRates['full_sangam_val_1']}-{gameRates['full_sangam_val_2']}</p>
               </div>
