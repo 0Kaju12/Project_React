@@ -8,6 +8,10 @@ import url6 from "./Images/half_sangam.png";
 import url7 from "./Images/full_sangam.png";
 import topBackground from "./Images/bg.png";
 import { useNavigate, useLocation } from "react-router-dom";
+import { FaDiceOne } from "react-icons/fa6";
+import { CgCardSpades } from "react-icons/cg";
+import { TbCards } from "react-icons/tb";
+import { PiCardsBold } from "react-icons/pi";
 
 function StarGame() {
   const navbarStyle = {
@@ -21,7 +25,7 @@ function StarGame() {
   };
 
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    background :"white",
     backgroundSize: "cover",
   };
   const navigate = useNavigate();
@@ -34,57 +38,58 @@ function StarGame() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">{openTime}</h1>
-        </div>
-      </div>
-
       <div
         className=" pl-2 flex justify-center items-start h-svh"
         style={backStyle}
       >
-        <div className="grid grid-cols-2" style={cardStyle}>
-          <div className="col-span-1 flex justify-center items-center ">
+        <div className="grid grid-cols-2 mt-10" style={cardStyle}>
+          <div className="flex justify-center items-center">
+          <div className="shadow-md rounded-xl border w-32 h-32 col-span-1 flex justify-center items-center text-lg font-bold ">
             <button
               onClick={() => {
                 navigate("/starsingle", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
               }}
             >
-              <img src={url1} alt="Image 1" className="w-64 h-48" />
+              <FaDiceOne className="w-20 h-20 ml-2"/>Single Digit
             </button>
           </div>
-          <div className="col-span-1 flex justify-center items-center   ">
+          </div>
+          <div className="flex justify-center items-center">
+          <div className="shadow-md border rounded-xl col-span-1 w-32 h-32 flex justify-center items-center text-lg font-bold  ">
             <button
             onClick={() => {
               navigate("/ssinglepana", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
             }}>
-              <img src={url3} alt="Image 2" className="w-64 h-48" />
+              <CgCardSpades className="w-20 h-20 ml-2"/>Single Pana
             </button>
           </div>
+          </div>
+
 
           {/* Second row with two columns */}
-          <div className="col-span-1 flex justify-center items-center mt-4">
+          <div className="flex justify-center items-center">
+          <div className="shadow-md border rounded-xl col-span-1 w-32 h-32 flex justify-center items-center mt-4 text-lg font-bold">
             <button
               onClick={() => {
                 navigate("/sdoublepana",{ state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
               }}
             >
-              <img src={url4} alt="Image 3" className="w-64 h-48" />
+              <PiCardsBold className="w-20 h-20"/>Double Pana
             </button>
           </div>
-          <div className="col-span-1 flex justify-center items-center mt-4">
+          </div>
+            <div className="flex justify-center items-center">
+            <div className="shadow-md border rounded-xl w-32 h-32 col-span-1 flex justify-center items-center mt-4 text-lg font-bold">
             <button
               onClick={() => {
                 navigate("/stripplepana", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
               }}
             >
-              <img src={url5} alt="Image 4" className="w-64 h-48" />
+              <TbCards className="w-20 h-20"/>Triple Pana
             </button>
           </div>
+            </div>
+
         </div>
       </div>
     </>

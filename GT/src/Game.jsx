@@ -9,6 +9,14 @@ import url7 from "./Images/full_sangam.png";
 import topBackground from "./Images/bg.png";
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
+import { FaDiceOne } from "react-icons/fa6";
+import { CgCardSpades } from "react-icons/cg";
+import { TbCards } from "react-icons/tb";
+import { PiCardsBold } from "react-icons/pi";
+import { MdHourglassFull } from "react-icons/md";
+import { MdHourglassBottom } from "react-icons/md";
+import { FaDice } from "react-icons/fa6";
+
 
 function Game() {
   const navbarStyle = {
@@ -46,8 +54,8 @@ function Game() {
   return (
     <>
       <div className="pl-2 flex justify-center -mt-8" style={backStyle}>
-        <div className="grid grid-cols-2 gap-2 " style={cardStyle}>
-          <div className="col-span-1 flex justify-center items-center ">
+        <div className="grid grid-cols-2 gap-2 mt-10 text-lg font-bold" style={cardStyle}>
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -55,10 +63,10 @@ function Game() {
                   navigate("/single", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Single Digit' } });
                 }
               }}>
-              <img src={url1} alt="Image 1" className="w-32 h-32 border shadow-md" />
+              <FaDiceOne className="w-20 h-20 ml-2"/>Single Digit
             </button>
           </div>
-          <div className="col-span-1 flex justify-center items-center">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -66,12 +74,12 @@ function Game() {
                   navigate("/jodi", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Jodi Digit' } });
                 }
               }}>
-              <img src={url2} alt="Image 2" className="w-32 h-32 border shadow-md" />
+              <FaDice className="w-20 h-20 ml-2"/>Jodi Digit
             </button>
           </div>
 
           {/* Second row with two columns */}
-          <div className="col-span-1 flex justify-center items-center -mt-12">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -79,10 +87,10 @@ function Game() {
                   navigate("/singlepana", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Single Pana' } });
                 }
               }}>
-              <img src={url3} alt="Image 3" className="w-32 h-32 border shadow-md" />
+              <CgCardSpades className="w-20 h-20 ml-2"/>Single Pana
             </button>
           </div>
-          <div className="col-span-1 flex justify-center items-center -mt-12 ">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -90,12 +98,12 @@ function Game() {
                   navigate("/doublepana", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Double Pana' } });
                 }
               }}>
-              <img src={url4} alt="Image 4" className="w-32 h-32 border shadow-md" />
+              <PiCardsBold className="w-20 h-20"/>Double Pana
             </button>
           </div>
 
           {/* Third row with one column */}
-          <div className="col-span-2 flex justify-center items-center -mt-12">
+          <div className="shadow-md border rounded-xl w-48 h-32 col-span-2 flex justify-center items-center ml-20 mt-3">
             <button
               onClick={() => {
                 if (gameId) {
@@ -103,12 +111,12 @@ function Game() {
                   navigate("/tripplepana", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Triple Pana' } });
                 }
               }}>
-              <img src={url5} alt="Image 5" className="w-32 h-32 border shadow-md" />
+              <TbCards className="w-20 h-20"/>Triple Pana
             </button>
           </div>
 
           {/* Fourth row with two columns */}
-          <div className="col-span-1 flex justify-center items-center -mt-12">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-16">
             <button
               onClick={() => {
                 if (gameId) {
@@ -116,10 +124,10 @@ function Game() {
                   navigate("/halfsangam", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Half Sangam' } });
                 }
               }}>
-              <img src={url6} alt="Image 6" className="w-32 h-32 border shadow-md" />
+              <MdHourglassBottom className="w-20 h-20"/>Half Sangam
             </button>
           </div>
-          <div className="col-span-1 flex justify-center items-center -mt-12">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-16">
             <button
               onClick={() => {
                 if (gameId) {
@@ -127,7 +135,7 @@ function Game() {
                   navigate("/fullsangam", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Full Sangam' } });
                 }
               }}>
-              <img src={url7} alt="Image 7" className="w-32 h-32 border shadow-md" />
+              <MdHourglassFull className="w-20 h-20"/>Full Sangam
             </button>
           </div>
         </div>

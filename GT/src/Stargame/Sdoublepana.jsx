@@ -125,7 +125,7 @@ function Sdoublepana() {
     alignItems: "center",
   };
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    background : 'white',
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
@@ -311,27 +311,8 @@ function Sdoublepana() {
   const totalPoints=submittedData.reduce((acc, curr) => acc + parseInt(curr.points), 0)
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
-        <button className="px-4" onClick={back}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">Double Pana</h1>
-        </div>
-
-        <ul className="font-bold text-lg flex flex-shrink: 0 absolute right-10 top-15">
-          <li className="flex items-center">
-            <a href="#" className="text-white flex items-center">
-              <img
-                src={WalletIcon}
-                alt="Wallet Icon"
-                className="w-8 h-8 mr-2"
-              />
-              <span>{walletAmt}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>Double Pana</h1></div>
+  
       <div style={backStyle} className="text-white" >
         <div className="flex justify-center items-center pt-5 ">
           <div className="" style={cardStyle}>
@@ -339,7 +320,7 @@ function Sdoublepana() {
               type="date"
               value={todayDate}
               readOnly
-              className="w-full flex justify-center p-4 text-black border border-black-500 rounded-xl text-center"
+              className="shadow-md w-full flex justify-center p-4 text-black border border-black-500 rounded-xl text-center"
             />
             <p className="my-2">Open Digit</p>
             <input
@@ -347,7 +328,7 @@ function Sdoublepana() {
               inputMode="numeric"
               ref={digit}
               placeholder="Enter Digit"
-              className="w-full p-4 border border-black-500 rounded-xl text-black"
+              className="shadow-md w-full p-4 border border-black-500 rounded-xl text-black"
               list="digitList" // Step 2: Add list attribute
               autoComplete="off" 
             />
@@ -362,11 +343,11 @@ function Sdoublepana() {
               inputMode="numeric"
               ref={point}
               placeholder="Enter Points"
-              className="w-full  p-4 border border-black-500 rounded-xl text-black"
+              className="shadow-md w-full  p-4 border border-black-500 rounded-xl text-black"
             />
-            <div className="flex  mb-4 text-black">
+            <div className="flex  mb-4 text-white">
               <button
-                className={`p-4 border border-black-500 rounded-xl bg-yellow-500 mt-4 ${
+                className={`p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 cursor-pointer mt-4 ${
                   isProceed ? "w-11/12" : "w-full"
                 }`}
                 onClick={handleSubmit}
@@ -376,7 +357,7 @@ function Sdoublepana() {
               {isProceed && (
                   <>
                     <button
-                      className="p-4 border border-black-500 rounded-xl bg-yellow-500 mt-4 w-full ml-3"
+                      className="p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 cursor-pointer mt-4 w-full ml-3"
                       onClick={() => setShowModal(true)}
                     >
                       Submit
@@ -422,7 +403,7 @@ function Sdoublepana() {
               return (
                 <div key={index} className="w-full flex mb-3 ">
                   <div
-                    className="w-10/12  p-1  border border-black-500 bg-white text-black flex justify-between"
+                    className="shadow-md w-10/12  p-1  border border-black-500 bg-white text-black flex justify-between"
                     style={{ borderRadius: "25px" }}
                   >
                     <div className="flex flex-col items-center ml-4">
@@ -435,7 +416,7 @@ function Sdoublepana() {
                     </div>
                   </div>
                   <button
-                    className="bg-white p-4 flex items-center justify-center ml-1"
+                    className="shadow-md border bg-white p-4 flex items-center justify-center ml-1"
                     style={{ borderRadius: "20px" }}
                     onClick={handleClickRemoveDiv(index)}
                   >

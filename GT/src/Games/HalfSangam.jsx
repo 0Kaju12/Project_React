@@ -471,7 +471,8 @@ function HalfSangam() {
 
   return (
     <>
-
+      <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>Half Sangam</h1></div>
+  
       <div style={backStyle} className="text-white">
         <div className="flex justify-center items-center pt-5 ">
           <div className="" style={cardStyle}>
