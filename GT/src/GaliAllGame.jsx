@@ -4,6 +4,9 @@ import left from "./Images/left_digit.png";
 import jodi from "./Images/jodi_digit_image.png";
 import topBackground from "./Images/bg.png";
 import { useNavigate, useLocation } from "react-router-dom";
+import { FaAnglesLeft } from "react-icons/fa6";
+import { FaAnglesRight } from "react-icons/fa6";
+import { GiRollingDices } from "react-icons/gi";
 
 function GaliAllGame() {
   const navbarStyle = {
@@ -17,7 +20,7 @@ function GaliAllGame() {
   };
 
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    background:'white',
     backgroundSize: "cover",
   };
   const navigate = useNavigate();
@@ -30,21 +33,12 @@ function GaliAllGame() {
 
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">{gameName}</h1>
-        </div>
-      </div>
-
       <div
-        className=" pl-2 flex justify-center items-start h-svh"
+        className=" pl-2 flex-col justify-center items-start h-svh"
         style={backStyle}
       >
-        <div className="grid grid-cols-2 pt-10" style={cardStyle}>
-        <div className="col-span-1 flex justify-center items-center mt-4 ">
+        <div className="flex justify-center items-center mt-10">
+        <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center mt-4 text-lg font-bold mr-20 w-32 h-32 ">
             <button
              onClick={()=>{
               if (gameId) {
@@ -52,10 +46,11 @@ function GaliAllGame() {
                 navigate("/leftdigit", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
               }
             }}>
-              <img src={left} alt="Image 3" className="w-42 h-32" />
+              <FaAnglesLeft className="w-20 h-20" /> Left Digit
+              {/* <img src={left} alt="Image 3" className="w-42 h-32" /> */}
             </button>
           </div>
-          <div className="col-span-1 flex justify-center items-center mt-4">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center mt-4 text-lg font-bold w-32 h-32">
             <button
              onClick={()=>{
               if (gameId) {
@@ -63,12 +58,16 @@ function GaliAllGame() {
                 navigate("/rightdigit", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Right Digit' } });
               }
             }}>
-              <img src={right} alt="Image 4" className="w-42 h-32" />
+                <FaAnglesRight className="w-20 h-20" /> Right Digit
             </button>
           </div>
+        </div>
+        {/* <div className="grid grid-cols-2 pt-10" style={cardStyle}> */}
+
 
           {/* Third row with one column */}
-          <div className="col-span-2 flex justify-center items-center mt-4">
+          <div className="flex justify-center items-center">
+          <div className="shadow-md border rounded-xl col-span-2 w-32 h-32 flex justify-center items-center mt-7 text-lg font-bold ml-25 ">
             <button
              onClick={()=>{
               if (gameId) {
@@ -76,11 +75,13 @@ function GaliAllGame() {
                 navigate("/jodidigit", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Triple Pana' } });
               }
             }}>
-              <img src={jodi} alt="Image 5" className="w-42 h-36 " />
+              <GiRollingDices  className="w-20 h-20" /> Jodi Digit
             </button>
           </div>
+          </div>
+
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
