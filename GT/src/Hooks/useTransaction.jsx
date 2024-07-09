@@ -29,7 +29,7 @@ function useTransaction(unique) {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-wallet-transaction-history",
+        "https://khatrimatka.online/api-wallet-transaction-history",
         requestOptions
       );
       const result = await response.json();

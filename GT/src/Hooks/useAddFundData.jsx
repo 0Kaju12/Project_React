@@ -30,7 +30,7 @@ function useAddFundData(unique, mobile) {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-get-auto-deposit-list",
+        "https://khatrimatka.online/api-get-auto-deposit-list",
         requestOptions
       );
       const result = await response.json();

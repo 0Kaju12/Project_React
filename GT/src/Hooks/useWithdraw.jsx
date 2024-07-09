@@ -30,7 +30,7 @@ function useWithdraw(unique, mobile) {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-user-withdraw-transaction-history",
+        "https://khatrimatka.online/api-user-withdraw-transaction-history",
         requestOptions
       );
       const result = await response.json();

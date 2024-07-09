@@ -30,7 +30,7 @@ function useQRPAY() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-get-qr-pay",
+        "https://khatrimatka.online/api-get-qr-pay",
         requestOptions
       );
       const result = await response.json();

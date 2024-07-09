@@ -86,7 +86,7 @@ function Win({ onDataFetch }) {
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-wining-history-data",
+      "https://khatrimatka.online/api-wining-history-data",
       requestOptions
     );
     const result = await response.json();

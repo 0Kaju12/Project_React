@@ -29,7 +29,7 @@ function useGameRate() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-game-rates",
+        "https://khatrimatka.online/api-game-rates",
         requestOptions
       );
       const result = await response.json();

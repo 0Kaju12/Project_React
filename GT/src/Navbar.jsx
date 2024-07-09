@@ -87,7 +87,7 @@ function Navbar() {
 
   const handleClick = () => {
     // window.location.href = resinfo1['web_starline_chart_url'];
-    window.open('https://sattamatkaofficials.com/uploads/images/GT_1718623233.apk', '_blank');
+    window.open('https://khatrimatka.online/uploads/images/GT_1718623233.apk', '_blank');
   };
   
 

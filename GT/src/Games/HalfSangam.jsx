@@ -329,7 +329,7 @@ function HalfSangam() {
         redirect: "follow",
       };
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-user-wallet-balance",
+        "https://khatrimatka.online/api-user-wallet-balance",
         requestOptions
       );
       const result = await response.json();

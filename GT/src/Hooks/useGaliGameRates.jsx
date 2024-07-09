@@ -29,7 +29,7 @@ function useGaliGameRates() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-galidisawar-game-rates",
+        "https://khatrimatka.online/api-galidisawar-game-rates",
         requestOptions
       );
       const result = await response.json();

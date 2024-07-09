@@ -98,7 +98,7 @@ const MyModal = ({
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-submit-bid",
+      "https://khatrimatka.online/api-submit-bid",
       requestOptions
     );
     const result = await response.json();
