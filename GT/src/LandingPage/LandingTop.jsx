@@ -15,12 +15,16 @@ import topBackground from '../Images/bg.png';
 import { useNavigate } from 'react-router-dom';
 import useCarosuel from '../Hooks/useCarosuel';
 import {  useSelector } from 'react-redux';
+import { FaRegCreditCard } from "react-icons/fa";
+import { MdWallet } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoCall } from "react-icons/io5"; 
 
 
 
 function LandingTop() {
   const topStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover',
     height: 'auto', // Set the height of the div
     width: '100%' // Set the width of the div
@@ -79,76 +83,84 @@ function LandingTop() {
 
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2" style={topStyle}>
-      <div style={carouselContainerStyleRight}>
-        <Carousel
-          showStatus={false}
-          showThumbs={false}
-          showArrows={false}
-          infiniteLoop={true}
-          emulateTouch={true}
-          autoPlay={true}
-          interval={3000}
-          stopOnHover={true}
-          swipeable={true}
-          dynamicHeight={true}
-          width={'100%'}
-          height={'0px'}
-          centerMode={false}
-        >
-          <div>
-            <img src={cara1} alt="image 1" className="h-full w-full object-cover rounded-xl" style={imageStyle} />
-          </div>
-          <div>
-            <img src={cara2} alt="image 2" className="h-full w-full object-cover rounded-xl" style={imageStyle} />
-          </div>
-        </Carousel>
-      </div>
-      <div className="relative flex flex-col items-center justify-center">
-  <div style={{ position: 'absolute' }}>
-    <button onClick={() => navigate('/login')} className='flex justify-center'>
-      <img className='h-20' src={black} alt="Game Rates" style={cellImageStyle} />
-    </button>
-  </div>
-  <div className="flex space-x-4 mb-1">
-    <div className='mr-10'>
-      <button onClick={() => navigate('/login')}>
-        <img src={addfund} alt="Add Fund" style={cellImageStyle} />
-      </button>
-    </div>
-    <div>
-      <button onClick={() => navigate('/login')}>
-        <img src={withdraw} alt="Withdraw" style={cellImageStyle} />
-      </button>
-    </div>
-  </div>
-  <div className="flex space-x-4  ">
-    <div className='mr-12'>
-      <a href="/login" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center">
-        <button>
-          <img src={whatsapp} alt="WhatsApp"  style={cellImageStyle} className='w-36' />
+    <><div style={topStyle}>
+      
+    <div className="flex items-center justify-center pt-2 mb-2">
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
+      <a
+        
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}>
+          <p className="font-bold">Whatsapp</p>
+          <FaWhatsapp className="text-4xl" />
         </button>
       </a>
     </div>
-    <div className='ml-3'>
-      <button onClick={() => navigate('/login')}>
-        <img src={call} alt="Call"  style={cellImageStyle} className='w-36' />
-      </button>
-    </div>
-  </div>
-</div>
-      <div style={markerStyle}>
-        <img src={marker} alt="marker" />
-      </div>
-      <div className='flex justify-center items-start pb-3 col-span-full'>
-      <button className='mr-3' onClick={() => navigate('/login')}>
-              <img src={gali} alt="Add Fund" className='w-64 h-15' />
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
+      {/* <div className="grid grid-cols-2 gap-4">
+        <div>
+          
+          <button
+          
+            type="button"
+            className="flex items-center justify-center text-gray-900 bg-white border  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+            onClick={() => navigate("/imp9")}
+          >
+           <RiFundsFill className="mr-2 w-8 h-6" /> Add Funds
+          </button>
+        </div>
+        <div>
+          <button
+            type="button"
+            className="text-gray-900 bg-white border  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+            onClick={() => navigate("/imp8")}
+          >
+           
+     Withdraw
+          </button>
+        </div>
+        <div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center w-full"
+          >
+            <button
+              type="button"
+              className="text-gray-900 bg-white border   focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+            >
+              WhatsApp
             </button>
-            <button onClick={() => navigate('/login')}>
-              <img src={star} alt="Add Fund" className='w-64 h-15' />
-            </button>
+          </a>
+        </div>
+        <div>
+          <button
+            type="button"
+            className="text-gray-900 bg-white border  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+            onClick={() => navigate("/imp8")}
+          >
+            Call Helpline
+          </button>
+        </div>
+      </div> */}
+    </div>
+
+      <div className="flex justify-center items-start pb-2 col-span-full">
+        <button className="mr-3" onClick={() => navigate("/login")}>
+          <img src={gali} alt="Add Fund" className="w-64 h-15" />
+        </button>
+        <button onClick={() => navigate("/login")}>
+          <img src={star} alt="Add Fund" className="w-64 h-15" />
+        </button>
       </div>
     </div>
+    </>
+    
   );
 }
 
