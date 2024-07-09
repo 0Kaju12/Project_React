@@ -13,23 +13,9 @@ function About() {
   };
   return (
     <div>
-      <div
-        className="bg-custom-purple text-white sticky top-0"
-        style={navbarStyle}
-      >
-        <button className="px-4" onClick={() => back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">About Us</h1>
-        </div>
-      </div>
-      <div className="sticky top-6 bg-white">
-        <div className="flex justify-center items-center ">
-          <img src={logo} alt="Center Image" className="w-40 h-40" />
-        </div>
-      </div>
-      <div className="overflow-y-auto h-screen">
+                <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>About Us</h1></div>
+      
+      <div className="overflow-y-auto h-screen pl-2">
         <strong>Data Deletion Policy of Our App</strong>
         <br />
         Last updated: 18 sep 2023

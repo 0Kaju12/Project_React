@@ -21,7 +21,7 @@ function Htp() {
     position: "relative",
   };
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover', // This will make the background image cover the container without 
     backgroundPosition: 'center',
     position:'relative'
@@ -46,26 +46,11 @@ function Htp() {
 
   return (
     <div className="relative h-svh">
-      <div className="ticky top-0">
-        <div className="bg-custom-purple text-white s" style={navbarStyle}>
-          <button className="px-4" onClick={()=>back()}>
-            <BiArrowBack size={24} />
-          </button>
-          <div>
-            <h1 className="text-white px-3 ">How To Play</h1>
-          </div>
-        </div>
-      </div>
-      <div className="h-screen" style={backStyle}>
-        <div
-          className="sticky top-5 text-white "
-          style={divStyle}
-        >
-          <div className="flex justify-center items-center ">
-            <img src={logo} alt="Center Image" className="w-40 h-40" />
-          </div>
-        </div>
-        <div className="text-white flex flex-col p-5" dangerouslySetInnerHTML={renderHowToPlayContent()}>
+                <div className="font-bold flex items-center justify-center text-2xl mt-2 mb-2"><h1>How To Play</h1></div>
+      
+      <div className="flex items-center justify-center border w-auto py-3 shadow-md " style={backStyle}>
+        
+        <div className="text-black flex flex-col p-5" dangerouslySetInnerHTML={renderHowToPlayContent()}>
         </div>
       </div>
     </div>
