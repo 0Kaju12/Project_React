@@ -99,7 +99,7 @@ const GaliModal = ({
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-galidisawar-submit-bid",
+      "https://khatrimatka.online/api-galidisawar-submit-bid",
       requestOptions
     );
     const result = await response.json();

@@ -127,7 +127,7 @@ function Profile() {
 
     try {
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-profile-update",
+        "https://khatrimatka.online/api-profile-update",
         requestOptions
       );
 

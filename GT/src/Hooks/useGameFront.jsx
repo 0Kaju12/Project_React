@@ -29,7 +29,7 @@ function useGameFront(unique) {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-get-dashboard-data",
+        "https://khatrimatka.online/api-get-dashboard-data",
         requestOptions
       );
       const result = await response.json();

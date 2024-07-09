@@ -101,7 +101,7 @@ const StarModal = ({
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-starline-submit-bid",
+      "https://khatrimatka.online/api-starline-submit-bid",
       requestOptions
     );
     const result = await response.json();

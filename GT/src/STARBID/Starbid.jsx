@@ -86,7 +86,7 @@ function Starbid({ onDataFetch }) {
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-starline-bid-history-data",
+      "https://khatrimatka.online/api-starline-bid-history-data",
       requestOptions
     );
     const result = await response.json();

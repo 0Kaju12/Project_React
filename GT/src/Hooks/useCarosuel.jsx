@@ -27,7 +27,7 @@ function useCarosuel() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-get-slider-images",
+        "https://khatrimatka.online/api-get-slider-images",
         requestOptions
       );
       const result = await response.json();

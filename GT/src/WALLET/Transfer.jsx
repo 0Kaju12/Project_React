@@ -117,7 +117,7 @@ function Transfer() {
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-check-user-for-transfer-amt",
+      "https://khatrimatka.online/api-check-user-for-transfer-amt",
       requestOptions
     );
     return await response.json();

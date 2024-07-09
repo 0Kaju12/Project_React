@@ -102,7 +102,7 @@ function Login() {
       redirect: "follow",
     };
 
-    const response = await fetch("https://kalyanmilanofficialmatka.in/api-user-login", requestOptions);
+    const response = await fetch("https://khatrimatka.online/api-user-login", requestOptions);
     const result = await response.json();
 
     if (result?.status === true) {

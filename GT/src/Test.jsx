@@ -34,7 +34,7 @@ function Test() {
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-get-social-data",
+      "https://khatrimatka.online/api-get-social-data",
       requestOptions
     );
     const result = await response.json();

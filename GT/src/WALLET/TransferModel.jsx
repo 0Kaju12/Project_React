@@ -54,7 +54,7 @@ const TransferModel = ({ closeModal, points, name, number }) => {
             redirect: "follow",
         };
 
-        const response = await fetch("https://kalyanmilanofficialmatka.in/api-user-transfer-wallet-balance", requestOptions);
+        const response = await fetch("https://khatrimatka.online/api-user-transfer-wallet-balance", requestOptions);
         const result = await response.json();
         if (result?.status === true) {
             notify();

@@ -27,7 +27,7 @@ function useStarline() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-starline-game",
+        "https://khatrimatka.online/api-starline-game",
         requestOptions
       );
       const result = await response.json();

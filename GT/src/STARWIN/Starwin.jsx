@@ -86,7 +86,7 @@ function Starwin({ onDataFetch }) {
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-starline-wining-history-data",
+      "https://khatrimatka.online/api-starline-wining-history-data",
       requestOptions
     );
     const result = await response.json();

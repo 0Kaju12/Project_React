@@ -108,7 +108,7 @@ function Register() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-check-mobile",
+        "https://khatrimatka.online/api-check-mobile",
         requestOptions
       );
       const result = await response.json();

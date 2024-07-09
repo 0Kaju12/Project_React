@@ -29,7 +29,7 @@ function useHowtoPlay() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-how-to-play",
+        "https://khatrimatka.online/api-how-to-play",
         requestOptions
       );
       const result = await response.json();

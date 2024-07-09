@@ -30,7 +30,7 @@ function useUpiOption(unique, mobile) {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-last-fund-request-detail",
+        "https://khatrimatka.online/api-last-fund-request-detail",
         requestOptions
       );
       const result = await response.json();

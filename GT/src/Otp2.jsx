@@ -95,7 +95,7 @@ function Otp2() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-resend-otp",
+        "https://khatrimatka.online/api-resend-otp",
         requestOptions
       );
       const result = await response.json();
@@ -153,7 +153,7 @@ function Otp2() {
         redirect: "follow",
       };
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-add-user-upi-details",
+        "https://khatrimatka.online/api-add-user-upi-details",
         requestOptions
       );
       const result = await response.json();

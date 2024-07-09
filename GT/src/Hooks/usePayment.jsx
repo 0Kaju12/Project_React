@@ -32,7 +32,7 @@ function usePayment(token, number) {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-user-payment-method-list",
+        "https://khatrimatka.online/api-user-payment-method-list",
         requestOptions
       );
       const result = await response.json();

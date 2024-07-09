@@ -108,7 +108,7 @@ const PaymentModal = ({ closeModal, option }) => {
       };
   
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-resend-otp",
+        "https://khatrimatka.online/api-resend-otp",
         requestOptions
       );
       const result = await response.json();

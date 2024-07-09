@@ -87,7 +87,7 @@ function Bid({ onDataFetch }) {
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-bid-history-data",
+      "https://khatrimatka.online/api-bid-history-data",
       requestOptions
     );
     const result = await response.json();

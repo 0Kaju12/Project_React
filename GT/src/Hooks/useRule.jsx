@@ -28,7 +28,7 @@ function useRule() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-money-deposit-withdrawal-rule",
+        "https://khatrimatka.online/api-money-deposit-withdrawal-rule",
         requestOptions
       );
       const result = await response.json();

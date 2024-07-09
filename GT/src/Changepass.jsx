@@ -136,7 +136,7 @@ function Changepass() {
     };
 
     const response = await fetch(
-      "https://kalyanmilanofficialmatka.in/api-change-password",
+      "https://khatrimatka.online/api-change-password",
       requestOptions
     );
     const result = await response.json();

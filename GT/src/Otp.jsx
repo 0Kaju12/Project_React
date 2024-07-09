@@ -80,7 +80,7 @@ function Otp() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-user-registration",
+        "https://khatrimatka.online/api-user-registration",
         requestOptions
       );
       const result = await response.json();
@@ -119,7 +119,7 @@ function Otp() {
       };
 
       const response = await fetch(
-        "https://kalyanmilanofficialmatka.in/api-resend-otp",
+        "hhttps://khatrimatka.online/api-resend-otp",
         requestOptions
       );
       const result = await response.json();
