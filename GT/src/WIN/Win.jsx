@@ -12,7 +12,7 @@ function Win({ onDataFetch }) {
     alignItems: "center",
   };
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
     position:'relative',
@@ -109,25 +109,18 @@ function Win({ onDataFetch }) {
 
   return (
     <>
-      <div className="bg-custom-purple text-white" style={navbarStyle}>
-        <button className="px-4" onClick={()=>back()}>
-          <BiArrowBack size={24} />
-        </button>
-        <div>
-          <h1 className="text-white px-3">WIN HISTORY</h1>
-        </div>
-      </div>
-      <div style={backStyle} className="text-white">
+          <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>WINS</h1></div>
+      <div style={backStyle} className="text-black">
         <div className="flex justify-center item-center p-1" >
-          <div className="" style={cardStyle} >
+          <div className="border shadow-md" style={cardStyle} >
             {/* <p className="inline-block rounded p-3 border border-white  bg-blue-950 w-full" >Select Dates</p> */}
-            <p className="">From Date</p>
+            <p className="font-bold">From Date</p>
             <DatePickerButton selectedDate={selectedDate} onDateChange={handleDateChange} />
-            <p className=" mt-1" >To Date</p>
+            <p className=" mt-1 font-bold" >To Date</p>
             <DatePickerButton selectedDate={selectedEndDate} onDateChange={handleEndDateChange} />
             <div className="flex justify-center  ">
               <button 
-                className="p-3 border border-black-500 text-black rounded mt-2 bg-white w-full" 
+                className="p-3 border  text-white rounded mt-2 bg-blue-600  w-full" 
                 onClick={handleSubmit}
                 disabled={isSubmitting} // Disable button when submitting
               >

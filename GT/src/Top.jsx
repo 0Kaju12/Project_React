@@ -113,13 +113,21 @@ function Top() {
       style={topStyle}
     >
     <div className="flex items-center justify-center pt-2 mb-2">
-      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md"><button onClick={() => navigate("/imp9")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
-      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md"> <button onClick={() => navigate("/imp8")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
-      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md">          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Whatsapp</p> <FaWhatsapp className="text-4xl" /></button> </a> </div>
-      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/imp9")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/imp7")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="flex flex-col py-2 px-1 items-center justify-center">
+          <p className="font-bold">Whatsapp</p>
+          <FaWhatsapp className="text-4xl" />
+        </button>
+      </a>
+    </div>
+      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
       {/* <div className="grid grid-cols-2 gap-4">
         <div>
           

@@ -27,13 +27,13 @@ const DatePickerButton = ({ selectedDate, onDateChange }) => {
   };
 
   return (
-    <div className='flex justify-between items-center px-2 w-full border border-black-500 bg-blue-950 rounded' onClick={openDatePicker}>
+    <div className='flex justify-between items-center px-2 w-full border rounded' onClick={openDatePicker}>
       {/* <img className="m-1" src={cal} alt="" /> */}
       
       <DatePicker 
         selected={startDate}
         onChange={(date) => handleDateChange(date)}
-        className="bg-blue-950 py-4 "
+        className="border-none py-4 "
         ref={datePickerRef}
       />
       <FaRegCalendar />

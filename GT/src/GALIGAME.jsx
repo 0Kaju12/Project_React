@@ -8,7 +8,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import TimerStar from "./TimerStar";
 import useGaliGameFront from "./Hooks/useGaliGameFront";
-
+import { FaPlay } from "react-icons/fa";
+import { FaStop } from "react-icons/fa";
+import classNames from "classnames";
 function GALIGAME() {
   const [status, setStatus] = useState(false);
   const [gameRates, setGameRates] = useState([{}]);
@@ -21,8 +23,8 @@ function GALIGAME() {
     marginTop: "-4px",
   };
   const laststyle = {
-    height:"7px",
-    gap: "7px"
+    height: "7px",
+    gap: "7px",
   };
   const imgstyle = {
     width: "40px",
@@ -47,8 +49,63 @@ function GALIGAME() {
   return (
     <div>
       {gameRates.map((game) => (
-        <div key={game.game_id} className="mb-5">
-          <div className="flex justify-between items-center pt-1 pl-2 pr-2 pb-7 ml-2 mr-6 h-15 rounded-xl border border-white text-white"style={{background:"linear-gradient(to right, #141384, #0000)"}}>
+        <div key={game.game_id} className="mb-5 shadow-md rounded">
+          <div className=" flex items-center justify-evenly font-bold border py-2">
+            <div>
+              <p className="text-black font-bold">
+                {game.open_result ? `${game.open_result}` : "**"}
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div
+                className={classNames(
+                  "text-xs flex justify-center items-center font-bold",
+                  {
+                    "text-red-600": game.msg_status === 2,
+                    "text-green-600": game.msg_status === 1,
+                  }
+                )}
+              >
+                {game.msg_status === 2 ? "MARKET CLOSED" : "MARKET RUNNING"}
+              </div>
+              <div className="flex justify-center items-center mb-2">
+                <p className="text-black font-bold text-xs">
+                  Open - {game.open_time}
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <button
+                onClick={() => {
+                  // console.log(game.msg_status)
+                  if (game.msg_status === 1) {
+                    navigate("/galiallgame", {
+                      state: {
+                        gameId: game.game_id,
+                        openTime: game.open_time,
+                        gameName: game.game_name,
+                      },
+                    });
+                  }
+                }}
+              >
+                {game.msg_status === 1 ? (
+                  <FaPlay className="text-2xl text-green-600" />
+                ) : (
+                  <FaStop className="text-2xl text-red-600" />
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+export default GALIGAME;
+
+{
+  /* <div className="flex justify-between items-center pt-1 pl-2 pr-2 pb-7 ml-2 mr-6 h-15 rounded-xl border border-white text-white"style={{background:"linear-gradient(to right, #141384, #0000)"}}>
             <p className="top-0 right-0">{game.game_name}</p>
             
           </div>
@@ -95,10 +152,5 @@ function GALIGAME() {
               </button>
             </div>
 
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+          </div> */
 }
-export default GALIGAME;

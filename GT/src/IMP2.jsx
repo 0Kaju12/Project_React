@@ -8,17 +8,19 @@ import StarlineGame from "./StarlineGame";
 
 
 function IMP2(){
-    const topStyle = {
-        backgroundImage: `url(${topBackground})`,
-        backgroundSize: 'cover',
-        height: 'auto', // Set the height of the div
-        width: '100%', // Set the width of the div
-        paddingBottom:'20px'
-      };
+  const topStyle = {
+    // backgroundImage: `url(${topBackground})`,
+    backgroundSize: 'cover',
+    height: 'auto',
+    width: '100%',
+    paddingBottom: '20px',
+    overflowY: 'scroll'
+};
+
     return (
         <>
-        <div className="relative">
-        <div className="sticky top-0">
+        <div className="">
+        <div className=" z-4">
         <Starline/>
         </div>
         
