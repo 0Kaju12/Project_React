@@ -1,11 +1,6 @@
-import chart from "../Images/chart.png";
-import close from "../Images/close.png";
-import open from "../Images/play.png";
-import { useEffect, useState } from "react";
-import useGameFront from "../Hooks/useGameFront";
-import { useSelector } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
-import Timer from "../Timer";
+import React from "react";
+import { FaPlay } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function LandingGameFRONT() {
   const centerstyle = {
@@ -26,7 +21,6 @@ function LandingGameFRONT() {
     height: "auto",
     marginTop: "-4px",
   };
-
   const navigate = useNavigate();
 
   const games = [
@@ -49,33 +43,23 @@ function LandingGameFRONT() {
   ];
 
   return (
-    <div>
-      {games.map((game) => (
-        <div className="mb-5" key={game}>
-          <div
-            className="flex justify-between justify-center items-center pt-1 pl-2 pr-2 pb-7 ml-2 mr-6 h-15 rounded-2xl border border-white text-white"
-            style={{ background: "linear-gradient(to right, #141384, #0000)" }}
-          >
-            <p className="top-0 right-0">{game}</p>
-            {/* 00:00:00 */}
-          </div>
-          <div className="bg-white mr-2 ml-7 z-2 -mt-7 p-1 pb-2 flex flex-col rounded-2xl border">
-            <div className="flex justify-between items-end py-2">
-              <div>
-                <img src={chart} style={imgstyle} alt="Chart" />
+    <div className="px-5 mt-2">
+      {games.map((game, index) => (
+        <div key={index} className="mb-5 border shadow-md rounded py-2">
+          <div className="flex items-center justify-evenly">
+            <div>
+              <p className="text-black font-bold">***_**_***</p>
+            </div>
+            <div className="flex flex-col justify-center items-center text-sm">
+              <div className="flex flex-col items-center justify-center font-bold text-sm">
+                <p className=" text-black">{game}</p>
+              <div className="text-green-500 font-bold">Login To Play</div>
               </div>
-              <div className="text-green-700 font-bold text-lg flex justify-center items-center">
-                Login To Play
-              </div>
-              <div className="flex justify-center items-center">
-                <button
-                  onClick={() => {
-                    navigate("login");
-                  }}
-                >
-                  <img src={open} className="mt-1" style={imgstyle} alt="Open" />
-                </button>
-              </div>
+            </div>
+            <div>
+              <button onClick={()=> navigate("/login")}>
+                <FaPlay className="text-2xl text-green-600" />
+              </button>
             </div>
           </div>
         </div>

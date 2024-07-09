@@ -103,7 +103,7 @@ function Game() {
           </div>
 
           {/* Third row with one column */}
-          <div className="shadow-md border rounded-xl w-48 h-32 col-span-2 flex justify-center items-center ml-20 mt-3">
+          <div className="shadow-md border rounded-xl w-48 h-32 col-span-2 flex justify-center items-center ml-20 ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -116,7 +116,7 @@ function Game() {
           </div>
 
           {/* Fourth row with two columns */}
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-16">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-10">
             <button
               onClick={() => {
                 if (gameId) {
@@ -127,7 +127,7 @@ function Game() {
               <MdHourglassBottom className="w-20 h-20"/>Half Sangam
             </button>
           </div>
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-16">
+          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-10 ">
             <button
               onClick={() => {
                 if (gameId) {
