@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 function Otp2() {
   const backStyle = {
-    backgroundImage: `url(${topBackground})`,
+    // backgroundImage: `url(${topBackground})`,
     backgroundSize: "cover",
     minHeight: "100vh",
   };
@@ -166,38 +166,31 @@ function Otp2() {
   return (
     <>
       <div style={backStyle}>
-        <div className="bg-custom-purple text-white" style={navbarStyle}>
-          <button className="px-4" onClick={back}>
-            <BiArrowBack size={24} />
-          </button>
-          <div>
-            <h1 className="text-white px-3 text-lg">OTP</h1>
-          </div>
-        </div>
+        
         <div className="flex justify-center items-center">
           <img src={logo} alt="Center Image" className="w-40 h-40" />
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-white mt-4 text-3xl">OTP Verification</p>
-          <p className="text-white mt-4">
+          <p className="text-black  mt-4 text-3xl">OTP Verification</p>
+          <p className="text-black mt-4">
             Enter the code from the SMS we sent to
           </p>
           <div className="text-white">+91 {phoneNumber} </div>
           {counter > 0 && (
-            <div className="text-white mt-5">Resend OTP in: 00 : {counter}</div>
+            <div className="text-black mt-5">Resend OTP in: 00 : {counter}</div>
           )}
           <OtpInput
-            value={otp}
-            onChange={setOtp}
-            otpType="number"
-            disabled={false}
-            autoFocus
-            className="mt-5 ml-4"
-          />
+          value={otp}
+          onChange={setOtp}
+          otpType="number"
+          disabled={false}
+          autoFocus
+          inputClassName="border border-black rounded-md font-bold mt-5"
+        />
           <div className="text-gray-500" style={{ margin: "30px 20px 0 0" }}>
             I didn't receive any code.{" "}
             {counter === 0 && (
-              <button className="ml-3" onClick={handleResendOtp}>
+              <button className="ml-3 font-bold text-red-500" onClick={handleResendOtp}>
                 RESEND
               </button>
             )}
