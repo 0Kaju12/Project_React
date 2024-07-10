@@ -67,6 +67,7 @@ function Profile() {
   const unique_token = useSelector((state) => state.userDetail.token);
   const [formErrors, setFormErrors] = useState({});
   const name = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -79,6 +80,9 @@ function Profile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (isSubmitting) return;
+    setIsSubmitting(true); 
     const errors = validate(name.current.value);
     setFormErrors(errors);
 
@@ -91,6 +95,8 @@ function Profile() {
       setIsSubmit(true);
     } catch (error) {
       console.error("Error occurred during data fetching:", error);
+    } finally {
+      setIsSubmitting(false); // Always reset submitting state after request is completed
     }
   };
 
@@ -204,7 +210,8 @@ function Profile() {
                   className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 mt-2 rounded"
                   type="submit"
                 >
-                  Submit
+                  {/* Submit */}
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               )}
             </form>

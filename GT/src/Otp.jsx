@@ -18,6 +18,7 @@ function Otp() {
   const mobile = useSelector((state) => state.registerDetail.phone);
   const password = useSelector((state) => state.registerDetail.password);
   const otp2 = useSelector((state) => state.registerDetail.otp);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const navigate = useNavigate();
   const back = () => {
@@ -41,18 +42,23 @@ function Otp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true); 
 
     try {
       if (otp == otp2 || otp == data2) {
         setIsSubmit(true);
         const a = await fetchData(username, mobile, password);
         handleAdduser(a?.user_name, a?.unique_token, mobile);
+        // setIsSubmitting(false);
         navigate("/imp");
       } else {
         setErrorMsg("Enter Valid OTP");
       }
     } catch (error) {
       console.error("Error registering:", error);
+    } finally {
+      setIsSubmitting(false); // Always reset submitting state after request is completed
     }
   };
 
@@ -135,6 +141,8 @@ function Otp() {
     padding: "",
     position: "relative",
   };
+  console.log(otp2)
+  console.log(data2)
 
   return (
     <>
@@ -157,7 +165,7 @@ function Otp() {
           otpType="number"
           disabled={false}
           autoFocus
-          inputClassName="border border-black rounded-md p-3 mt-5"
+          inputClassName="border border-black rounded-md font-bold mt-5"
         />
           <div className="text-black-500" style={{ margin: "30px 20px 0 0" }}>
             I didn't receive any code.{" "}
@@ -172,8 +180,10 @@ function Otp() {
             className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-5 rounded "
             style={{ marginTop: "30px" }}
             onClick={handleSubmit}
+            disabled={isSubmitting}
           >
-            SUBMIT
+            {/* SUBMIT */}
+            {isSubmitting ? "Registering..." : "Register"}
           </button>
         </div>
       </div>

@@ -185,7 +185,7 @@ function Changepass() {
                 </div>
               </div>
               <div className="mb-6 relative">
-                <label className="block mb-1 font-medium text-white">
+                <label className="block mb-1 font-bold text-black">
                   New Password
                 </label>
                 <div className="relative">
@@ -211,7 +211,7 @@ function Changepass() {
                 </div>
               </div>
               <div className="mb-6 relative">
-                <label className="block mb-1 font-medium text-white">
+                <label className="block mb-1 font-bold text-black">
                   Confirm New Password
                 </label>
                 <div className="relative">
