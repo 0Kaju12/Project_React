@@ -32,7 +32,7 @@ function DepositRule(){
     return (
         <>
       <div  className="mt-2">
-        <div className="text-black font-bold ">
+        <div className="text-black font-bold px-3 ">
           {status && gameRates.length > 0 && gameRates[0].deposit_rule.split('\n').map((line, index) => (
             <p className="mb-4"key={index}>{line}</p>
           ))}

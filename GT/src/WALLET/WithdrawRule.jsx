@@ -33,7 +33,7 @@ function WithdrawRule(){
         <>
 
       <div className="mt-2 font-bold" >
-        <div className="text-black  ">
+        <div className="text-black px-3 ">
           {status && gameRates.length > 0 && gameRates[0].withdrawal_rule.split('\n').map((line, index) => (
             <p className="mb-4"key={index}>{line}</p>
           ))}
