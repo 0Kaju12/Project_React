@@ -15,7 +15,7 @@ function About() {
     <div>
                 <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>About Us</h1></div>
       
-      <div className="overflow-y-auto h-screen pl-2">
+      <div className="overflow-y-auto h-screen px-3">
         <strong>Data Deletion Policy of Our App</strong>
         <br />
         Last updated: 18 sep 2023
