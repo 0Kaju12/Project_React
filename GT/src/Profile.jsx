@@ -179,7 +179,7 @@ function Profile() {
               <p className="text-black font-bold mb-2">{username}</p>
               <p className="text-black font-bold mb-2">{mobile}</p>
               <button
-                className="bg-blue-600 hover:bg-blue-700 mt-2 w-32 py-2 text-white font-bold  rounded"
+                className="bg-yellow-600 hover:bg-yellow mt-2 w-32 py-2 text-white font-bold  rounded"
                 onClick={toggleInput}
               >
                 Edit
@@ -207,7 +207,7 @@ function Profile() {
               </div>
               {showInput && (
                 <button
-                  className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 mt-2 rounded"
+                  className="bg-yellow-600 hover:bg-yellow text-white font-bold py-2 px-4 mt-2 rounded"
                   type="submit"
                 >
                   {/* Submit */}

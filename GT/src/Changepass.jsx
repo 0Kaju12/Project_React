@@ -241,7 +241,7 @@ function Changepass() {
               </div>
               <div className="flex justify-center items-center">
                 <button
-                  className="text-white px-10 py-2 rounded-md  bg-blue-600 hover:bg-blue-700"
+                  className="text-white px-10 py-2 rounded-md  bg-yellow-600 hover:bg-yellow-500"
                   type="submit"
                 >
                   Change

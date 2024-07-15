@@ -51,7 +51,7 @@ function Test() {
     <>
       <div>
         <button
-          className="p-3 border border-black-500 rounded mt-4 bg-blue-800 w-3/4 text-white"
+          className="p-3 border border-black-500 rounded mt-4 bg-yellow-600 hover:bg-yellow w-3/4 text-white"
           type="button" // specify type as button to prevent form submission
           onClick={handleSubmit} // call handleSubmit when the button is clicked
         >

@@ -141,7 +141,7 @@ function Wallet() {
           <div>
             <button
               onClick={() => addf()}
-              className="bg-blue-700 rounded-xl hover:bg-blue-500"
+              className=" rounded-xl bg-yellow-600 hover:bg-yellow-500"
               style={box3}
             >
               + Add Fund
@@ -150,7 +150,7 @@ function Wallet() {
           <div>
             <button
               onClick={() => withd()}
-              className="bg-blue-700 rounded-xl hover:bg-blue-500"
+              className=" rounded-xl bg-yellow-600 hover:bg-yellow-500"
               style={box3}
             >
               - Withdraw Fund
@@ -159,7 +159,7 @@ function Wallet() {
 
           <div>
             <button
-              className="bg-blue-700 rounded-xl hover:bg-blue-500"
+              className=" rounded-xl bg-yellow-600 hover:bg-yellow-500"
               style={box3}
               onClick={() => trans()}
             >
@@ -229,7 +229,7 @@ function Wallet() {
         >
           <button
             onClick={() => navigate("/transaction")}
-            className="flex   justify-evenly items-center p-2 py-3 rounded hover:bg-blue-500 bg-blue-700 text-white border-none mb-2 "
+            className="flex   justify-evenly items-center p-2 py-3 rounded bg-yellow-600 hover:bg-yellow-500 text-white border-none mb-2 "
           >
             <p className="mr-5 ml-2">Wallet History</p>
             <FaHistory className="h-6 w-12" />

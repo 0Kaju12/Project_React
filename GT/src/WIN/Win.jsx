@@ -120,7 +120,7 @@ function Win({ onDataFetch }) {
             <DatePickerButton selectedDate={selectedEndDate} onDateChange={handleEndDateChange} />
             <div className="flex justify-center  ">
               <button 
-                className="p-3 border  text-white rounded mt-2 bg-blue-600  w-full" 
+                className="p-3 border  text-white rounded mt-2 bg-yellow-600 hover:bg-yellow-500  w-full" 
                 onClick={handleSubmit}
                 disabled={isSubmitting} // Disable button when submitting
               >
