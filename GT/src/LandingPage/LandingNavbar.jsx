@@ -35,6 +35,7 @@ import { FaRegCreditCard } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { IoMdPeople } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa6";
 
 function LandingNavbar() {
   const Hamburg = {
@@ -66,6 +67,11 @@ function LandingNavbar() {
   const handlelogout = () => {
     navigate("login");
   };
+
+  const handleClick = () => {
+    // window.location.href = resinfo1['web_starline_chart_url'];
+    window.open('https://khatrimatka.online/uploads/images/GT_1718623233.apk', '_blank');
+  };
   
 
   return (
@@ -78,7 +84,7 @@ function LandingNavbar() {
 
           <div className="text-xl fading-text">
             <div className="w-40 flex items-center ">
-              <marquee scrollamount="4"> SATTA MATKA OFFICIALS</marquee>
+              <marquee scrollamount="4"> KHATRI MATKA OFFICIALS</marquee>
             </div>
           </div>
 
@@ -211,7 +217,7 @@ function LandingNavbar() {
             </li>
       
 
-            <li className="">
+            {/* <li className="">
               <NavLink
                 to="/login"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
@@ -230,7 +236,7 @@ function LandingNavbar() {
                 <IoMdPeople className="w-8 h-6 ml-3 mr-2" />
                 About Us
               </NavLink>
-            </li>
+            </li> */}
 
             
             {/* <li>
@@ -244,6 +250,16 @@ function LandingNavbar() {
               <div className="text-xl font-bold ml-5 bg-yellow-400 p-2 rounded-xl">{"Download APP"}</div>
             </div>
             </li> */}
+            <li className="">
+              <NavLink
+                to="/change"
+                className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleClick}
+              >
+                <FaDownload className="w-8 h-6 ml-3 mr-2" />
+                Download App
+              </NavLink>
+            </li>
 
             {/* <li onClick={handlelogout}>
               <NavLink className="block py-2 px-4 hover:bg-gray-700 rounded-lg">
@@ -255,6 +271,7 @@ function LandingNavbar() {
                 Log out
               </NavLink>
             </li> */}
+
             <hr class="my-4" />
           </ul>
           <div className="flex flex-col p-4">
