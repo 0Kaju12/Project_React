@@ -8,14 +8,14 @@ const History = ()=>{
     <h1>History</h1>
   </div>
   <div className="flex flex-col  items-center justify-center" >
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/addfundhistory")} className="flex  py-2 px-1  "><p className="font-bold">Deposit History</p> </button> </div>
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/transaction")} className="flex  py-2 px-1  "><p className="font-bold">Wallet History</p> </button> </div>
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/imp4")} className="flex  py-2 px-1  "><p className="font-bold">Main Bid-History</p> </button> </div>
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/imp3")} className="flex  py-2 px-1  "><p className="font-bold">Main Win-History</p> </button> </div>
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/imp5")} className="flex  py-2 px-1  "><p className="font-bold">Starline Bid-History</p> </button> </div>
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/imp6")} className="flex  py-2 px-1  "><p className="font-bold">Starline Win-History</p> </button> </div>
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/impbid")} className="flex  py-2 px-1  "><p className="font-bold">Gali Bid-History</p> </button> </div>
-  <div className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/impwin")} className="flex  py-2 px-1  "><p className="font-bold">Gali Win-History</p> </button> </div>
+  <div onClick={() => navigate("/addfundhistory")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Deposit History</p> </button> </div>
+  <div onClick={() => navigate("/transaction")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Wallet History</p> </button> </div>
+  <div onClick={() => navigate("/imp4")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Main Bid-History</p> </button> </div>
+  <div onClick={() => navigate("/imp3")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Main Win-History</p> </button> </div>
+  <div onClick={() => navigate("/imp5")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Starline Bid-History</p> </button> </div>
+  <div onClick={() => navigate("/imp6")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Starline Win-History</p> </button> </div>
+  <div onClick={() => navigate("/impbid")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Gali Bid-History</p> </button> </div>
+  <div onClick={() => navigate("/impwin")} className="  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Gali Win-History</p> </button> </div>
    
 
   </div>

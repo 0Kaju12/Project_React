@@ -1,4 +1,4 @@
-import logo from "./Images/logo.png";
+import logo from "./Images/BG__.jpeg";
 // import { BiArrowBack } from "react-icons/bi";
 // import topBackground from "./Images/bg.png";
 import { FiEye, FiEyeOff, FiLock, FiAlertCircle } from "react-icons/fi";
@@ -121,7 +121,7 @@ function Login() {
         
           <form style={cardStyle} className="p-5 shadow-md z-4 mt-2" onSubmit={handleSubmit}>
           <div className="flex flex-col justify-center items-center ">
-          <img src={logo} alt="Center Image" className="w-40 h-40" />
+          <img src={logo} alt="Center Image" className="w-40 h-40 rounded-xl" />
           <h1 className="font-bold text-2xl">Login</h1>
         </div>
             <p>Phone Number</p>
