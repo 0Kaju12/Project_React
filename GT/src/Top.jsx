@@ -111,7 +111,7 @@ function Top() {
 
   return (
     <div
-      className=""
+      className="px-2"
       style={topStyle}
     >
     <div className="flex items-center justify-center mb-2 mt-2">

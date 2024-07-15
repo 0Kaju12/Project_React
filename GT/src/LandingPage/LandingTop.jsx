@@ -86,9 +86,9 @@ function LandingTop() {
 
 
   return (
-    <><div style={topStyle}>
+    <><div style={topStyle} className='px-2'>
       
-    <div className="flex items-center justify-center pt-2 mb-2">
+    <div className="flex items-center justify-center pt-2 mb-2 ">
       <div className="w-1/4 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
       <div className="w-1/4 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
       <div className="w-1/4 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">

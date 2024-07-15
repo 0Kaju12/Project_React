@@ -14,7 +14,7 @@ function GALIRATES() {
     // backgroundImage: `url(${topBackground})`,
     backgroundSize: "cover", // This will make the background image cover the container without
     paddingBottom: "10px",
-    paddingTop: "0px"
+    paddingTop: "0px",
   };
   const navbarStyle = {
     height: "60px",
@@ -40,8 +40,6 @@ function GALIRATES() {
     width: "500px",
     margin: "20px 10px 0 30px",
     borderRadius: "20px",
-
-    
   };
 
   const marker = {
@@ -55,7 +53,7 @@ function GALIRATES() {
     navigate("/imp");
   };
   const handleClick = () => {
-    window.open(resinfo1['web_galidessar_chart_url'], '_blank');
+    window.open(resinfo1["web_galidessar_chart_url"], "_blank");
   };
 
   const [status, setStatus] = useState(false);
@@ -70,7 +68,7 @@ function GALIRATES() {
       setGameRates1(resinfo1["result"]);
     }
   }, [resinfo1]);
-  console.log(resinfo1)
+  console.log(resinfo1);
   useEffect(() => {
     if (resinfo && resinfo["game_rates"]) {
       setStatus(true);
@@ -80,16 +78,44 @@ function GALIRATES() {
 
   return (
     <>
-      <div>
-        <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>GALI DISAWAR</h1></div>
+      <div className="px-2">
+        <div className="font-bold flex items-center justify-center text-2xl mt-2">
+          <h1>GALI DISAWAR</h1>
+        </div>
         <div>
           <div style={backStyle}>
             <div className="w-120">
-            <div className="flex items-center justify-center pt-2 mb-2">
-      <div onClick={() => navigate("/impbid")} className="w-1/3 text-white bg-yellow-600 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Bid-History</p> <FaHistory className="text-2xl" /></button> </div>
-      <div onClick={() => navigate("/impwin")} className="w-1/3 text-white bg-yellow-600 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Win History</p> <FaHistory className="text-2xl" /></button> </div>
-      <div onClick={handleClick} className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Chart</p> <FaChartSimple className="text-2xl" /></button> </div>
-      </div>
+              <div className="flex items-center justify-center pt-2 mb-2">
+                <div
+                  onClick={() => navigate("/impbid")}
+                  className="w-1/3 text-white bg-yellow-600 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+                >
+                  <button className="flex flex-col py-2 px-1 items-center justify-center">
+                    <p className="font-bold">Bid-History</p>{" "}
+                    <FaHistory className="text-2xl" />
+                  </button>{" "}
+                </div>
+                <div
+                  onClick={() => navigate("/impwin")}
+                  className="w-1/3 text-white bg-yellow-600 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+                >
+                  {" "}
+                  <button className="flex flex-col py-2 px-1 items-center justify-center">
+                    <p className="font-bold">Win History</p>{" "}
+                    <FaHistory className="text-2xl" />
+                  </button>{" "}
+                </div>
+                <div
+                  onClick={handleClick}
+                  className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+                >
+                  {" "}
+                  <button className="flex flex-col py-2 px-1 items-center justify-center">
+                    <p className="font-bold">Chart</p>{" "}
+                    <FaChartSimple className="text-2xl" />
+                  </button>{" "}
+                </div>
+              </div>
               {/* <div className="flex " style={box1}>
                 <button
                   className="text-white rounded border border-white  "
@@ -114,34 +140,34 @@ function GALIRATES() {
                 </button>
               </div> */}
               {/* <div className=""> */}
-                <div  className="flex flex-col justify-center w-120 text-white bg-yellow-600 border font-bold z-4 shadow-md p-2   ">
-                  <div className="flex  justify-evenly items-center ">
-                    <p className="-ml-2">Left Digit</p>
-                    <p className="ml-1">:-</p>
-                    <p>
-                      {gameRates["single_digit_val_1"]}-
-                      {gameRates["single_digit_val_2"]}
-                    </p>
-                  </div>
-
-                  <div className="flex   justify-evenly items-center ">
-                    <p className="-ml-1"> Right Digit</p>
-                    <p className="">:-</p>
-                    <p>
-                      {gameRates["single_pana_val_1"]}-
-                      {gameRates["single_pana_val_2"]}
-                    </p>
-                  </div>
-
-                  <div className="flex   justify-evenly items-center">
-                    <p>Jodi Digit </p>
-                    <p className="ml-4">:-</p>
-                    <p>
-                      {gameRates["double_pana_val_1"]}-
-                      {gameRates["double_pana_val_2"]}
-                    </p>
-                  </div>
+              <div className="flex flex-col justify-center w-120 text-white bg-yellow-600 border font-bold z-4 shadow-md p-2   ">
+                <div className="flex  justify-evenly items-center ">
+                  <p className="-ml-2">Left Digit</p>
+                  <p className="ml-1">:-</p>
+                  <p>
+                    {gameRates["single_digit_val_1"]}-
+                    {gameRates["single_digit_val_2"]}
+                  </p>
                 </div>
+
+                <div className="flex   justify-evenly items-center ">
+                  <p className="-ml-1"> Right Digit</p>
+                  <p className="">:-</p>
+                  <p>
+                    {gameRates["single_pana_val_1"]}-
+                    {gameRates["single_pana_val_2"]}
+                  </p>
+                </div>
+
+                <div className="flex   justify-evenly items-center">
+                  <p>Jodi Digit </p>
+                  <p className="ml-4">:-</p>
+                  <p>
+                    {gameRates["double_pana_val_1"]}-
+                    {gameRates["double_pana_val_2"]}
+                  </p>
+                </div>
+              </div>
               {/* </div> */}
             </div>
           </div>
