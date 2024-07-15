@@ -44,7 +44,7 @@ function StarGame() {
       >
         <div className="grid grid-cols-2 mt-10" style={cardStyle}>
           <div className="flex justify-center items-center">
-          <div className="shadow-md rounded-xl border w-32 h-32 col-span-1 flex justify-center items-center text-lg font-bold ">
+          <div className="shadow-md rounded-xl border w-32 h-32 col-span-1 text-yellow-600 flex justify-center items-center text-lg font-bold ">
             <button
               onClick={() => {
                 navigate("/starsingle", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
@@ -55,7 +55,7 @@ function StarGame() {
           </div>
           </div>
           <div className="flex justify-center items-center">
-          <div className="shadow-md border rounded-xl col-span-1 w-32 h-32 flex justify-center items-center text-lg font-bold  ">
+          <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 w-32 h-32 flex justify-center items-center text-lg font-bold  ">
             <button
             onClick={() => {
               navigate("/ssinglepana", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
@@ -68,7 +68,7 @@ function StarGame() {
 
           {/* Second row with two columns */}
           <div className="flex justify-center items-center">
-          <div className="shadow-md border rounded-xl col-span-1 w-32 h-32 flex justify-center items-center mt-4 text-lg font-bold">
+          <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 w-32 h-32 flex justify-center items-center mt-4 text-lg font-bold">
             <button
               onClick={() => {
                 navigate("/sdoublepana",{ state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
@@ -79,7 +79,7 @@ function StarGame() {
           </div>
           </div>
             <div className="flex justify-center items-center">
-            <div className="shadow-md border rounded-xl w-32 h-32 col-span-1 flex justify-center items-center mt-4 text-lg font-bold">
+            <div className="shadow-md border rounded-xl w-32 h-32 col-span-1 text-yellow-600 flex justify-center items-center mt-4 text-lg font-bold">
             <button
               onClick={() => {
                 navigate("/stripplepana", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });

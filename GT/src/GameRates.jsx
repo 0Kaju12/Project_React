@@ -52,37 +52,37 @@ function GameRates() {
         <div style={cardStyle}>
           {status && (
             <>
-              <div className=" text-black border  h-10 w-80  font-bold flex justify-between items-center" style={newStyle}>
+              <div className=" text-white bg-yellow-600 border  h-10 w-80  font-bold flex justify-between items-center" style={newStyle}>
                 <p>Single Digit</p>
                 <p>{gameRates['single_digit_val_1']}-{gameRates['single_digit_val_2']}</p>
               </div>
 
-              <div className="text-black border h-10 w-80 font-bold  flex justify-between items-center" style={newStyle}>
+              <div className="text-white bg-yellow-600 border h-10 w-80 font-bold  flex justify-between items-center" style={newStyle}>
                 <p>Jodi Digit</p>
                 <p>{gameRates['jodi_digit_val_1']}-{gameRates['jodi_digit_val_2']}</p>
               </div>
 
-              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-white bg-yellow-600 border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Single Panna</p>
                 <p>{gameRates['single_pana_val_1']}-{gameRates['single_pana_val_2']}</p>
               </div>
 
-              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-white bg-yellow-600 border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Double Panna</p>
                 <p>{gameRates['double_pana_val_1']}-{gameRates['double_pana_val_2']}</p>
               </div>
 
-              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-white bg-yellow-600 border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Tripple Panna</p>
                 <p>{gameRates['tripple_pana_val_1']}-{gameRates['tripple_pana_val_2']}</p>
               </div>
 
-              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-white bg-yellow-600 border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Half Sangam</p>
                 <p>{gameRates['half_sangam_val_1']}-{gameRates['half_sangam_val_2']}</p>
               </div>
 
-              <div className="text-black border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
+              <div className="text-white bg-yellow-600 border font-bold h-10 w-80 flex justify-between items-center" style={newStyle}>
                 <p>Jodi Digit</p>
                 <p>{gameRates['full_sangam_val_1']}-{gameRates['full_sangam_val_2']}</p>
               </div>

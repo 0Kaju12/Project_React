@@ -55,7 +55,7 @@ function Game() {
     <>
       <div className="pl-2 flex justify-center -mt-8" style={backStyle}>
         <div className="grid grid-cols-2 gap-2 mt-10 text-lg font-bold" style={cardStyle}>
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -66,7 +66,7 @@ function Game() {
               <FaDiceOne className="w-20 h-20 ml-2"/>Single Digit
             </button>
           </div>
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -79,7 +79,7 @@ function Game() {
           </div>
 
           {/* Second row with two columns */}
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -90,7 +90,7 @@ function Game() {
               <CgCardSpades className="w-20 h-20 ml-2"/>Single Pana
             </button>
           </div>
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -103,7 +103,7 @@ function Game() {
           </div>
 
           {/* Third row with one column */}
-          <div className="shadow-md border rounded-xl w-48 h-32 col-span-2 flex justify-center items-center ml-20 ">
+          <div className="shadow-md border rounded-xl text-yellow-600 w-48 h-32 col-span-2 flex justify-center items-center ml-20 ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -111,12 +111,12 @@ function Game() {
                   navigate("/tripplepana", { state: { gameId: gameId, openTime: openTime, gameName: gameName, pana: 'Triple Pana' } });
                 }
               }}>
-              <TbCards className="w-20 h-20"/>Triple Pana
+              <TbCards className="w-20 h-20 text-yellow-600"/>Triple Pana
             </button>
           </div>
 
           {/* Fourth row with two columns */}
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-10">
+          <div className="shadow-md border rounded-xl text-yellow-600 col-span-1 flex justify-center items-center -mt-10">
             <button
               onClick={() => {
                 if (gameId) {
@@ -127,7 +127,7 @@ function Game() {
               <MdHourglassBottom className="w-20 h-20"/>Half Sangam
             </button>
           </div>
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center -mt-10 ">
+          <div className="shadow-md border rounded-xl text-yellow-600 col-span-1 flex justify-center items-center -mt-10 ">
             <button
               onClick={() => {
                 if (gameId) {
