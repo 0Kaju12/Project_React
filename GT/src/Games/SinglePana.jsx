@@ -430,7 +430,7 @@ function SinglePana() {
             />
             <div className="flex  mb-4 text-white">
               <button
-                className={`p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 cursor-pointer mt-4 ${
+                className={`p-4 border border-black-500 rounded-xl bg-yellow-600 hover:bg-yellow-500 cursor-pointer mt-4 ${
                   isProceed ? "w-11/12" : "w-full"
                 }`}
                 onClick={handleSubmit}
@@ -440,7 +440,7 @@ function SinglePana() {
               {isProceed && (
                 <>
                   <button
-                    className="p-4 border border-black-500 rounded-xl bg-blue-700 hover:bg-blue-500 cursor-pointer mt-4 w-full ml-3"
+                    className="p-4 border border-black-500 rounded-xl bg-yellow-600 hover:bg-yellow-500 cursor-pointer mt-4 w-full ml-3"
                     onClick={() => setShowModal(true)}
                   >
                     Submit

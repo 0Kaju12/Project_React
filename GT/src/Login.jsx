@@ -170,7 +170,7 @@ function Login() {
             {errorText && <p className="text-red-500">{errorText}</p>} {/* Render error message */}
             <div className="flex justify-center mb-5">
               <button
-                className="text-white p-3 border border-black-500 rounded mt-4 bg-blue-800 hover:bg-blue-600 w-full"
+                className="text-white p-3 border border-black-500 rounded mt-4 bg-yellow-600 hover:bg-yellow-500 w-full"
                 type="submit"
                 disabled={isSubmitting}
               >

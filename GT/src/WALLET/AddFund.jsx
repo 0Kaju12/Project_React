@@ -60,11 +60,11 @@ function AddFunds() {
       <h1 >Add Funds</h1>
       </div>
       <div className="flex items-center font-bold justify-center  mt-4 mb-2">
-        <button className="w-1/2 border mr-2 py-2 flex  items-center justify-center text-white  rounded cursor-pointer bg-blue-700 hover:bg-blue-500" onClick={() => navigate("/depositrule")}>
+        <button className="w-1/2 border mr-2 py-2 flex  items-center justify-center text-white  rounded cursor-pointer bg-yellow-600 hover:bg-yellow-500" onClick={() => navigate("/depositrule")}>
           <p className="mr-5 ml-2">Deposit Rule</p>
          <BsFileEarmarkRuledFill className="h-6 w-12" />
          </button>
-        <button className="w-1/2 border ml-2 py-2 flex items-center justify-center text-white  rounded  bg-blue-700 hover:bg-blue-500 cursor-pointer " onClick={() => navigate("/addfundhistory")}>
+        <button className="w-1/2 border ml-2 py-2 flex items-center justify-center text-white  rounded  bg-yellow-600 hover:bg-yellow-500 cursor-pointer " onClick={() => navigate("/addfundhistory")}>
         <p className="mr-0 ml-1">Deposit History</p>
         <FaHistory className="h-6 w-12" />
         </button>

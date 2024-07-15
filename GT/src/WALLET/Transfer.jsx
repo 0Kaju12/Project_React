@@ -158,7 +158,7 @@ function Transfer() {
           <p className="text-red-500">{formErrors.phoneno}</p>
           <div className=" flex justify-center items-center">
             <button
-              className="py-3 px-2 w-48  text-white rounded bg-blue-700 hover:bg-blue-500  "
+              className="py-3 px-2 w-48  text-white rounded bg-yellow-600 hover:bg-yellow-500  "
               type="submit"
             >
               Transfer

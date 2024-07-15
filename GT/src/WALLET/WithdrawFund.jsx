@@ -197,14 +197,14 @@ function WithdrawFunds() {
         </div>
         <div className="flex items-center  justify-center  mt-4 mb-2">
           <button
-            className="w-1/2 border mr-2 py-2 flex items-center justify-center text-white  rounded cursor-pointer bg-blue-700 hover:bg-blue-500"
+            className="w-1/2 border mr-2 py-2 flex items-center justify-center text-white  rounded cursor-pointer bg-yellow-600 hover:bg-yellow-500"
             onClick={() => navigate("/withdrawrule")}
           >
             <p className="mr-0 ml-2">Withdraw Rule</p>
             <BsFileEarmarkRuledFill className="h-6 w-12" />
           </button>
           <button
-            className="w-1/2 border ml-2 py-2 flex   rounded cursor-pointer text-white items-center justify-center bg-blue-700 hover:bg-blue-500  "
+            className="w-1/2 border ml-2 py-2 flex   rounded cursor-pointer text-white items-center justify-center bg-yellow-600 hover:bg-yellow-500  "
             onClick={() => navigate("/withdrawhistory")}
           >
             <p className="mr-0 ml-1">Withdraw History</p>
@@ -245,7 +245,7 @@ function WithdrawFunds() {
         </div>
         <div style={box4} className="flex flex-col ">
           <button
-            className="text-white rounded bg-blue-700 hover:bg-blue-500 py-2 px-4 "
+            className="text-white rounded bg-yellow-600 hover:bg-yellow-500 py-2 px-4 "
             onClick={handleSubmit}
             disabled={isSubmitting}
           >

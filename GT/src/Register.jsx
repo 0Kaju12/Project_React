@@ -202,7 +202,7 @@ function Register() {
 
             <div className="flex justify-center mb-5">
               <button
-                className="p-3 border border-black-500 rounded mt-4 text-white bg-blue-800 hover:bg-blue-700 w-full"
+                className="p-3 border border-black-500 rounded mt-4 text-white bg-yellow-600 hover:bg-yellow w-full"
                 type="submit"
                 disabled={isSubmitting}
               >
