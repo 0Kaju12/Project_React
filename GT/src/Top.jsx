@@ -22,6 +22,8 @@ import { FaRegCreditCard } from "react-icons/fa";
 import { MdWallet } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
+import { FaStar } from "react-icons/fa6";
+import { FaCircleStop } from "react-icons/fa6";
 
 function Top() {
   const topStyle = {
@@ -112,10 +114,10 @@ function Top() {
       className=""
       style={topStyle}
     >
-    <div className="flex items-center justify-center pt-2 mb-2">
-      <div onClick={() => navigate("/imp9")} className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
-      <div onClick={() => navigate("/imp7")} className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
-      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
+    <div className="flex items-center justify-center mb-2 mt-2">
+      <div onClick={() => navigate("/imp9")} className="w-1/4 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/imp7")} className="w-1/4 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div className="w-1/4 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
       <a
         href={whatsappUrl}
         target="_blank"
@@ -127,7 +129,7 @@ function Top() {
         </button>
       </a>
     </div>
-      <div className="w-1/4 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
+      <div className="w-1/4 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
       {/* <div className="grid grid-cols-2 gap-4">
         <div>
           
@@ -177,14 +179,20 @@ function Top() {
       </div> */}
     </div>
 
-      <div className="flex justify-center items-start pb-2 col-span-full">
+      {/* <div className="flex justify-center items-start pb-2 col-span-full">
         <button className="mr-3" onClick={() => navigate("/galiIMP")}>
           <img src={gali} alt="Add Fund" className="w-64 h-15" />
+          <FaStar /> <span>PLAY STARLINE</span>
         </button>
         <button onClick={() => navigate("/imp2")}>
           <img src={star} alt="Add Fund" className="w-64 h-15" />
         </button>
+      </div> */}
+      <div className="flex items-center justify-center mb-2">
+      <div onClick={() => navigate("/galiIMP")} className="w-1/2 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  h-16 px-1 items-center justify-between"> <FaCircleStop className="text-4xl mr-4" /><p className="text-xl">GALI DISAWAR</p></button> </div>
+      <div onClick={() => navigate("/imp2")} className="w-1/2 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex  h-16 px-1 items-center justify-between"><FaStar className="text-4xl mr-4" /> <p className="text-xl">PLAY STARLINE</p></button> </div>
       </div>
+
     </div>
   );
 }

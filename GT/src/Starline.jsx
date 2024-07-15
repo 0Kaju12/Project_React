@@ -78,42 +78,47 @@ function Starline() {
   return (
     <>
       <div>
-      <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>STARLINE GAMES</h1></div>
-        
-          <div style={backStyle}>
-            <div className="w-120">
-              <div className="flex items-center justify-center pt-2 mb-2">
-                <div onClick={() => navigate("/imp5")} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
-                  <button
-                    
-                    className="flex flex-col py-2 px-1 items-center justify-center"
-                  >
-                    <p className="font-bold">Bid-History</p>{" "}
-                    <FaHistory className="text-2xl" />
-                  </button>{" "}
-                </div>
-                <div onClick={() => navigate("/imp6")} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
-                  {" "}
-                  <button
+        <div className="font-bold flex items-center justify-center text-2xl mt-2">
+          <h1>STARLINE GAMES</h1>
+        </div>
 
-                    className="flex flex-col py-2 px-1 items-center justify-center"
-                  >
-                    <p className="font-bold">Win History</p>{" "}
-                    <FaHistory className="text-2xl" />
-                  </button>{" "}
-                </div>
-                <div   onClick={handleClick} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
-                  {" "}
-                  <button
-                    onClick={handleClick}
-                    className="flex flex-col py-2 px-1 items-center justify-center"
-                  >
-                    <p className="font-bold">Chart</p>{" "}
-                    <FaChartSimple className="text-2xl" />
-                  </button>{" "}
-                </div>
+        <div style={backStyle}>
+          <div className="w-120">
+            <div className="flex items-center justify-center pt-2 mb-2">
+              <div
+                onClick={() => navigate("/imp5")}
+                className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+              >
+                <button className="flex flex-col py-2 px-1 items-center justify-center">
+                  <p className="font-bold">Bid-History</p>{" "}
+                  <FaHistory className="text-2xl" />
+                </button>{" "}
               </div>
-              {/* <div className="flex " style={box1}>
+              <div
+                onClick={() => navigate("/imp6")}
+                className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+              >
+                {" "}
+                <button className="flex flex-col py-2 px-1 items-center justify-center">
+                  <p className="font-bold">Win History</p>{" "}
+                  <FaHistory className="text-2xl" />
+                </button>{" "}
+              </div>
+              <div
+                onClick={handleClick}
+                className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+              >
+                {" "}
+                <button
+                  onClick={handleClick}
+                  className="flex flex-col py-2 px-1 items-center justify-center"
+                >
+                  <p className="font-bold">Chart</p>{" "}
+                  <FaChartSimple className="text-2xl" />
+                </button>{" "}
+              </div>
+            </div>
+            {/* <div className="flex " style={box1}>
                 <button
                   className="text-white rounded border border-white  "
                   style={btnStyle}
@@ -136,43 +141,43 @@ function Starline() {
                   CHART
                 </button>
               </div> */}
-              <div className="flex flex-col justify-center w-120 text-black border font-bold z-4 shadow-md p-2   ">
-                <div className="flex  justify-evenly items-center ">
-                  <p className="-ml-2">Single Digit</p>
-                  <p className="ml-1">:-</p>
-                  <p>
-                    {gameRates["single_digit_val_1"]}-
-                    {gameRates["single_digit_val_2"]}
-                  </p>
-                </div>
-
-                <div className="flex   justify-evenly items-center ">
-                  <p className="-ml-1"> Single Panna</p>
-                  <p className="">:-</p>
-                  <p>
-                    {gameRates["single_pana_val_1"]}-
-                    {gameRates["single_pana_val_2"]}
-                  </p>
-                </div>
-
-                <div className="flex   justify-evenly items-center">
-                  <p className="-ml-2">Double Panna </p>
-                  <p className="-ml-1">:-</p>
-                  <p>
-                    {gameRates["double_pana_val_1"]}-
-                    {gameRates["double_pana_val_2"]}
-                  </p>
-                </div>
-                <div className="flex   justify-evenly items-center">
-                  <p className="-ml-2">Tripple Panna </p>
-                  <p className="-ml-1">:-</p>
-                  <p>
-                    {gameRates["tripple_pana_val_1"]}-
-                    {gameRates["tripple_pana_val_2"]}
-                  </p>
-                </div>
+            <div className="flex flex-col justify-center w-120 text-white bg-yellow-600 border font-bold z-4 shadow-md p-2   ">
+              <div className="flex  justify-evenly items-center ">
+                <p className="-ml-2">Single Digit</p>
+                <p className="ml-1">:-</p>
+                <p>
+                  {gameRates["single_digit_val_1"]}-
+                  {gameRates["single_digit_val_2"]}
+                </p>
               </div>
-              {/* <div className="flex justify-center align-items-center">
+
+              <div className="flex   justify-evenly items-center ">
+                <p className="-ml-1"> Single Panna</p>
+                <p className="">:-</p>
+                <p>
+                  {gameRates["single_pana_val_1"]}-
+                  {gameRates["single_pana_val_2"]}
+                </p>
+              </div>
+
+              <div className="flex   justify-evenly items-center">
+                <p className="-ml-2">Double Panna </p>
+                <p className="-ml-1">:-</p>
+                <p>
+                  {gameRates["double_pana_val_1"]}-
+                  {gameRates["double_pana_val_2"]}
+                </p>
+              </div>
+              <div className="flex   justify-evenly items-center">
+                <p className="-ml-2">Tripple Panna </p>
+                <p className="-ml-1">:-</p>
+                <p>
+                  {gameRates["tripple_pana_val_1"]}-
+                  {gameRates["tripple_pana_val_2"]}
+                </p>
+              </div>
+            </div>
+            {/* <div className="flex justify-center align-items-center">
               <div style={priceStyle} className="px-5 py-2 text-white border border-white">
                 
               <div className="flex flex-row justify-between p-2">
@@ -205,12 +210,11 @@ function Starline() {
 
               </div>
               </div> */}
-            </div>
-            {/* <div style={marker}>
+          </div>
+          {/* <div style={marker}>
                 <img src={starMarker} alt="" />
             </div> */}
-          </div>
-        
+        </div>
       </div>
     </>
   );

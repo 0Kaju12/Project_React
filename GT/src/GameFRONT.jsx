@@ -59,7 +59,7 @@ function GameFRONT() {
   return (
     <div className="px-5 mt-2">
       {gameRates.map((game) => (
-        <div key={game.game_id} className="mb-5 border shadow-md rounded  ">
+        <div key={game.game_id} className="mb-5 border  shadow-md rounded   ">
           <div className="flex items-center justify-evenly">
             <div>
               <a
@@ -69,7 +69,7 @@ function GameFRONT() {
               >
                 {/* <img src={chart} className="w-10 h-auto mt-1" alt="Chart" />
                  */}
-                 <FaChartSimple className="text-2xl"/>
+                 <FaChartSimple className="text-2xl text-yellow-600"/>
               </a>
             </div>
             <div className=" flex flex-col justify-center items-center text-xs">
@@ -95,7 +95,7 @@ function GameFRONT() {
                 </div>
               </div>
               <div>
-                <p className="text-black font-bold">
+                <p className="text-yellow-600 font-bold">
                   {game.open_result
                     ? game.close_result
                       ? `${game.open_result}${game.close_result}`

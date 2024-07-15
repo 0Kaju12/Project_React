@@ -38,7 +38,7 @@ function GaliAllGame() {
         style={backStyle}
       >
         <div className="flex justify-center items-center mt-10">
-        <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center mt-4 text-lg font-bold mr-20 w-32 h-32 ">
+        <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 flex justify-center items-center mt-4 text-lg font-bold mr-20 w-32 h-32 ">
             <button
              onClick={()=>{
               if (gameId) {
@@ -50,7 +50,7 @@ function GaliAllGame() {
               {/* <img src={left} alt="Image 3" className="w-42 h-32" /> */}
             </button>
           </div>
-          <div className="shadow-md border rounded-xl col-span-1 flex justify-center items-center mt-4 text-lg font-bold w-32 h-32">
+          <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 flex justify-center items-center mt-4 text-lg font-bold w-32 h-32">
             <button
              onClick={()=>{
               if (gameId) {
@@ -67,7 +67,7 @@ function GaliAllGame() {
 
           {/* Third row with one column */}
           <div className="flex justify-center items-center">
-          <div className="shadow-md border rounded-xl col-span-2 w-32 h-32 flex justify-center items-center mt-7 text-lg font-bold ml-25 ">
+          <div className="shadow-md border rounded-xl col-span-2 text-yellow-600 w-32 h-32 flex justify-center items-center mt-7 text-lg font-bold ml-25 ">
             <button
              onClick={()=>{
               if (gameId) {

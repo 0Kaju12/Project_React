@@ -138,7 +138,7 @@ function Wallet() {
 
       <div className=" p-5 text-black z-4 shadow-md m-auto ">
         <div style={Container} className="">
-          <div>
+          {/* <div>
             <button
               onClick={() => addf()}
               className=" rounded-xl bg-yellow-600 hover:bg-yellow-500"
@@ -157,6 +157,7 @@ function Wallet() {
             </button>
           </div>
 
+
           <div>
             <button
               className=" rounded-xl bg-yellow-600 hover:bg-yellow-500"
@@ -165,8 +166,14 @@ function Wallet() {
             >
               Transfer
             </button>
-          </div>
+          </div> */}
         </div>
+        <div className="flex flex-col  items-center justify-center" >
+  <div onClick={() => addf()} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Add Fund</p> </button> </div>
+  <div onClick={() => withd()} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Withdraw Fund</p> </button> </div>
+  <div onClick={() => trans()} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Transfer</p> </button> </div>
+  <div onClick={() => navigate("/transaction")} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Wallet History</p> </button> </div>
+  </div>
         <div className="border rounded-xl w-80 m-auto mt-2 mb-2">
           {" "}
           <div className="" style={box4}>
@@ -218,23 +225,7 @@ function Wallet() {
           </div>
         </div>
 
-        <div
-          style={{
-            padding: "10px",
-            width: "250px",
-            margin: "auto",
-
-            marginBottom: "20px",
-          }}
-        >
-          <button
-            onClick={() => navigate("/transaction")}
-            className="flex   justify-evenly items-center p-2 py-3 rounded bg-yellow-600 hover:bg-yellow-500 text-white border-none mb-2 "
-          >
-            <p className="mr-5 ml-2">Wallet History</p>
-            <FaHistory className="h-6 w-12" />
-          </button>
-        </div>
+        
 
         {/* <p className="mt-4 text-center text-white">Transactions</p> */}
       </div>

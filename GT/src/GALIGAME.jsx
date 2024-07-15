@@ -55,7 +55,7 @@ function GALIGAME() {
             </div>
           <div className=" flex items-center justify-evenly font-bold ">
             <div>
-              <p className="text-black font-bold -mt-2">
+              <p className="text-yellow-600 font-bold -mt-2">
                 {game.open_result ? `${game.open_result}` : "**"}
               </p>
             </div>
@@ -74,7 +74,7 @@ function GALIGAME() {
               </div>
               <div className="flex justify-center items-center mb-2">
                 <p className="text-black font-bold text-xs">
-                  Open - {game.open_time}
+                  Close - {game.open_time}
                 </p>
               </div>
             </div>

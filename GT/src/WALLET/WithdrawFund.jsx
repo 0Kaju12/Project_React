@@ -195,7 +195,7 @@ function WithdrawFunds() {
           </p>
           <p className="text-red-500 ">{errorText}</p>
         </div>
-        <div className="flex items-center  justify-center  mt-4 mb-2">
+        {/* <div className="flex items-center  justify-center  mt-4 mb-2">
           <button
             className="w-1/2 border mr-2 py-2 flex items-center justify-center text-white  rounded cursor-pointer bg-yellow-600 hover:bg-yellow-500"
             onClick={() => navigate("/withdrawrule")}
@@ -210,7 +210,11 @@ function WithdrawFunds() {
             <p className="mr-0 ml-1">Withdraw History</p>
             <FaHistory className="h-6 w-12" />
           </button>
-        </div>
+        </div> */}
+        <div className=" mt-2 flex flex-col  items-center justify-center" >
+  <div onClick={() => navigate("/withdrawrule")} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Add Fund</p> </button> </div>
+  <div onClick={() => navigate("/withdrawhistory")} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Withdraw Fund</p> </button> </div>
+  </div>
 
         <div className="flex flex-col " style={box4}>
           <input
