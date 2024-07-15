@@ -77,7 +77,7 @@ function Starline() {
 
   return (
     <>
-      <div>
+      <div className="px-2">
         <div className="font-bold flex items-center justify-center text-2xl mt-2">
           <h1>STARLINE GAMES</h1>
         </div>
