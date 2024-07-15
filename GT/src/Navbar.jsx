@@ -83,11 +83,20 @@ function Navbar() {
     dispatch(removePass());
     navigate('/') 
   }
+  const handleSidebarItemClick = () => {
+    setBackdropActive(false);
+    setSidebarActive(false);
+  };
 
 
   const handleClick = () => {
     // window.location.href = resinfo1['web_starline_chart_url'];
     window.open('https://khatrimatka.online/uploads/images/GT_1718623233.apk', '_blank');
+  };
+
+  const handleClick1 = () => {
+    handleSidebarItemClick();
+    navigate('/profile');
   };
   
 
@@ -101,7 +110,7 @@ function Navbar() {
 
           <div className="text-xl fading-text">
             <div className="w-40 flex items-center ">
-              <marquee scrollamount="4"> SATTA MATKA OFFICIALS</marquee>
+              <marquee scrollamount="4"> KHATRI MATKA OFFICIALS</marquee>
             </div>
           </div>
 
@@ -143,7 +152,10 @@ function Navbar() {
           <li className="">
               <NavLink
                 to="/imp"
-                className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg "
+                onClick={handleSidebarItemClick}
+                
+              
               >
                 <IoMdHome className="w-8 h-6 ml-3 mr-2" />
                 Home
@@ -168,6 +180,7 @@ function Navbar() {
               <NavLink
                 to="/imp9"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <FaRegCreditCard className="w-8 h-6 ml-3 mr-2" />
                 Add Funds
@@ -178,6 +191,7 @@ function Navbar() {
               <NavLink
                 to="/imp7"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <FaWallet className="w-8 h-6 ml-3 mr-2" />
                 Wallet
@@ -187,6 +201,7 @@ function Navbar() {
               <NavLink
                 to="/imp3"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <FaHistory className="w-8 h-6 ml-3 mr-2" />
                 Win History
@@ -197,6 +212,7 @@ function Navbar() {
               <NavLink
                 to="/imp4"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <FaHistory className="w-8 h-6 ml-3 mr-2" />
                 Bid History
@@ -207,6 +223,7 @@ function Navbar() {
               <NavLink
                 to="/htp"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <FaBookOpen className="w-8 h-6 ml-3 mr-2" />
                 How To Play
@@ -216,6 +233,7 @@ function Navbar() {
               <NavLink
                 to="/gameRates"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <FaStar className="w-8 h-6 ml-3 mr-2" />
                 Game Rates
@@ -225,6 +243,7 @@ function Navbar() {
               <NavLink
                 to="/change"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <IoMdSettings className="w-8 h-6 ml-3 mr-2" />
                 Change Password
@@ -232,7 +251,7 @@ function Navbar() {
             </li>
       
 
-            <li className="">
+            {/* <li className="">
               <NavLink
                 to="/privacy"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
@@ -240,18 +259,19 @@ function Navbar() {
                 <MdPolicy className="w-8 h-6 ml-3 mr-2" />
                 Privacy Policy
               </NavLink>
-            </li>
+            </li> */}
 
             
-            <li className="">
+            {/* <li className="">
               <NavLink
                 to="/about"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
+                onClick={handleSidebarItemClick}
               >
                 <IoMdPeople className="w-8 h-6 ml-3 mr-2" />
                 About Us
               </NavLink>
-            </li>
+            </li> */}
 
             
             {/* <li>
@@ -279,7 +299,7 @@ function Navbar() {
             <hr class="my-4" />
           </ul>
           <div className="flex flex-col p-4">
-          <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={()=>{navigate('/profile')}}>My Profile</button>
+          <button  type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={handleClick1}>My Profile</button>
           <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" onClick={handlelogout}>Logout</button>
 
           </div>

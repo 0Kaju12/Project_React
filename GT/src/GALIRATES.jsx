@@ -86,9 +86,9 @@ function GALIRATES() {
           <div style={backStyle}>
             <div className="w-120">
             <div className="flex items-center justify-center pt-2 mb-2">
-      <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/impbid")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Bid-History</p> <FaHistory className="text-2xl" /></button> </div>
-      <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/impwin")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Win History</p> <FaHistory className="text-2xl" /></button> </div>
-      <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={handleClick} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Chart</p> <FaChartSimple className="text-2xl" /></button> </div>
+      <div onClick={() => navigate("/impbid")} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Bid-History</p> <FaHistory className="text-2xl" /></button> </div>
+      <div onClick={() => navigate("/impwin")} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Win History</p> <FaHistory className="text-2xl" /></button> </div>
+      <div onClick={handleClick} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Chart</p> <FaChartSimple className="text-2xl" /></button> </div>
       </div>
               {/* <div className="flex " style={box1}>
                 <button

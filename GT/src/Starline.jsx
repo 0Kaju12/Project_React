@@ -83,26 +83,26 @@ function Starline() {
           <div style={backStyle}>
             <div className="w-120">
               <div className="flex items-center justify-center pt-2 mb-2">
-                <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
+                <div onClick={() => navigate("/imp5")} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
                   <button
-                    onClick={() => navigate("/imp5")}
+                    
                     className="flex flex-col py-2 px-1 items-center justify-center"
                   >
                     <p className="font-bold">Bid-History</p>{" "}
                     <FaHistory className="text-2xl" />
                   </button>{" "}
                 </div>
-                <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
+                <div onClick={() => navigate("/imp6")} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
                   {" "}
                   <button
-                    onClick={() => navigate("/imp6")}
+
                     className="flex flex-col py-2 px-1 items-center justify-center"
                   >
                     <p className="font-bold">Win History</p>{" "}
                     <FaHistory className="text-2xl" />
                   </button>{" "}
                 </div>
-                <div className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
+                <div   onClick={handleClick} className="w-1/3 mr-2 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
                   {" "}
                   <button
                     onClick={handleClick}

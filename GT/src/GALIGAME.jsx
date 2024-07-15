@@ -49,14 +49,18 @@ function GALIGAME() {
   return (
     <div>
       {gameRates.map((game) => (
-        <div key={game.game_id} className="mb-5 shadow-md rounded">
-          <div className=" flex items-center justify-evenly font-bold border py-2">
+        <div key={game.game_id} className="mb-5 shadow-md rounded border py-2">
+          <div className="font-bold text-sm text-center">
+            {game.game_name}
+            </div>
+          <div className=" flex items-center justify-evenly font-bold ">
             <div>
-              <p className="text-black font-bold">
+              <p className="text-black font-bold -mt-2">
                 {game.open_result ? `${game.open_result}` : "**"}
               </p>
             </div>
             <div className="flex flex-col items-center justify-center">
+              
               <div
                 className={classNames(
                   "text-xs flex justify-center items-center font-bold",
