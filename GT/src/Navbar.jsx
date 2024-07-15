@@ -132,7 +132,7 @@ function Navbar() {
           className={isSidebarActive ? "sidebar--active" : "sidebar"}
           style={sidebarStyle}
         >
-          <div className="px-6 pt-4 pb-3" style={{background:'black'}}>
+          <div className="px-6 pt-4 pb-3  text-white bg-yellow-600" >
             {/* User Info */}
             <div className="text-center">
               <div className="flex">
@@ -252,7 +252,7 @@ function Navbar() {
             </li>
             <li className="">
               <NavLink
-                to="/change"
+                // to="/change"
                 className= "flex   py-2 px-4 hover:bg-white hover:text-black rounded-lg"
                 onClick={handleClick}
               >
@@ -310,7 +310,7 @@ function Navbar() {
             <hr class="my-4" />
           </ul>
           <div className="flex flex-col p-4">
-          <button  type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={handleClick1}>My Profile</button>
+          <button  type="button" class="text- bg-yellow-600 hover:bg-yellow-500 border  rounded-lg text-sm px-5 py-2.5 me-2 mb-2 " onClick={handleClick1}>My Profile</button>
           <button type="button" class="text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" onClick={handlelogout}>Logout</button>
 
           </div>
