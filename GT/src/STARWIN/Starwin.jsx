@@ -1,6 +1,6 @@
 import { BiArrowBack } from "react-icons/bi";
 import DatePickerButton from "../Date";
-import topBackground from "../Images/bg.png";
+import topBackground from "../Images/new1.jpg";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -12,7 +12,7 @@ function Starwin({ onDataFetch }) {
     alignItems: "center",
   };
   const backStyle = {
-    // backgroundImage: `url(${topBackground})`,
+    backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     position: 'relative',
@@ -111,6 +111,7 @@ function Starwin({ onDataFetch }) {
 
   return (
     <>
+    <div className="border shadow-md z-10 " style={backStyle}>
           <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>STARLINE WINS</h1></div>
       <div style={backStyle} className="text-black">
       <div className="flex justify-center item-center p-1">
@@ -131,6 +132,7 @@ function Starwin({ onDataFetch }) {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

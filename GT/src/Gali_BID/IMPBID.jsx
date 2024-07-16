@@ -13,6 +13,7 @@ function IMPBID() {
   const handleDataFetch = (status, data) => {
     setFetchResultStatus(status);
     setFetchResultData(data);
+    console.log('hi')
     console.log(data);
   };
 

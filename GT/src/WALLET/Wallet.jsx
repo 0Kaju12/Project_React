@@ -137,6 +137,7 @@ function Wallet() {
     <>
 
       <div className=" p-5 text-black z-4 shadow-md m-auto ">
+      <div className="font-bold flex items-center justify-center text-2xl "><h1>WALLET</h1></div>
         <div style={Container} className="">
           {/* <div>
             <button

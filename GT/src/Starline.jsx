@@ -87,7 +87,7 @@ function Starline() {
             <div className="flex items-center justify-center pt-2 mb-2">
               <div
                 onClick={() => navigate("/imp5")}
-                className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+                className="w-1/3 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600  flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
               >
                 <button className="flex flex-col py-2 px-1 items-center justify-center">
                   <p className="font-bold">Bid-History</p>{" "}
@@ -96,7 +96,7 @@ function Starline() {
               </div>
               <div
                 onClick={() => navigate("/imp6")}
-                className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+                className="w-1/3 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600  flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
               >
                 {" "}
                 <button className="flex flex-col py-2 px-1 items-center justify-center">
@@ -106,7 +106,7 @@ function Starline() {
               </div>
               <div
                 onClick={handleClick}
-                className="w-1/3 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"
+                className="w-1/3 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600  flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
               >
                 {" "}
                 <button
