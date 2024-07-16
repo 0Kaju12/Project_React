@@ -9,8 +9,8 @@ import call from '../Images/call_helpline.png';
 import withdraw from '../Images/withdraw.png';
 import marker from '../Images/marker.png';
 import black from '../Images/blackjed.png';
-import star from '../Images/play_starline.png'
-import gali from '../Images/gali_disawar.png'
+import star from '../Images/7.png'
+import gali from '../Images/6.png'
 import topBackground from '../Images/bg.png';
 import { useNavigate } from 'react-router-dom';
 import useCarosuel from '../Hooks/useCarosuel';
@@ -89,9 +89,9 @@ function LandingTop() {
     <><div style={topStyle} className='px-2'>
       
     <div className="flex items-center justify-center pt-2 mb-2 ">
-      <div className="w-1/4 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
-      <div className="w-1/4 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
-      <div className="w-1/4 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md">
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md">
       <a
         
         target="_blank"
@@ -103,7 +103,7 @@ function LandingTop() {
         </button>
       </a>
     </div>
-      <div className="w-1/4 mr-2 text-white bg-yellow-600 border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
       {/* <div className="grid grid-cols-2 gap-4">
         <div>
           
@@ -153,18 +153,18 @@ function LandingTop() {
       </div> */}
     </div>
 
-      {/* <div className="flex justify-center items-start pb-2 col-span-full">
+      <div className="flex justify-center items-start pb-2 col-span-full">
         <button className="mr-3" onClick={() => navigate("/login")}>
           <img src={gali} alt="Add Fund" className="w-64 h-15" />
         </button>
         <button onClick={() => navigate("/login")}>
           <img src={star} alt="Add Fund" className="w-64 h-15" />
         </button>
-      </div> */}
-      <div className="flex items-center justify-center mb-2">
+      </div>
+      {/* <div className="flex items-center justify-center mb-2">
       <div onClick={() => navigate("/login")} className="w-1/2 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  h-16 px-1 items-center justify-between"> <FaCircleStop className="text-4xl mr-4" /><p className="text-xl">GALI DISAWAR</p></button> </div>
       <div onClick={() => navigate("/login")} className="w-1/2 mr-2 bg-yellow-600 text-white border flex items-center justify-center rounded z-4 hover:shadow-lg shadow-md"> <button  className="flex  h-16 px-1 items-center justify-between"><FaStar className="text-4xl mr-4" /> <p className="text-xl">PLAY STARLINE</p></button> </div>
-      </div>
+      </div> */}
     </div>
     </>
     
