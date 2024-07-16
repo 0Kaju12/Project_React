@@ -89,9 +89,9 @@ function LandingTop() {
     <><div style={topStyle} className='px-2'>
       
     <div className="flex items-center justify-center pt-2 mb-2 ">
-      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
-      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
-      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md">
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md">
       <a
         
         target="_blank"
@@ -103,7 +103,7 @@ function LandingTop() {
         </button>
       </a>
     </div>
-      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
       {/* <div className="grid grid-cols-2 gap-4">
         <div>
           

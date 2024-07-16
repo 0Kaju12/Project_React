@@ -88,7 +88,7 @@ function GALIRATES() {
               <div className="flex items-center justify-center pt-2 mb-2">
                 <div
                   onClick={() => navigate("/impbid")}
-                  className="w-1/3 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
+                  className="w-1/3 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
                 >
                   <button className="flex flex-col py-2 px-1 items-center justify-center">
                     <p className="font-bold">Bid-History</p>{" "}
@@ -97,7 +97,7 @@ function GALIRATES() {
                 </div>
                 <div
                   onClick={() => navigate("/impwin")}
-                  className="w-1/3 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
+                  className="w-1/3 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
                 >
                   {" "}
                   <button className="flex flex-col py-2 px-1 items-center justify-center">
@@ -107,7 +107,7 @@ function GALIRATES() {
                 </div>
                 <div
                   onClick={handleClick}
-                  className="w-1/3 mr-2 bg-black border-2 text-yellow-600  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
+                  className="w-1/3 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"
                 >
                   {" "}
                   <button className="flex flex-col py-2 px-1 items-center justify-center">
