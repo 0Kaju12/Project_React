@@ -1,6 +1,6 @@
 import { BiArrowBack } from "react-icons/bi";
 import DatePickerButton from "../Date";
-import topBackground from "../Images/bg.png";
+import topBackground from "../Images/new1.jpg";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -12,7 +12,7 @@ function Bid({ onDataFetch }) {
     alignItems: "center",
   };
   const backStyle = {
-    // backgroundImage: `url(${topBackground})`,
+    backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
     position: 'relative',
@@ -129,8 +129,9 @@ function Bid({ onDataFetch }) {
 
   return (
     <>
+    <div className="border shadow-md z-10 " style={backStyle}>
             <div className="font-bold flex items-center justify-center text-2xl mt-2"><h1>GALI DISAWAR BIDS</h1></div>
-      <div style={backStyle} className="text-black">
+      <div  className="text-black">
       <div className="flex justify-center item-center p-1">
           <div className="border shadow-md" style={cardStyle} >
             {/* <p className="inline-block rounded p-3 border border-white  bg-blue-950 w-full">Select Dates</p> */}
@@ -149,6 +150,7 @@ function Bid({ onDataFetch }) {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

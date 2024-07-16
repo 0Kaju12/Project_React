@@ -53,6 +53,7 @@ function StarlineGame() {
     <div className="">
       {gameRates.map((game) => (
         <div key={game.game_id} className="mb-5 relative ">
+          
           <div className=" flex items-center justify-evenly font-bold border py-2">
             <div>
               <p className="text-black font-bold">
@@ -60,6 +61,7 @@ function StarlineGame() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center">
+            <p className="top-0 right-0">{game.game_name}</p>
               <div
                 className={classNames(
                   "text-xs flex justify-center items-center font-bold",

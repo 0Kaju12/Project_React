@@ -139,6 +139,7 @@ function Transfer() {
         
         className="text-black flex flex-col justify-center items-center pt-5"
       >
+                    <div className="font-bold flex items-center justify-center text-2xl "><h1>TRANSFER POINTS</h1></div>
         <form onSubmit={handleSubmit} style={cardStyle}>
           <p className="font-bold ">Enter Points</p>
           <input
