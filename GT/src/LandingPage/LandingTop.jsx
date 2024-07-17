@@ -104,7 +104,7 @@ function LandingTop() {
         </button>
       </a>
     </div>
-      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
+      <div onClick={() => navigate("/login")} className="w-1/4  bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md"><button className="flex flex-col py-2 px-1 items-center justify-center" onClick={()=> navigate("/login")}><p className="font-bold">Helpline</p> <IoCall className="text-4xl" /></button>  </div>
       
     </div>
 
