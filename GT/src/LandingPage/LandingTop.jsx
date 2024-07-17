@@ -89,8 +89,8 @@ function LandingTop() {
     <><div style={topStyle} className='px-2'>
       
     <div className="flex items-center justify-center pt-2 mb-2 ">
-      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold text-sm">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
-      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md -mb-1"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold text-sm">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md -mb-1"> <button onClick={() => navigate("/login")} className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
       <div onClick={() => navigate("/login")} className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center z-4 hover:shadow-lg shadow-md">
       <a
         
@@ -158,7 +158,7 @@ function LandingTop() {
           <img src={gali} alt="Add Fund" className="w-64 h-18" />
         </button>
         <button onClick={() => navigate("/login")}>
-          <img src={star} alt="Add Fund" className="w-64 h-18 mt-1" />
+          <img src={star} alt="Add Fund" className="w-64 h-18 mt-0" />
         </button>
       </div>
       {/* <div className="flex items-center justify-center mb-2">
