@@ -29,8 +29,9 @@ function LandingTop() {
   const topStyle = {
     // backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover',
+    backgroundRepeat: "no-repeat",
     height: 'auto', // Set the height of the div
-    width: '100%' // Set the width of the div
+    width: 'auto' // Set the width of the div
   };
   
   const baseCarouselContainerStyle = {
