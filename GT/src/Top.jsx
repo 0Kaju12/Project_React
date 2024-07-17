@@ -185,7 +185,7 @@ function Top() {
           {/* <FaStar /> <span>PLAY STARLINE</span> */}
         </button>
         <button onClick={() => navigate("/imp2")}>
-          <img src={star} alt="Add Fund" className="w-64 h-18 mt-1" />
+          <img src={star} alt="Add Fund" className="w-64 h-18 mt-0" />
         </button>
       </div>
       {/* <div className="flex items-center justify-center mb-2">
