@@ -115,8 +115,8 @@ function Top() {
       style={topStyle}
     >
     <div className="flex items-center justify-center mb-2 mt-2">
-      <div onClick={() => navigate("/imp9")} className="w-1/4  mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md -mb-1"><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold text-sm">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
-      <div onClick={() => navigate("/imp7")} className="w-1/4  mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md -mb-1"> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/imp9")} className="w-1/4  mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md "><button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold text-sm">Add-Fund</p> <FaRegCreditCard className="text-4xl" /></button> </div>
+      <div onClick={() => navigate("/imp7")} className="w-1/4  mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md "> <button  className="flex flex-col py-2 px-1 items-center justify-center"><p className="font-bold">Wallet</p> <MdWallet className="text-4xl" /></button> </div>
       <div className="w-1/4 mr-2 bg-black border-4 text-white  rounded-xl border-yellow-600 flex items-center justify-center  z-4 hover:shadow-lg shadow-md">
       <a
         href={whatsappUrl}
@@ -185,7 +185,7 @@ function Top() {
           {/* <FaStar /> <span>PLAY STARLINE</span> */}
         </button>
         <button onClick={() => navigate("/imp2")}>
-          <img src={star} alt="Add Fund" className="w-64 h-18 mt-0" />
+          <img src={star} alt="Add Fund" className="w-64 h-19 mt-0.75" />
         </button>
       </div>
       {/* <div className="flex items-center justify-center mb-2">
