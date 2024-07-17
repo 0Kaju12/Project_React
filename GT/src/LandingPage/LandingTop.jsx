@@ -155,10 +155,10 @@ function LandingTop() {
 
       <div className="flex justify-center items-start pb-2 col-span-full">
         <button className="mr-3" onClick={() => navigate("/login")}>
-          <img src={gali} alt="Add Fund" className="w-64 h-15" />
+          <img src={gali} alt="Add Fund" className="w-64 h-20" />
         </button>
         <button onClick={() => navigate("/login")}>
-          <img src={star} alt="Add Fund" className="w-64 h-15" />
+          <img src={star} alt="Add Fund" className="w-64 h-20" />
         </button>
       </div>
       {/* <div className="flex items-center justify-center mb-2">

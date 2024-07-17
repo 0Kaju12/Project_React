@@ -181,11 +181,11 @@ function Top() {
 
       <div className="flex justify-center items-start pb-2 col-span-full">
         <button className="mr-3" onClick={() => navigate("/galiIMP")}>
-          <img src={gali} alt="Add Fund" className="w-64 h-15" />
+          <img src={gali} alt="Add Fund" className="w-64 h-20" />
           {/* <FaStar /> <span>PLAY STARLINE</span> */}
         </button>
         <button onClick={() => navigate("/imp2")}>
-          <img src={star} alt="Add Fund" className="w-64 h-15" />
+          <img src={star} alt="Add Fund" className="w-64 h-20" />
         </button>
       </div>
       {/* <div className="flex items-center justify-center mb-2">
