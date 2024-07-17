@@ -41,6 +41,7 @@ import { FaRegCreditCard } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { IoMdPeople } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
+import { RiUser3Fill } from "react-icons/ri";
 import { FaDownload } from "react-icons/fa6";
 function Navbar() {
   const Hamburg = {
@@ -137,6 +138,7 @@ function Navbar() {
             <div className="text-center">
               <div className="flex">
                 <FaUser className="w-8 h-6 mt-2  "/>
+                {/* <RiUser3Fill className="w- h-10 mt-2"/> */}
                 <div className="text-xl font-bold ml-5">
                   {username ? username : "sumit"}
                 </div>

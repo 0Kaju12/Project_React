@@ -55,7 +55,7 @@ function Game() {
     <>
       <div className="pl-2 flex justify-center -mt-8" style={backStyle}>
         <div className="grid grid-cols-2 gap-2 mt-10  font-bold" style={cardStyle}>
-          <div className="shadow-md border rounded-xl col-span-1 py-2 text-yellow-600 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 py-2 mr-2 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -66,7 +66,7 @@ function Game() {
               <FaDiceOne className="w-20 h-20 ml-2"/>Single Digit
             </button>
           </div>
-          <div className="shadow-md border rounded-xl col-span-1 py-2 text-yellow-600 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 py-2 ml-1 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -79,7 +79,7 @@ function Game() {
           </div>
 
           {/* Second row with two columns */}
-          <div className="shadow-md border rounded-xl col-span-1 py-2 text-yellow-600 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 py-2 mr-2 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -90,7 +90,7 @@ function Game() {
               <CgCardSpades className="w-20 h-20 ml-2"/>Single Pana
             </button>
           </div>
-          <div className="shadow-md border rounded-xl col-span-1 py-2 text-yellow-600 flex justify-center items-center ">
+          <div className="shadow-md border rounded-xl col-span-1 py-2 ml-1 text-yellow-600 flex justify-center items-center ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -103,7 +103,7 @@ function Game() {
           </div>
 
           {/* Third row with one column */}
-          <div className="shadow-md border rounded-xl text-yellow-600 w-40 h-32 mb-2 col-span-2 py-2 flex justify-center items-center ml-14 ">
+          <div className="shadow-md border rounded-xl text-yellow-600 w-36 h-32 mb-2 col-span-2 py-2 flex justify-center items-center ml-16 ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -116,7 +116,7 @@ function Game() {
           </div>
 
           {/* Fourth row with two columns */}
-          <div className="shadow-md border rounded-xl text-yellow-600 col-span-1 py-2 flex justify-center items-center -mt-2 ">
+          <div className="shadow-md border rounded-xl text-yellow-600 col-span-1 py-2 mr-2 flex justify-center items-center -mt-2 ">
             <button
               onClick={() => {
                 if (gameId) {
@@ -127,7 +127,7 @@ function Game() {
               <MdHourglassBottom className="w-20 h-20"/>Half Sangam
             </button>
           </div>
-          <div className="shadow-md border rounded-xl text-yellow-600 col-span-1 py-2 flex justify-center items-center -mt-2 ">
+          <div className="shadow-md border rounded-xl text-yellow-600 col-span-1 py-2 ml-1 flex justify-center items-center -mt-2 ">
             <button
               onClick={() => {
                 if (gameId) {
