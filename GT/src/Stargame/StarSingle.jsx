@@ -27,7 +27,6 @@ function StarSingle() {
   const [submit, setSubmit]= useState('');
 
   
-  console.log(formattedDate);
   const navbarStyle = {
     height: "60px",
     display: "flex",
@@ -70,7 +69,6 @@ function StarSingle() {
 
   const [isOpen, setIsOpen] = useState(true);
   const { gameId, openTime, gameName, pana } = useLocation().state;
-  console.log(gameId);
 
   const fetchData = async () => {
     try {
@@ -108,14 +106,12 @@ function StarSingle() {
   };
   useEffect(() => {
     fetchData();
-    console.log(isOpen);
   }, [res.wallet_amt]);
 
 
   useEffect(() => {
     if (res && res.wallet_amt) {
       setWalletAmt(resinfo.wallet_amt);
-      console.log(typeof(walletAmt))
     }
   }, [res.wallet_amt]);
 
@@ -154,7 +150,6 @@ function StarSingle() {
 
       setSubmittedData((prevData) => {
         const updatedData = [...prevData, newDataObject];
-        console.log(submittedData)
         return updatedData;
       });
       setDigitValue("");
@@ -307,7 +302,6 @@ function StarSingle() {
                 if (newData.length === 0) {
                   setIsProceed(false); // Set isProceed to false if only one item is left
                 }
-                console.log(submittedData);
               };
 
               return (
