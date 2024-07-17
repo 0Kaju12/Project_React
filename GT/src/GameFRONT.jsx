@@ -74,12 +74,12 @@ function GameFRONT() {
             </div>
             <div className=" flex flex-col justify-center items-center text-xs">
               <div className="flex items-center justify-center font-bold text-xs">
-                <p className="pr-3">{game.game_name}</p>
-                {game.open_time && game.close_time && game.msg_status === 1 ? (
+                <p className="pr-3 text-sm mt-1">{game.game_name}</p>
+                {/* {game.open_time && game.close_time && game.msg_status === 1 ? (
                   <Timer closeTime={game.close_time_srt} />
                 ) : (
                   "00:00:00"
-                )}
+                )} */}
               </div>
               <div>
                 <div
