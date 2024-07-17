@@ -17,14 +17,9 @@ const StarModal = ({
   date,
   clearSubmittedData,
 }) => {
-  console.log(totalIndex);
-  console.log(totalPoints);
-  console.log(submittedData);
-  console.log(gameId);
-  console.log(gameName);
-  console.log(pana);
-  console.log(date);
 
+console.log(pana)
+console.log("starrr")
   const navigate = useNavigate();
   const notify = () => {
     toast("Bid Successfully Placed");
@@ -38,10 +33,8 @@ const StarModal = ({
   }, []);
 
   const token = useSelector((state) => state.userDetail.token);
-  console.log(token);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("submite pressed");
     try {
       await fetchData(
         token,
@@ -56,7 +49,7 @@ const StarModal = ({
       closeModal(); // Close the modal here
       clearSubmittedData()
     } catch (error) {
-      console.log(error);
+
     }
   };
 
@@ -105,10 +98,9 @@ const StarModal = ({
       requestOptions
     );
     const result = await response.json();
-    console.log(result);
-    console.log("submit result out");
+
     if (result?.status === true) {
-      console.log("submit result");
+
       // notify();
     } else {
       throw new Error("Invalid username and password");
@@ -121,10 +113,10 @@ const StarModal = ({
       <div className="modal-container text-black flex flex-col rounded-tr-xl rounded-br-xl rounded-bl-none rounded-tl-xl font-bold py-4 px-2">
         <p>Once you placed a bid, it will not be cancelled</p>
         <p className="text-center">in any situation</p>
-        <p className="text-center bg-green-400 mb-2 py-2 text-white rounded-xl" style={{background: "linear-gradient(to right, #EAB308, #6D28D9)"}}>
+        <p className="text-center mb-2 py-2 text-white rounded-xl bg-yellow-600">
           {pana}
         </p>
-        <div className="flex justify-between align-middle bg-emerald-900 text-white mb-2 py-2 px-2">
+        <div className="flex justify-between align-middle bg-gray-800 text-white mb-2 py-2 px-2">
           <div className="flex flex-col">
             <p>Total Bid</p>
             <p className="text-center">{totalIndex}</p>
@@ -138,15 +130,15 @@ const StarModal = ({
             <p className="text-center">Close</p>
           </div>
         </div>
-        <div className="flex justify-around mt-2">
+        <div className="flex justify-around mt-2 text-white">
           <button
             onClick={closeModal}
-            className="model-btn p-4 bg-yellow-500 rounded-xl border border-white"  style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}
+            className="model-btn p-4 bg-yellow-600 rounded-xl border border-white"  style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}
           >
             CANCEL
           </button>
           <form onSubmit={handleSubmit}>
-            <button type="submit" className="bg-yellow-500 rounded-xl p-4 border border-white"  style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}>
+            <button type="submit" className="bg-yellow-600 rounded-xl p-4 border border-white"  style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}>
               SUBMIT
             </button>
           </form>

@@ -35,7 +35,6 @@ const MyModal = ({
     e.preventDefault();
     if (!isSubmitting) { // Check if form is already being submitted
       setIsSubmitting(true); // Set submitting state to true
-      console.log("submit pressed");
       try {
         await fetchData(
           token,
@@ -102,10 +101,8 @@ const MyModal = ({
       requestOptions
     );
     const result = await response.json();
-    console.log(result);
-    console.log("submit result out");
     if (result?.status === true) {
-      console.log("submit result");
+
       // notify();
     } else {
       throw new Error("Invalid username and password");
@@ -118,10 +115,10 @@ const MyModal = ({
       <div className="modal-container text-black flex flex-col rounded-tr-xl rounded-br-xl rounded-bl-none rounded-tl-xl font-bold py-4 px-2">
         <p>Once you placed a bid, it will not be cancelled</p>
         <p className="text-center">in any situation</p>
-        <p className="text-center mb-2 py-2 text-white rounded-xl" style={{background: "linear-gradient(to right, #EAB308, #6D28D9)"}}> 
+        <p className="text-center mb-2 py-2 text-white rounded-xl bg-yellow-600" > 
           {pana}
         </p>
-        <div className="flex justify-between align-middle bg-emerald-900 text-white mb-2 py-2 px-2">
+        <div className="flex justify-between align-middle bg-gray-800 text-white mb-2 py-2 px-2">
           <div className="flex flex-col">
             <p>Total Bid</p>
             <p className="text-center">{totalIndex}</p>
@@ -138,7 +135,7 @@ const MyModal = ({
         <div className="flex justify-around mt-2 text-white">
           <button
             onClick={closeModal}
-            className="model-btn p-4  rounded-xl border border-white bg-yellow-500" style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}
+            className="model-btn p-4  rounded-xl border border-white bg-yellow-600" style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}
           >
             CANCEL
           </button>
@@ -146,7 +143,7 @@ const MyModal = ({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-green-500 rounded-xl p-4 bg-yellow-500 border border-white" style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}
+              className=" rounded-xl p-4 bg-yellow-600 border border-white" style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}
             >
               {isSubmitting ? "Submitting..." : "SUBMIT"}
             </button>

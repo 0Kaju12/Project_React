@@ -47,7 +47,7 @@ function StarGame() {
           <div className="shadow-md rounded-xl border w-32 h-32 col-span-1 text-yellow-600 flex justify-center items-center text-lg font-bold ">
             <button
               onClick={() => {
-                navigate("/starsingle", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
+                navigate("/starsingle", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Digit' } });
               }}
             >
               <FaDiceOne className="w-20 h-20 ml-2"/>Single Digit
@@ -71,7 +71,7 @@ function StarGame() {
           <div className="shadow-md border rounded-xl col-span-1 text-yellow-600 w-32 h-32 flex justify-center items-center mt-4 text-lg font-bold">
             <button
               onClick={() => {
-                navigate("/sdoublepana",{ state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
+                navigate("/sdoublepana",{ state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Double Pana' } });
               }}
             >
               <PiCardsBold className="w-20 h-20"/>Double Pana
@@ -82,7 +82,7 @@ function StarGame() {
             <div className="shadow-md border rounded-xl w-32 h-32 col-span-1 text-yellow-600 flex justify-center items-center mt-4 text-lg font-bold">
             <button
               onClick={() => {
-                navigate("/stripplepana", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Single Pana' } });
+                navigate("/stripplepana", { state: { gameId : gameId, openTime : openTime, gameName: gameName, pana:'Triple Pana' } });
               }}
             >
               <TbCards className="w-20 h-20"/>Triple Pana

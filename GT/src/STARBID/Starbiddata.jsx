@@ -57,7 +57,7 @@ function Starbiddata({ data }) {
           </div>
           )}
   
-          {data.pana === "Tripple Pana" && (
+          {data.pana === "Triple Pana" && (
             <div className="bg-white border-black  text-black mr-2 ml-4 z-2 -mt-1 p-1 flex justify-between align-middle border rounded-2xl  pl-4 pr-5">
             <div className="flex flex-col">
             <p className="font-bold"> {data.game_name}</p>
