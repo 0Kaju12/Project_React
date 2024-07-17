@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { ExclamationIcon } from '@heroicons/react/solid';
+import "../Modal.css";
 
 const GaliModal = ({
   closeModal,
@@ -116,9 +117,9 @@ const GaliModal = ({
   return (
     <>
       <div className="modal-wrapper rounded" onClick={closeModal}></div>
-      <div className="modal-container text-black flex flex-col rounded-xl font-bold py-4 px-2">
+      {/* <div className="modal-container text-black flex flex-col rounded-xl font-bold py-4 px-2">
       <div className="flex justify-center items-center">
-    <ExclamationIcon className="h-20 w-20" /> {/* Icon size increased to 8rem */}
+    <ExclamationIcon className="h-20 w-20" />
   </div>
         <p>Once you placed a Bid, You can't cancel </p>
         <p className="text-center">it Do You Want To Place..?</p>
@@ -139,6 +140,40 @@ const GaliModal = ({
             Close
           </button>
 
+        </div>
+      </div> */}
+      <div className="modal-container text-black flex flex-col rounded-tr-xl rounded-br-xl rounded-bl-none rounded-tl-xl font-bold py-4 px-2">
+        <p>Once you placed a bid, it will not be cancelled</p>
+        <p className="text-center">in any situation</p>
+        <p className="text-center mb-2 py-2 text-white rounded-xl bg-yellow-600">
+          {pana}
+        </p>
+        <div className="flex justify-between align-middle bg-gray-800 text-white mb-2 py-2 px-2">
+          <div className="flex flex-col">
+            <p>Total Bid</p>
+            <p className="text-center">{totalIndex}</p>
+          </div>
+          <div className="flex flex-col">
+            <p>Total Point</p>
+            <p className="text-center">{totalPoints}</p>
+          </div>
+          <div className="flex flex-col">
+            <p>Game Type</p>
+            <p className="text-center">Close</p>
+          </div>
+        </div>
+        <div className="flex justify-around mt-2 text-white">
+          <button
+            onClick={closeModal}
+            className="model-btn p-4 bg-yellow-600 rounded-xl border border-white"  style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}
+          >
+            CANCEL
+          </button>
+          <form onSubmit={handleSubmit}>
+            <button type="submit" className="bg-yellow-600 rounded-xl p-4 border border-white"  style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}>
+            {isSubmitting ? "Submitting..." : "SUBMIT"}
+            </button>
+          </form>
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
 import "../Modal.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -17,7 +17,7 @@ const StarModal = ({
   date,
   clearSubmittedData,
 }) => {
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
 console.log(pana)
 console.log("starrr")
   const navigate = useNavigate();
@@ -35,6 +35,8 @@ console.log("starrr")
   const token = useSelector((state) => state.userDetail.token);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isSubmitting) { // Check if form is already being submitted
+      setIsSubmitting(true);
     try {
       await fetchData(
         token,
@@ -51,6 +53,10 @@ console.log("starrr")
     } catch (error) {
 
     }
+    finally {
+      setIsSubmitting(false); // Reset submitting state to false
+    }
+  }
   };
 
   const fetchData = async (
@@ -139,7 +145,7 @@ console.log("starrr")
           </button>
           <form onSubmit={handleSubmit}>
             <button type="submit" className="bg-yellow-600 rounded-xl p-4 border border-white"  style={{boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"}}>
-              SUBMIT
+            {isSubmitting ? "Submitting..." : "SUBMIT"}
             </button>
           </form>
         </div>
