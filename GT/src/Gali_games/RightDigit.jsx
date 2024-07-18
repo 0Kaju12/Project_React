@@ -230,7 +230,7 @@ function RightDigit() {
               readOnly
               className="shadow-md w-full flex justify-center p-4 text-black border-2 rounded-xl text-center bg-white"
             />
-            <p className="my-2">Digit</p>
+            <p className="my-2 text-black">Digit</p>
             <input
               type="number"
               inputMode="numeric"
@@ -245,7 +245,7 @@ function RightDigit() {
     <option key={index} value={digit} />
   ))}
 </datalist>
-            <p className="my-2">Points</p>
+            <p className="my-2 text-black">Points</p>
             <input
               type="number"
               inputMode="numeric"

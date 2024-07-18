@@ -230,7 +230,7 @@ function LeftDigit() {
               readOnly
               className="shadow-md w-full flex justify-center p-4 text-black bg-white border-2 rounded-xl text-center"
             />
-            <p className="my-2">Digit</p>
+            <p className="my-2 text-black" >Digit</p>
             <input
               type="number"
               inputMode="numeric"
@@ -245,7 +245,7 @@ function LeftDigit() {
     <option key={index} value={digit} />
   ))}
 </datalist>
-            <p className="my-2">Points</p>
+            <p className="my-2 text-black">Points</p>
             <input
               type="number"
               inputMode="numeric"

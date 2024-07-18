@@ -352,7 +352,7 @@ function Ssinglepana() {
               readOnly
               className="shadow-md w-full flex justify-center p-4 text-black border border-black-500 rounded-xl text-center"
             />
-            <p className="my-2">Open Digit</p>
+            <p className="my-2 text-black">Open Digit</p>
             <input
               type="number"
               inputMode="numeric"
@@ -367,7 +367,7 @@ function Ssinglepana() {
     <option key={index} value={digit} />
   ))}
 </datalist>
-            <p className="my-2">Points</p>
+            <p className="my-2 text-black">Points</p>
             <input
               type="number"
               inputMode="numeric"
