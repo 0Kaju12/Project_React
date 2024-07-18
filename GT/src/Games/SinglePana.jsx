@@ -363,7 +363,7 @@ function SinglePana() {
               readOnly
               className="shadow-md w-full flex justify-center p-4 text-black border border-black-500 rounded-xl text-center"
             />
-            <p className="m-2">Choose Session</p>
+            <p className="mt-2 text-black">Choose Session</p>
             <div className="flex space-x-4 justify-center items-center w-full ">
               {isOpen ? (
                 <div className="shadow-md  flex justify-center items-center w-1/2 border border-black-500 p-4 bg-white rounded-xl">
@@ -405,7 +405,7 @@ function SinglePana() {
               </div>
             </div>
 
-            <p className="my-2">{isOpen ? "Open Pana" : "Close Pana"}</p>
+            <p className="my-2 text-black">{isOpen ? "Open Pana" : "Close Pana"}</p>
             <input
               type="number"
               inputMode="numeric"
@@ -420,7 +420,7 @@ function SinglePana() {
                 <option key={index} value={digit} />
               ))}
             </datalist>
-            <p className="my-2">Points</p>
+            <p className="my-2 text-black">Points</p>
             <input
               type="number"
               inputMode="numeric"

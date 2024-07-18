@@ -232,7 +232,7 @@ function Single() {
               readOnly
               className="border shadow-md w-full flex justify-center p-4 text-black  border-black-500 rounded-xl text-center"
             />
-            <p className="m-2">Choose Session</p>
+            <p className="mt-2 text-black">Choose Session</p>
             <div className="flex space-x-4 justify-center items-center w-full ">
               
               {isOpen ? (
@@ -275,7 +275,7 @@ function Single() {
               </div>
             </div>
 
-            <p className="my-2">Open Digit</p>
+            <p className="my-2 text-black">Open Digit</p>
             <input
               type="number"
               inputMode="numeric"
@@ -290,7 +290,7 @@ function Single() {
     <option key={index} value={digit} />
   ))}
 </datalist>
-            <p className="my-2">Points</p>
+            <p className="my-2 text-black">Points</p>
             <input
               type="number"
               inputMode="numeric"
