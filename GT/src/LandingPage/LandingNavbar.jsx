@@ -111,13 +111,16 @@ function LandingNavbar() {
             <div className="text-center">
               <div className="flex">
                 <FaUser className="w-8 h-6 mt-2  "/>
+                <div className="flex flex-col items-center justify-center">
                 <div className="text-xl font-bold ml-2">
                   {/* {username ? username : "sumit"} */}
                   Username
                 </div>
+                <div className="text-sm  opacity-75 ml-1 ">Phone Number</div>
+                </div>
               </div>
 
-              <div className="text-sm opacity-75  -ml-16">Phone Number</div>
+
             </div>
             {/* Logout Button */}
 

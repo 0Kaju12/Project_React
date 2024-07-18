@@ -138,13 +138,17 @@ function Navbar() {
             <div className="text-center">
               <div className="flex">
                 <FaUser className="w-8 h-6 mt-2  "/>
+                <div className="flex flex-col">
                 {/* <RiUser3Fill className="w- h-10 mt-2"/> */}
-                <div className="text-xl font-bold ml-5">
+                <div className="text-xl font-bold ml-1">
                   {username ? username : "sumit"}
+
+                </div>
+                <div className="text-sm opacity-75 ml-1 ">{mobile}</div>
                 </div>
               </div>
 
-              <div className="text-sm opacity-75  -ml-16">{mobile}</div>
+
             </div>
             {/* Logout Button */}
 
