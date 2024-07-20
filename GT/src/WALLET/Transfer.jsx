@@ -40,9 +40,13 @@ function Transfer() {
   };
   const [transactionData, setTransactionData] = useState({});
   const [walletAmt, setWalletAmt] = useState();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
     const errors = validate(
       phoneno.current.value,
       points.current.value,
@@ -52,6 +56,7 @@ function Transfer() {
     setFormErrors(errors);
 
     if (Object.keys(errors).length > 0) {
+      setIsSubmitting(false);
       return;
     }
 
@@ -71,6 +76,8 @@ function Transfer() {
       }
     } catch (error) {
       setErrorText("Username or password incorrect"); // Set error message
+    }finally {
+      setIsSubmitting(false); // Always reset submitting state after request is completed
     }
   };
 
@@ -90,6 +97,9 @@ function Transfer() {
       errors.points = "Points is required!";
     } else if (points < 100) {
       errors.points = "Points Must be More than 100";
+    }
+    else if(points>res.wallet_amt){
+      errors.points="Not Enough Points"
     }
     return errors;
   };
@@ -148,7 +158,7 @@ function Transfer() {
             type="text"
             ref={points}
           />
-          <p className="text-red-500">{formErrors.points}</p>
+          <p className="text-red-500 font-bold text-center">{formErrors.points}</p>
           <p className="font-bold ">Enter Phone Number</p>
           <input
             className="py-3 px-5 my-2 rounded-xl text-black  border"
@@ -156,13 +166,13 @@ function Transfer() {
             type="text"
             ref={phoneno}
           />
-          <p className="text-red-500">{formErrors.phoneno}</p>
+          <p className="text-red-500 font-bold text-center">{formErrors.phoneno}</p>
           <div className=" flex justify-center items-center">
             <button
               className="py-3 px-2 w-48  text-white rounded bg-yellow-600 hover:bg-yellow-500  "
               type="submit"
             >
-              Transfer
+                {isSubmitting ? "Submitting..." : "Transfer"}
             </button>
             {showModal && (
               <TransferModel

@@ -193,7 +193,7 @@ function WithdrawFunds() {
           <p className="text-red-500 mt-2 py-2 pl-2  rounded-xl  border font-bold  ">
             Withdraw Timings :- 07:00AM -10:00AM
           </p>
-          <p className="text-red-500 ">{errorText}</p>
+          {/* <p className="text-red-500 ">{errorText}</p> */}
         </div>
         {/* <div className="flex items-center  justify-center  mt-4 mb-2">
           <button
@@ -212,8 +212,8 @@ function WithdrawFunds() {
           </button>
         </div> */}
         <div className=" mt-2 flex flex-col  items-center justify-center" >
-  <div onClick={() => navigate("/withdrawrule")} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Add Fund</p> </button> </div>
-  <div onClick={() => navigate("/withdrawhistory")} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Withdraw Fund</p> </button> </div>
+  <div onClick={() => navigate("/withdrawrule")} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Withdraw Rule</p> </button> </div>
+  <div onClick={() => navigate("/withdrawhistory")} className="bg-yellow-600 text-white hover:bg-yellow-500  mb-4 h-10 w-80 border flex items-center justify-evenly rounded z-4 hover:shadow-lg shadow-md"><button  className="flex  py-2 px-1  "><p className="font-bold">Withdraw History</p> </button> </div>
   </div>
 
         <div className="flex flex-col " style={box4}>
@@ -255,7 +255,7 @@ function WithdrawFunds() {
           >
             {isSubmitting ? "Submitting..." : "Withdraw Now"}
           </button>
-          <p className="text-red-500 ">{errorText}</p>
+          <p className="text-red-500 font-bold text-center  mt-2 ">{errorText}</p>
         </div>
         <div
           style={{

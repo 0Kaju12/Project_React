@@ -1,10 +1,11 @@
 import "../Modal.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import transf from "../Images/transfer_img.png";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
+
 
 const TransferModel = ({ closeModal, points, name, number }) => {
     const navigate= useNavigate();
@@ -21,16 +22,22 @@ const TransferModel = ({ closeModal, points, name, number }) => {
 
     const token = useSelector(state => state.userDetail.token);
     console.log(token);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isSubmitting) return;
+        setIsSubmitting(true);
+
         try {
             await fetchData(token, number, points);
             notify();
             closeModal(); // Close the modal here
         } catch (error) {
             console.log(error);
-        }
+        }finally {
+            setIsSubmitting(false); // Always reset submitting state after request is completed
+          }
     };
 
     const fetchData = async (token, number, points) => {
@@ -86,7 +93,7 @@ const TransferModel = ({ closeModal, points, name, number }) => {
                     <button onClick={closeModal} className="model-btn p-4 px-6 bg-green-500 rounded-xl">
                         CANCEL
                     </button>
-                    <button className="bg-green-500 rounded-xl  px-6 p-4" onClick={handleSubmit}>SUBMIT</button>
+                    <button className="bg-green-500 rounded-xl  px-6 p-4" onClick={handleSubmit}>                {isSubmitting ? "Submitting..." : "Transfer"}</button>
                 </div>
             </div>
         </>
